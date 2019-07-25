@@ -21,7 +21,7 @@
 <xsd:annotation> 
    <xsd:documentation>
 
-        Copyright 2019 MESA International, Version 0700
+        Copyright 2018 MESA International, Version 0700
 		All Rights Reserved. http://www.mesa.org
 
         This MESA International work (including specifications, documents, 
@@ -60,8 +60,6 @@
         V0700   21 Dec 2018     D. Brandl       Updated Version for 2018 update of ISA 95 Part 4
                                                 Added unbounded to OperationsDefinitionID to WorkDefinitionType
                                                 Added OperationsSegmentID to WorkDefinitionType
-												Changed all intermediate date and time types to DatTimeType
-				29 Mar 2019		D. Brandl		All future comments and revisions to be recorded in GitHub
 
    </xsd:documentation>
 </xsd:annotation>
@@ -112,7 +110,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
 														minOccurs = "0"/>
-      <xsd:element name = "PublishedDate"               type = "DateTimeType" 
+      <xsd:element name = "PublishedDate"               type = "PublishedDateType" 
 														minOccurs = "0"/>
       <xsd:element name = "WorkMaster"                  type = "WorkMasterType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -139,13 +137,13 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "Duration"                    type = "DurationType" 
                                                         minOccurs = "0"/>
-      <xsd:element name = "PublishedDate"               type = "DateTimeType"     
+      <xsd:element name = "PublishedDate"               type = "PublishedDateType"     
                                                         minOccurs = "0"/>
-      <xsd:element name = "OperationsDefinitionID"      type = "IdentifierType"     
+      <xsd:element name = "OperationsDefinitionID"      type = "OperationsDefinitionIDType"     
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "OperationsSegmentID"         type = "IdentifierType"     
+      <xsd:element name = "OperationsSegmentID"         type = "OperationsSegmentIDType"     
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "ProcessSegmentID"         	type = "IdentifierType"     
+      <xsd:element name = "ProcessSegmentID"         	type = "ProcessSegmentIDType"     
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Parameter"                   type = "ParameterType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -168,7 +166,7 @@
       <xsd:group   ref  = "WorkDefinitionType"/>
       <xsd:element name = "WorkMaster"                  type = "WorkMasterType"       
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "IncludesPropertiesOf"        type = "IdentifierType"       
+      <xsd:element name = "IncludesPropertiesOf"        type = "WorkMasterIDType"       
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkMaster"         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -177,7 +175,7 @@
   <xsd:complexType name = "WorkDirectiveType">
     <xsd:sequence>
       <xsd:group   ref  = "WorkDefinitionType"/>
-      <xsd:element name = "WorkMasterID"                type = "IdentifierType"       
+      <xsd:element name = "WorkMasterID"                type = "WorkMasterIDType"       
                                                         minOccurs = "0"/>
       <xsd:element name = "JobOrderID"                  type = "IdentifierType"
                                                         minOccurs = "0"/>

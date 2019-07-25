@@ -21,7 +21,7 @@
 <xsd:annotation> 
    <xsd:documentation>
 
-        Copyright 2019 MESA International, Version 0700
+        Copyright 2018 MESA International, Version 0700
 		All Rights Reserved. http://www.mesa.org
 
         This MESA International work (including specifications, documents, 
@@ -59,8 +59,6 @@
         V0700   21 Dec 2018     D. Brandl       Updated Version for 2018 update of ISA 95 Part 4
                                                 Added OperationsRequestID to JobOrderType
                                                 Added SegmentRequirementID to JobOrderType
-												Changed all intermediate date and time types to DatTimeType
-				29 Mar 2019		D. Brandl		All future comments and revisions to be recorded in GitHub
 
    </xsd:documentation>
 </xsd:annotation>
@@ -105,13 +103,13 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkType"                    type = "OperationsTypeType"   
                                                         minOccurs = "0"/>
-      <xsd:element name = "StartTime"                   type = "DateTimeType"   
+      <xsd:element name = "StartTime"                   type = "StartTimeType"   
                                                         minOccurs = "0"/>
-      <xsd:element name = "EndTime"                     type = "DateTimeType"     
+      <xsd:element name = "EndTime"                     type = "EndTimeType"     
                                                         minOccurs = "0"/>
       <xsd:element name = "ScheduleState"               type = "RequestStateType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "PublishedDate"               type = "DateTimeType" 
+      <xsd:element name = "PublishedDate"               type = "PublishedDateType" 
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkSchedule"                type = "WorkScheduleType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -131,9 +129,9 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "Workype"                     type = "OperationsTypeType"   
                                                         minOccurs = "0"/>
-      <xsd:element name = "StartTime"                   type = "DateTimeType" 
+      <xsd:element name = "StartTime"                   type = "StartTimeType" 
                                                         minOccurs = "0"/>
-      <xsd:element name = "EndTime"                     type = "DateTimeType" 
+      <xsd:element name = "EndTime"                     type = "EndTimeType" 
                                                         minOccurs = "0"/>
       <xsd:element name = "Priority"                    type = "PriorityType" 
                                                         minOccurs = "0"/>
@@ -161,11 +159,11 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "Workype"                     type = "OperationsTypeType"   
                                                         minOccurs = "0"/>
-      <xsd:element name = "StartTime"                   type = "DateTimeType" 
+      <xsd:element name = "StartTime"                   type = "StartTimeType" 
                                                         minOccurs = "0"/>
-      <xsd:element name = "EndTime"                     type = "DateTimeType" 
+      <xsd:element name = "EndTime"                     type = "EndTimeType" 
                                                         minOccurs = "0"/>
-      <xsd:element name = "PublishedDate"               type = "DateTimeType" 
+      <xsd:element name = "PublishedDate"               type = "PublishedDateType" 
                                                         minOccurs = "0"/>
       <xsd:element name = "JobOrder"                    type = "JobOrderType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -187,9 +185,9 @@
 	                                                    minOccurs = "0"/>
       <xsd:element name = "WorkMasterVersion"           type = "VersionType" 
 	                                                    minOccurs = "0"/>
-      <xsd:element name = "StartTime"                   type = "DateTimeType"  
+      <xsd:element name = "StartTime"                   type = "StartTimeType"  
                                                         minOccurs = "0"/>
-      <xsd:element name = "EndTime"                     type = "DateTimeType"      
+      <xsd:element name = "EndTime"                     type = "EndTimeType"      
                                                         minOccurs = "0"/>
       <xsd:element name = "Priority"                    type = "PriorityType" 
 	                                                    minOccurs = "0"/>
@@ -209,9 +207,9 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialRequirement"         type = "OpMaterialRequirementType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "OperationsRequestID"         type = "IdentifierType"    
+      <xsd:element name = "OperationsRequestID"         type = "OperationsRequestIDType"    
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "SegmentRequirementID"        type = "IdentifierType"    
+      <xsd:element name = "SegmentRequirementID"        type = "SegmentRequirementIDType"    
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:JobOrder"           minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>

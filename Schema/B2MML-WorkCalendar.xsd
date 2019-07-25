@@ -20,7 +20,7 @@
 <xsd:annotation> 
    <xsd:documentation>
 
-        Copyright 2019 MESA International, Version 0700
+        Copyright 2018 MESA International, Version 0700
 		All Rights Reserved. http://www.mesa.org
 
         This MESA International work (including specifications, documents, 
@@ -57,8 +57,6 @@
         ---     ----            ------          ----
         V0600   17 Mar 2013     D. Brandl       Initial version                                 
         V0700   21 Dec 2018     D. Brandl       Updated Version for 2018 update of ISA 95 Part 4
-												Changed all intermediate date and time types to DatTimeType
-				29 Mar 2019		D. Brandl		All future comments and revisions to be recorded in GitHub
 
    </xsd:documentation>
 </xsd:annotation>
@@ -108,7 +106,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
                                                         minOccurs = "0"  nillable="true"/>
-      <xsd:element name = "PublishedDate"               type = "DateTimeType" 
+      <xsd:element name = "PublishedDate"               type = "PublishedDateType" 
                                                         minOccurs = "0"  nillable="true"/>
       <xsd:element name = "WorkCalendar"                type = "WorkCalendarType"      
                                                         minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>

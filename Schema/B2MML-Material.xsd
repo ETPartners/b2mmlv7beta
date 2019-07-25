@@ -24,7 +24,7 @@
 <xsd:annotation> 
    <xsd:documentation>
 
-        Copyright 2019 MESA International, Version 0700
+        Copyright 2018 MESA International, Version 0700
 		All Rights Reserved. http://www.mesa.org
 
         This MESA International work (including specifications, documents, 
@@ -86,8 +86,6 @@
 											    Changed "Location" element name to "HierarchyScope"
         V0600   17 Mar 2013     D. Brandl       Changed copyright to MESA International and support for ISA 95 Part 4                                 
         V0700   21 Dec 2018     D. Brandl       Updated Version
-												Changed all intermediate date and time types to DatTimeType
-				29 Mar 2019		D. Brandl		All future comments and revisions to be recorded in GitHub
  
    </xsd:documentation>
 </xsd:annotation>
@@ -161,7 +159,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
                                                         minOccurs = "0"  nillable="true"/>
-      <xsd:element name = "PublishedDate"               type = "DateTimeType" 
+      <xsd:element name = "PublishedDate"               type = "PublishedDateType" 
                                                         minOccurs = "0"  nillable="true"/>
       <xsd:element name = "MaterialClass"               type = "MaterialClassType"      
                                                         minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>
@@ -189,11 +187,11 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialClassProperty"       type = "MaterialClassPropertyType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "MaterialDefinitionID"        type = "IdentifierType"
+      <xsd:element name = "MaterialDefinitionID"        type = "MaterialDefinitionIDType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialTestSpecificationID" type = "IdentifierType"      
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "AssemblyClassID"             type = "IdentifierType"    
+      <xsd:element name = "AssemblyClassID"             type = "MaterialClassIDType"    
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "AssemblyType"                type = "AssemblyTypeType" 
 	                                                    minOccurs = "0"/>
@@ -231,13 +229,13 @@
                                                         minOccurs = "0" />
       <xsd:element name = "MaterialDefinitionProperty"  type = "MaterialDefinitionPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "MaterialClassID"             type = "IdentifierType"    
+      <xsd:element name = "MaterialClassID"             type = "MaterialClassIDType"    
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "MaterialLotID"               type = "IdentifierType"      
+      <xsd:element name = "MaterialLotID"               type = "MaterialLotIDType"      
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "MaterialTestSpecificationID" type = "IdentifierType"      
+      <xsd:element name = "MaterialTestSpecificationID" type = "MaterialTestSpecificationIDType"      
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "AssemblyDefinitionID"        type = "IdentifierType"
+      <xsd:element name = "AssemblyDefinitionID"        type = "MaterialDefinitionIDType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "AssemblyType"                type = "AssemblyTypeType" 
 	                                                    minOccurs = "0"/>
@@ -273,7 +271,7 @@
                                                         minOccurs = "0" />
       <xsd:element name = "SpatialDefinition"     		type = "SpatialDefinitionType"     
                                                         minOccurs = "0" />
-      <xsd:element name = "MaterialDefinitionID"        type = "IdentifierType"       
+      <xsd:element name = "MaterialDefinitionID"        type = "MaterialDefinitionIDType"       
                                                         minOccurs = "0"/>
       <xsd:element name = "Status"                      type = "StatusType"
                                                         minOccurs = "0"/>
@@ -285,7 +283,7 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "MaterialTestSpecificationID" type = "IdentifierType"
+      <xsd:element name = "MaterialTestSpecificationID" type = "MaterialTestSpecificationIDType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "AssemblyLotID"               type = "MaterialLotType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -334,7 +332,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialSubLot"              type = "MaterialSubLotType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "MaterialLotID"               type = "IdentifierType" 
+      <xsd:element name = "MaterialLotID"               type = "MaterialLotIDType" 
                                                         minOccurs="0" maxOccurs="1" />
       <xsd:element name = "AssemblyLotID"               type = "MaterialLotType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>

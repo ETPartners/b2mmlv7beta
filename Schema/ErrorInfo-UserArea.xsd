@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.mesa.org/xml/B2MML-Extention"
+    xmlns:ext="http://www.mesa.org/xml/B2MML-Extention">
+ 
+    <xs:element name="ErrorMessage" type="ext:ErrorMessageType"  />
+     
+    <xs:simpleType name="ErrorTypeType" final="restriction">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="BusinessError" />
+            <xs:enumeration value="SystemError" />
+        </xs:restriction>
+    </xs:simpleType>
+     
+    <xs:complexType name="ErrorMessageType">
+        <xs:sequence>
+            <xs:element name="ThrowedFrom" type="xs:string" />
+            <xs:element name="TimeStamp" type="xs:dateTime"/>
+            <xs:element name="ErrorType" type="ext:ErrorTypeType"/>
+            <xs:element name="ErrorCode" type="xs:string" minOccurs = "0" />
+            <xs:element name="ErrorDescription" type="xs:string" minOccurs = "0" />
+            <xs:element name="CausedBy" type="ext:ErrorMessageType" minOccurs = "0" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
