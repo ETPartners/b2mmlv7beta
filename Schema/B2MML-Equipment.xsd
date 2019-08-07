@@ -9,6 +9,7 @@
                 attributeFormDefault    = "unqualified">
   
 <!-- Import the Extension Schema         -->
+<!-- This is a modification for version control demo purpose by Rachel         -->	
 
 <xsd:import     namespace="http://www.mesa.org/xml/B2MML-AllExtensions" 
                 schemaLocation="B2MML-AllExtensions.xsd"/>
