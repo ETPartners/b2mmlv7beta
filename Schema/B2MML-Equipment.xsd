@@ -162,8 +162,7 @@ zero or more equipment classes.
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentClass"      type = "EquipmentClassType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EquipmentCapabilityTestSpecification"
-                                                type = "TestSpecificationType"
+      <xsd:element name = "TestSpecification"   type = "TestSpecificationType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:EquipmentInformation"       
                                                 minOccurs = "0" maxOccurs = "1"/>
@@ -191,8 +190,7 @@ zero or more equipment classes.
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentClassID"    type = "IdentifierType"   
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EquipmentCapabilityTestSpecificationID"
-                                                type = "IdentifierType"
+      <xsd:element name = "TestSpecificationID" type = "IdentifierType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:Equipment"  minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -209,8 +207,6 @@ zero or more equipment classes.
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EvaluatedPropertyReference"
                                                 type = "EvaluatedPropertyReferenceType"
-                                                minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "TestResult"          type = "TestResultType"         
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:EquipmentProperty"
                                                 minOccurs = "0" maxOccurs = "1"/>
@@ -237,8 +233,7 @@ zero or more equipment classes.
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentID"         type = "IdentifierType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EquipmentCapabilityTestSpecificationID"
-                                                type = "IdentifierType"
+      <xsd:element name = "TestSpecificationID  type = "IdentifierType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:EquipmentClass"
                                                 minOccurs = "0" maxOccurs = "1"/>
