@@ -172,21 +172,31 @@ zero or more equipment classes.
   <xsd:complexType name = "EquipmentType">
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType"/>
+      <xsd:element name = "Version"             type = "VersionType"/>	
+                                                minOccurs = "0" />
       <xsd:element name = "Description"         type = "DescriptionType"        
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Effectivefrom"       type = "DateTimeType" 
+                                                minOccurs = "0" />	    
+      <xsd:element name = "EffectiveTo"         type = "DateTimeType" 
+                                                minOccurs = "0" />	    
       <xsd:element name = "HierarchyScope"      type = "HierarchyScopeType"   
                                                 minOccurs = "0" />
-      <xsd:element name = "EquipmentLevel"      type = "HierarchyScopeType"   
+      <xsd:element name = "EquipmentLevel"      type = "EquipmentLevelType"   
                                                 minOccurs = "0" />
       <xsd:element name = "SpatialDefinition"   type = "SpatialDefinitionType"     
                                                 minOccurs = "0" />
       <xsd:element name = "EquipmentAssetMapping" type = "EquipmentAssetMappingType"   
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "PhysicalAssetID"     type = "PhysicalAssetIDType"   
+                                                minOccurs = "0" />
       <xsd:element name = "OperationalLocation" type = "ResourceLocationType"     
+                                                minOccurs = "0" />
+      <xsd:element name = "OperationalLocationType"   type = "OperationalLocationTypeType"     
                                                 minOccurs = "0" />
       <xsd:element name = "EquipmentProperty"   type = "EquipmentPropertyType"  
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "Equipment"           type = "EquipmentType"  
+      <xsd:element name = "EquipmentChild"      type = "EquipmentType"  
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentClassID"    type = "IdentifierType"   
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
@@ -203,7 +213,9 @@ zero or more equipment classes.
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"               type = "ValueType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EquipmentProperty"   type = "EquipmentPropertyType"  
+      <xsd:element name = "EquipmentPropertyChild"   type = "EquipmentPropertyType"  
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "EquipmentClassPropertyID"   type = "EquipmentClassPropertyIDType"  
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EvaluatedPropertyReference"
                                                 type = "EvaluatedPropertyReferenceType"
@@ -216,19 +228,21 @@ zero or more equipment classes.
   <xsd:complexType name = "EquipmentClassType">
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType"/>
+      <xsd:element name = "Version"             type = "VersionType"/>	
+                                                minOccurs = "0" />
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"      type = "HierarchyScopeType"   
                                                 minOccurs = "0" />
-      <xsd:element name = "EquipmentLevel"      type = "HierarchyScopeType"   
+      <xsd:element name = "EquipmentLevel"      type = "EquipmentLevelType"   
                                                 minOccurs = "0" />
       <xsd:element name = "EquipmentClassProperty"
                                                 type = "EquipmentClassPropertyType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EquipmentClass"
+      <xsd:element name = "EquipmentClassChild"
                                                 type = "EquipmentClassType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "UsesPropertiesOfEquipmentClassID"
+      <xsd:element name = "EquipmentClassParentID"
                                                 type = "IdentifierType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentID"         type = "IdentifierType"
@@ -245,11 +259,11 @@ zero or more equipment classes.
       <xsd:element name = "ID"                  type = "IdentifierType"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "PropertyType" 		type="ClassPropertyTypeType"
-												minOccurs="0"/>
+      <xsd:element name = "PropertyType" 	type="ClassPropertyTypeType"
+						minOccurs="0"/>
       <xsd:element name = "Value"               type = "ValueType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EquipmentClassProperty"
+      <xsd:element name = "EquipmentClassPropertyChild"
                                                 type = "EquipmentClassPropertyType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EvaluatedPropertyReference"
