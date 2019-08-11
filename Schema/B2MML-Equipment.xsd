@@ -190,9 +190,9 @@ zero or more equipment classes.
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetID"     type = "PhysicalAssetIDType"   
                                                 minOccurs = "0" />
-      <xsd:element name = "OperationalLocationID" type = "ResourceLocationType"     
+      <xsd:element name = "OperationalLocation" type = "ResourceLocationType"     
                                                 minOccurs = "0" />
-      <xsd:element name = "OperationalLocationType"   type = "OperationalLocationTypeType"     
+      <xsd:element name = "OperationalLocationType"   type = "ResourceLocationTypeType"     
                                                 minOccurs = "0" />
       <xsd:element name = "EquipmentProperty"   type = "EquipmentPropertyType"  
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
