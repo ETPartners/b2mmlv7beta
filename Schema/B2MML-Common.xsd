@@ -455,7 +455,7 @@ Defined values are (explained using dependency type between element A and elemen
         </xsd:sequence>
     </xsd:complexType>
     <!--     -->    
-    <xsd:complexType name="EquipmentElementLevel1Type">
+    <xsd:complexType name="EquipmentLevel1Type">
         <xsd:simpleContent>
             <xsd:restriction base="CodeType">
                 <xsd:enumeration value="Enterprise"/>
@@ -529,12 +529,9 @@ The hierarchy scope identifies the associated instance in the role-based equipme
 			</xsd:documentation>
 		</xsd:annotation> 
         <xsd:sequence>
-            <xsd:element name="EquipmentID" type="IdentifierType"/>
-            <xsd:choice>
-                <xsd:element name="EquipmentElementLevel" type="EquipmentElementLevelType"/>
-                <xsd:element name="EquipmentLevel" type="EquipmentElementLevelType"/>
-            </xsd:choice>
-            <xsd:element name="HierarchyScope" type="HierarchyScopeType" minOccurs="0"/>
+            <xsd:element name="EquipmentID" 		type="IdentifierType"/>
+            <xsd:element name="EquipmentLevel" 		type="EquipmentLevelType"/>
+            <xsd:element name="HierarchyScopeChild" 	type="HierarchyScopeType" minOccurs="0"/>
             <xsd:group ref="Extended:HierarchyScope" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
@@ -1340,8 +1337,8 @@ Defined values are
     <!--     -->    
     <xsd:complexType name="ResourceLocationType">
         <xsd:sequence>
-		<xsd:element name = "Location" type = "TextType" />
-		<xsd:element name = "LocationType" type = "ResourceLocationTypeType" />
+		<xsd:element name = "Location" type = "TextType"/>
+		<xsd:element name = "LocationType" type = "ResourceLocationTypeType"/>
         </xsd:sequence>
     </xsd:complexType>
     <!--     -->    
