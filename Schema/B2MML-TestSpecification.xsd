@@ -158,7 +158,7 @@ of test specifications.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsTestRequirementID"	type = "IdentifierType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "testableObjectID"		type = "IdentifierType"
+      <xsd:element name = "TestableObjectID"		type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:group   ref  = "Extended:TestSpecification"
                                                         minOccurs = "0" maxOccurs = "1"/>
