@@ -126,7 +126,7 @@ of test specifications.
 
 	
 <!-- Simple & Complex Types  -->
-  <xsd:complexType name = "TestSpecificationInformationType">
+  <xsd:complexType name = "OperationsTestInformationType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"                  
                                                         minOccurs = "0" nillable="true"/>
@@ -138,7 +138,9 @@ of test specifications.
                                                         minOccurs = "0"  nillable="true"/>
       <xsd:element name = "TestSpecification"         	type = "TestSpecificationType"      
                                                         minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>
-      <xsd:group   ref  = "Extended:TestSpecificationInformation" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name = "TestResult"         		type = "TestResultType"      
+                                                        minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>	    
+      <xsd:group   ref  = "Extended:OperationsTestInformation" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -176,7 +178,7 @@ of test specifications.
                                                         minOccurs = "1" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsTestRequirementID"	type = "IdentifierType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "testableObjectID"		type = "IdentifierType"
+      <xsd:element name = "TestableObjectID"		type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:group   ref  = "Extended:TestSpecification"  minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -234,7 +236,7 @@ of test specifications.
 			 					minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>
 	    <xsd:element name = "HierarchyScope" 		type = "HierarchyScopeType" 
 			 					minOccurs = "0"  nillable="true"/>
-      	    <xsd:element name = "testableObjectID"		type = "IdentifierType"
+      	    <xsd:element name = "TestableObjectID"		type = "IdentifierType"
                                                         	minOccurs = "0"/>
       	    <xsd:element name = "OperationsTestRequirementID"	type = "IdentifierType"
                                                         	minOccurs = "0"/>
