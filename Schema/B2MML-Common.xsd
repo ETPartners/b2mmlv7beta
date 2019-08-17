@@ -415,16 +415,16 @@ Defined types are:
 			<xsd:documentation>
 Defines an execution dependency constraint of two elements. 
 Defined values are (explained using dependency type between element A and element B)
--	at start: start B at A start;
--	after start: start B after A start;
--	after end: start B after A end;
--	not follow: B cannot follow A;
--	possible parallel: B may run in parallel to A;
--	not in parallel: B may not run in parallel to A;
--	no later after start: start B no later than dependency factor after A start:
--	no earlier after start: start B no earlier than dependency factor after A start;
--	no later after end: start B no later than dependency factor after A end;
--	no earlier after end: B no earlier than dependency factor after A end.
+- at start: start B at A start;
+- after start: start B after A start;
+- after end: start B after A end;
+- not follow: B cannot follow A;
+- possible parallel: B may run in parallel to A;
+- not in parallel: B may not run in parallel to A;
+- no later after start: start B no later than dependency factor after A start:
+- no earlier after start: start B no earlier than dependency factor after A start;
+- no later after end: start B no later than dependency factor after A end;
+- no earlier after end: B no earlier than dependency factor after A end.
 			</xsd:documentation>
 		</xsd:annotation> 
         <xsd:simpleContent>
@@ -434,6 +434,39 @@ Defined values are (explained using dependency type between element A and elemen
         </xsd:simpleContent>
     </xsd:complexType>
     <!--     -->    
+    <xsd:complexType name="Disposition1Type">
+        <xsd:simpleContent>
+            <xsd:restriction base="CodeType">
+                <xsd:enumeration value="Planned"/>
+                <xsd:enumeration value="In-Process"/>
+                <xsd:enumeration value="Restricted"/>
+                <xsd:enumeration value="UnRestricted"/>
+                <xsd:enumeration value="Closed"/>
+                <xsd:enumeration value="Other"/>
+            </xsd:restriction>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <!--     -->    
+    <xsd:complexType name="DispositionType">
+		<xsd:annotation> 
+			<xsd:documentation>
+Defines Planning and logistics disposition of a material lot or assembly of material lots. 
+Defined values for the disposition of a material lot are
+- Planned: a material lot that does not yet physically exist, is assigned to an operations request (segment requirement) or work request (Part 4 object) or job order (Part 4 object); 
+- In process: the material lot is in the process of being worked on; 
+- Restricted: a material lot is not permitted for normal use due to a restriction condition. 
+	EXAMPLE 5 A material lot can be awaiting a quality decision or a material lot can be physically inaccessible.
+- Unrestricted:  material lot is permitted for normal use without restriction; and
+- Closed:   material lot has been reconciled as completely consumed, sold or disposed of.
+			</xsd:documentation>
+		</xsd:annotation> 
+          <xsd:simpleContent>
+            <xsd:extension base="DispositionType">
+                <xsd:attribute name="OtherValue" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <!--     --> 	
     <xsd:complexType name="DescriptionType">
         <xsd:simpleContent>
             <xsd:restriction base="TextType"/>
