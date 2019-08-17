@@ -139,6 +139,8 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "PublishedDate"               type = "DateTimeType"     
                                                         minOccurs = "0"/>
+      <xsd:element name = "DefinitionType"              type = "DefinitionTypeType" 
+                                                        minOccurs = "0"/>	    
       <xsd:element name = "BillOfMaterialsID"           type = "IdentifierType" 
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkDefinitionID"            type = "IdentifierType"     
@@ -149,7 +151,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsSegment"           type = "OperationsSegmentType"    
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "UsesPropertiesOfOperationsDefinitionID"
+      <xsd:element name = "OperationsDefinitionParentID"
                                                         type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:OperationsDefinition"  minOccurs = "0" maxOccurs = "1"/>
@@ -167,6 +169,8 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "OperationsMaterialBillItem"  type = "OperationsMaterialBillItemType"
                                                         minOccurs = "0" maxOccurs="unbounded"/>
+      <xsd:element name = "OperationsMaterialBillChild"	type = "OperationsMaterialBillType"
+                                                	minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:OperationsMaterialBill"  minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -205,6 +209,8 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "OperationsType"              type = "OperationsTypeType" 
                                                         minOccurs = "0"/>
+      <xsd:element name = "DefinitionType"              type = "DefinitionTypeType" 
+                                                        minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType" 
                                                         minOccurs = "0"/>
       <xsd:element name = "Duration"                    type = "DurationType"            
@@ -217,8 +223,9 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "BillOfResourcesID"           type = "IdentifierType" 
                                                         minOccurs = "0"/>
-      <xsd:element name = "UsesPropertiesOfOperationsSegmentID"
-                                                        type = "IdentifierType"
+      <xsd:element name = "OperationsMaterialBillID"  	type = "IdentifierType" 
+                                                        minOccurs = "0"/>
+      <xsd:element name = "OperationsSegmentParentID"	type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Parameter"                   type = "ParameterType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -237,7 +244,6 @@
       <xsd:group   ref  = "Extended:OperationsSegment"  minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
-
 
 
 <!-- - - - - - - - - - - - - - - - - - - - - -->
