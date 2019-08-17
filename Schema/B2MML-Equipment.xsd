@@ -215,7 +215,7 @@ zero or more equipment classes.
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentPropertyChild"   type = "EquipmentPropertyType"  
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EquipmentClassPropertyID"   type = "EquipmentClassPropertyIDType"  
+      <xsd:element name = "EquipmentClassPropertyID"   type = "IdentifierType"  
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:EquipmentProperty"
                                                 minOccurs = "0" maxOccurs = "1"/>
