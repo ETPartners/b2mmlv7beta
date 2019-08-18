@@ -140,16 +140,16 @@
       <xsd:element name = "PublishedDate"               type = "DateTimeType"     
                                                         minOccurs = "0"/>
       <xsd:element name = "DefinitionType"              type = "DefinitionTypeType" 
-                                                        minOccurs = "0"/>	    
-      <xsd:element name = "BillOfMaterialsID"           type = "IdentifierType" 
                                                         minOccurs = "0"/>
-      <xsd:element name = "WorkDefinitionID"            type = "IdentifierType"     
-                                                        minOccurs = "0"/>
-      <xsd:element name = "BillOfResourcesID"           type = "IdentifierType" 
-                                                        minOccurs = "0"/>
-      <xsd:element name = "OperationsMaterialBill"      type = "OperationsMaterialBillType" 
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsSegment"           type = "OperationsSegmentType"    
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "BillOfMaterialsID"           type = "IdentifierType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "WorkDefinitionID"            type = "IdentifierType"     
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "BillOfResourcesID"           type = "IdentifierType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "OperationsMaterialBill"      type = "OperationsMaterialBillType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsDefinitionParentID"
                                                         type = "IdentifierType"
@@ -218,13 +218,13 @@
       <xsd:element name = "ProcessSegmentID"            type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "BillOfMaterialsID"           type = "IdentifierType" 
-                                                        minOccurs = "0"/>
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkDefinitionID"            type = "IdentifierType"     
-                                                        minOccurs = "0"/>
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "BillOfResourcesID"           type = "IdentifierType" 
-                                                        minOccurs = "0"/>
-      <xsd:element name = "OperationsMaterialBillID"  	type = "IdentifierType" 
-                                                        minOccurs = "0"/>
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "OperationsMaterialBill"  	type = "OperationsMaterialBillType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsSegmentParentID"	type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Parameter"                   type = "ParameterType" 
@@ -239,7 +239,9 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "SegmentDependency"           type = "SegmentDependencyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "OperationsSegment"           type = "OperationsSegmentType" 
+      <xsd:element name = "DependentOperationsSegmentID" type = "IdentifierType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "OperationsSegmentChild"      type = "OperationsSegmentType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:OperationsSegment"  minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
