@@ -173,18 +173,18 @@ referenced work master shall have the same value as that of the process segment.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "SegmentDependency"           type = "SegmentDependencyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "ProcessSegment"              type = "ProcessSegmentType" 
+      <xsd:element name = "DependentProcessSegmentID"   type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "IncludesPropertiesOfProcessSegmentID"
+      <xsd:element name = "ProcessSegmentChild"         type = "ProcessSegmentType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "ProcessSegmentParentID"	type = "IdentifierType"
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "WorkMasterSourceID"		type = "IdentifierType"
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "OperationsSegmentSourceID"
                                                         type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "CorrespondsToWorkMasterID"
-                                                        type = "IdentifierType"
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "CorrespondsToOperationsSegmentID"
-                                                        type = "IdentifierType"
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "CorrespondsToSegmentRequirementID"
+      <xsd:element name = "SegmentRequirementSourceID"
                                                         type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:ProcessSegment"     minOccurs = "0" maxOccurs = "1"/>
