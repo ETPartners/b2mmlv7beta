@@ -17,7 +17,6 @@
   <xsd:include  schemaLocation = "B2MML-Common.xsd"/>
   <xsd:include  schemaLocation = "B2MML-OperationsPerformanceTypes.xsd"/> 
 
-
 <xsd:annotation> 
    <xsd:documentation>
 
