@@ -127,8 +127,6 @@ referenced work master shall have the same value as that of the process segment.
   <xsd:element name = "CancelProcessSegment"                    type = "CancelProcessSegmentType"/>
   <xsd:element name = "SyncProcessSegment"                      type = "SyncProcessSegmentType"/>
 
-
-
 <!-- Simple & Complex Types  -->
 
   <xsd:complexType name = "ProcessSegmentInformationType">
@@ -203,16 +201,16 @@ referenced work master shall have the same value as that of the process segment.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PersonnelUse"                type = "CodeType" minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType" minOccurs = "0"/>
-      <xsd:element name = "SpatialDefinition"     		type = "SpatialDefinitionType"     
+      <xsd:element name = "SpatialDefinition"     	type = "SpatialDefinitionType"     
                                                         minOccurs = "0" />
-      <xsd:element name = "OperationalLocation" 		type = "ResourceLocationType"     
+      <xsd:element name = "OperationalLocation" 	type = "ResourceLocationType"     
                                                         minOccurs = "0" />
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PersonnelSegmentSpecificationProperty" 
                                                         type = "PersonnelSegmentSpecificationPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>  <!-- "Has properties of" relationship -->
-      <xsd:element name = "PersonnelSegmentSpecification" 
+      <xsd:element name = "PersonnelSegmentSpecificationChild" 
                                                         type = "PersonnelSegmentSpecificationType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>  <!-- "Is made up of" relationship -->
       <xsd:element name = "TestSpecificationID" 		type = "IdentifierType" 
@@ -231,8 +229,8 @@ referenced work master shall have the same value as that of the process segment.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "PersonnalSegmentSpecificationProperty" 
-														type = "PersonnelSegmentSpecificationPropertyType" 
+      <xsd:element name = "PersonnalSegmentSpecificationPropertyChild" 
+							type = "PersonnelSegmentSpecificationPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:PersonnelSegmentSpecificationProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
@@ -249,19 +247,19 @@ referenced work master shall have the same value as that of the process segment.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentUse"                type = "CodeType" minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType" minOccurs = "0"/>
-      <xsd:element name = "SpatialDefinition"     		type = "SpatialDefinitionType"     
+      <xsd:element name = "SpatialDefinition"     	type = "SpatialDefinitionType"     
                                                         minOccurs = "0" />
-      <xsd:element name = "OperationalLocation" 		type = "ResourceLocationType"     
+      <xsd:element name = "OperationalLocation" 	type = "ResourceLocationType"     
                                                         minOccurs = "0" />
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentSegmentSpecificationProperty"       
                                                         type = "EquipmentSegmentSpecificationPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>  <!-- "Has properties of" relationship -->
-      <xsd:element name = "EquipmentSegmentSpecification" 
+      <xsd:element name = "EquipmentSegmentSpecificationChild" 
                                                         type = "EquipmentSegmentSpecificationType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>  <!-- "Is made up of" relationship -->
-      <xsd:element name = "TestSpecificationID" 		type = "IdentifierType" 
+      <xsd:element name = "TestSpecificationID" 	type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>  <!-- "Is assembled" from relationship -->
       <xsd:group   ref  = "Extended:EquipmentSegmentSpecification"
                                                         minOccurs = "0" maxOccurs = "1"/>
@@ -277,8 +275,8 @@ referenced work master shall have the same value as that of the process segment.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EquipmentSegmentSpecificationProperty" 
-														type = "EquipmentSegmentSpecificationPropertyType" 
+      <xsd:element name = "EquipmentSegmentSpecificationPropertyChild" 
+							type = "EquipmentSegmentSpecificationPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:EquipmentSegmentSpecificationProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
@@ -295,19 +293,19 @@ referenced work master shall have the same value as that of the process segment.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetUse"            type = "CodeType" minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType" minOccurs = "0"/>
-      <xsd:element name = "SpatialDefinition"     		type = "SpatialDefinitionType"     
+      <xsd:element name = "SpatialDefinition"     	type = "SpatialDefinitionType"     
                                                         minOccurs = "0" />
-      <xsd:element name = "OperationalLocation" 		type = "ResourceLocationType"     
+      <xsd:element name = "OperationalLocation" 	type = "ResourceLocationType"     
                                                         minOccurs = "0" />
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetSegmentSpecificationProperty"       
                                                         type = "PhysicalAssetSegmentSpecificationPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>  <!-- "Has properties of" relationship -->
-      <xsd:element name = "PhysicalAssetSegmentSpecification" 
+      <xsd:element name = "PhysicalAssetSegmentSpecificationChild" 
                                                         type = "PhysicalAssetSegmentSpecificationType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>  <!-- "Is made up of" relationship -->
-      <xsd:element name = "TestSpecificationID" 		type = "IdentifierType" 
+      <xsd:element name = "TestSpecificationID" 	type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>  <!-- "Is assembled" from relationship -->
       <xsd:group   ref  = "Extended:PhysicalAssetSegmentSpecification"
                                                         minOccurs = "0" maxOccurs = "1"/>
@@ -323,8 +321,8 @@ referenced work master shall have the same value as that of the process segment.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "PhysicalAssetSegmentSpecificationProperty" 
-														type = "PhysicalAssetSegmentSpecificationPropertyType" 
+      <xsd:element name = "PhysicalAssetSegmentSpecificationPropertyChild" 
+							type = "PhysicalAssetSegmentSpecificationPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:PhysicalAssetSegmentSpecificationProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
@@ -343,23 +341,23 @@ referenced work master shall have the same value as that of the process segment.
       <xsd:element name = "AssemblyType"                type = "AssemblyTypeType" minOccurs = "0"/>
       <xsd:element name = "AssemblyRelationship"        type = "AssemblyRelationshipType" minOccurs = "0"/>
       <xsd:element name = "AssemblySpecificationID"     type = "IdentifierType" 
-	                                                    minOccurs = "0" maxOccurs = "unbounded"/>
+	                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialUse"                 type = "MaterialUseType"
                                                         minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType" minOccurs = "0"/>
-      <xsd:element name = "SpatialDefinition"     		type = "SpatialDefinitionType"     
+      <xsd:element name = "SpatialDefinition"     	type = "SpatialDefinitionType"     
                                                         minOccurs = "0" />
-      <xsd:element name = "OperationalLocation" 		type = "ResourceLocationType"     
+      <xsd:element name = "OperationalLocation" 	type = "ResourceLocationType"     
                                                         minOccurs = "0" />
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialSegmentSpecificationProperty"        
                                                         type = "MaterialSegmentSpecificationPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>  <!-- "Has properties of" relationship --> 
-      <xsd:element name = "MaterialSegmentSpecification" 
+      <xsd:element name = "MaterialSegmentSpecificationChild" 
                                                         type = "MaterialSegmentSpecificationType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>  <!-- "Is assembled from" relationship -->    
-      <xsd:element name = "TestSpecificationID" 		type = "IdentifierType" 
+      <xsd:element name = "TestSpecificationID" 	type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>  <!-- "Specifies" relationship -->
       <xsd:group   ref  = "Extended:MaterialSegmentSpecification"
                                                         minOccurs = "0" maxOccurs = "1"/>
@@ -375,8 +373,8 @@ referenced work master shall have the same value as that of the process segment.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "MaterialSegmentSpecificationProperty" 
-														type = "MaterialSegmentSpecificationPropertyType" 
+      <xsd:element name = "MaterialSegmentSpecificationPropertyChild" 
+							type = "MaterialSegmentSpecificationPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:MaterialSegmentSpecificationProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
