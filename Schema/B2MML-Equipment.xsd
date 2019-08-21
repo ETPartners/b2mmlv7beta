@@ -176,7 +176,7 @@ zero or more equipment classes.
                                                 minOccurs = "0" />
       <xsd:element name = "Description"         type = "DescriptionType"        
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "Effectivefrom"       type = "DateTimeType" 
+      <xsd:element name = "EffectiveFrom"       type = "DateTimeType" 
                                                 minOccurs = "0" />	    
       <xsd:element name = "EffectiveTo"         type = "DateTimeType" 
                                                 minOccurs = "0" />	    
@@ -229,6 +229,10 @@ zero or more equipment classes.
                                                 minOccurs = "0" />
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "EffectiveFrom"       type = "DateTimeType" 
+                                                minOccurs = "0" />	    
+      <xsd:element name = "EffectiveTo"         type = "DateTimeType" 
+                                                minOccurs = "0" />	    
       <xsd:element name = "HierarchyScope"      type = "HierarchyScopeType"   
                                                 minOccurs = "0" />
       <xsd:element name = "EquipmentLevel"      type = "EquipmentLevelType"   
