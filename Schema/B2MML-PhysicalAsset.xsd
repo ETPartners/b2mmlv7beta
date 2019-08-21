@@ -165,6 +165,12 @@ A physical asset class may be made up of zero or more physical asset classes.
       <xsd:element name = "ID"                  type = "IdentifierType"/>
       <xsd:element name = "Description"         type = "DescriptionType"        
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"             type = "VersionType"/>	
+                                                minOccurs = "0" />
+      <xsd:element name = "EffectiveFrom"       type = "DateTimeType" 
+                                                minOccurs = "0" />	    
+      <xsd:element name = "EffectiveTo"         type = "DateTimeType" 
+                                                minOccurs = "0" />
       <xsd:element name = "HierarchyScope"      type = "HierarchyScopeType"   
                                                 minOccurs = "0" />
       <xsd:element name = "FixedAssetID"        type = "IdentifierType" minOccurs = "0" />
@@ -210,8 +216,14 @@ A physical asset class may be made up of zero or more physical asset classes.
   <xsd:complexType name = "PhysicalAssetClassType">
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType"/>
-      <xsd:element name = "Description"         type = "DescriptionType"
+     <xsd:element name = "Version"              type = "VersionType"/>	
+                                                minOccurs = "0" />
+      <xsd:element name = "Description"         type = "DescriptionType" 
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "EffectiveFrom"       type = "DateTimeType" 
+                                                minOccurs = "0" />	    
+      <xsd:element name = "EffectiveTo"         type = "DateTimeType" 
+                                                minOccurs = "0" />
       <xsd:element name = "HierarchyScope"      type = "HierarchyScopeType"
                                                 minOccurs = "0"/>
       <xsd:element name = "Manufacturer"        type = "NameType"
