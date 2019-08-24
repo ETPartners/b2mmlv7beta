@@ -210,8 +210,6 @@ A person may be a member of zero or more personnel classes.
             <xsd:element name = "EvaluatedPropertyReference"      
                                                         type = "EvaluatedPropertyReferenceType"   
                                                         minOccurs = "0" />
-            <xsd:element name = "TestResult"            type = "TestResultType"
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
             <xsd:group   ref  = "Extended:PersonProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
           </xsd:sequence>
