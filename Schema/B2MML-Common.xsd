@@ -1523,7 +1523,7 @@ Spatial definition identifies a value and the predefined coordinate reference sy
 			<xsd:element name = "ID" type = "IdentifierType" minOccurs = "0" nillable="true"/>
 			<xsd:element name = "Description" type = "DescriptionType"  minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>
 			<xsd:element name = "HierarchyScope" type = "HierarchyScopeType" minOccurs = "0"  nillable="true"/>
-      	    		<xsd:element name = "testableObjectID" type = "IdentifierType" minOccurs = "0"/>
+      	    		<xsd:element name = "TestableObjectID" type = "IdentifierType" minOccurs = "0"/>
       	    		<xsd:element name = "OperationsTestRequirementID" type = "IdentifierType" minOccurs = "0"/>			
 			<xsd:element name = "EvaluationDate" type = "DateTimeType" minOccurs = "0"  nillable="true"/>
 			<xsd:element name = "EvaluatedCriterionResult" type = "TextType" minOccurs = "0"  nillable="true"/>
