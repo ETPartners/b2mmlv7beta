@@ -206,8 +206,6 @@ A physical asset class may be made up of zero or more physical asset classes.
       <xsd:element name = "EvaluatedPropertyReference"
                                                 type = "EvaluatedPropertyReferenceType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "TestResult"          type = "TestResultType"         
-                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:PhysicalAssetProperty"
                                                 minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
