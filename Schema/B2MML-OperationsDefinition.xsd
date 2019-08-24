@@ -131,6 +131,10 @@
       <xsd:element name = "ID"                          type = "IdentifierType" />
       <xsd:element name = "Version"                     type = "VersionType"
                                                         minOccurs = "0"/>
+      <xsd:element name = "EffectiveFrom"               type = "DateTimeType" 
+                                                        minOccurs = "0" />	    
+      <xsd:element name = "EffectiveTo"                 type = "DateTimeType" 
+                                                        minOccurs = "0" />
       <xsd:element name = "Description"                 type = "DescriptionType"       
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType" 
