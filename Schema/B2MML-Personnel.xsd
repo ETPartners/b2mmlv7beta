@@ -160,7 +160,7 @@ A person may be a member of zero or more personnel classes.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
            <xsd:element name = "PersonnelClass"        	type = "PersonnelClassType"     
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-           <xsd:element name = "QualificationTestSpecification"  
+           <xsd:element name = "TestSpecification"  
                                                         type = "TestSpecificationType"     
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
            <xsd:group   ref  = "Extended:PersonnelInformation"
@@ -191,10 +191,10 @@ A person may be a member of zero or more personnel classes.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
           <xsd:element name = "PersonnelClassID"      	type = "IdentifierType"   
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-          <xsd:element name = "QualificationTestSpecificationID"      
+          <xsd:element name = "TestSpecificationID"      
                                                         type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-          <xsd:group   ref  = "Extended:Person"       minOccurs = "0" maxOccurs = "1"/>
+          <xsd:group   ref  = "Extended:Person"         minOccurs = "0" maxOccurs = "1"/>
      	</xsd:sequence>
 </xsd:complexType>
 
@@ -236,7 +236,7 @@ A person may be a member of zero or more personnel classes.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
             <xsd:element name = "PersonID"              type = "IdentifierType"  
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-            <xsd:element name = "QualificationTestSpecificationID"      
+            <xsd:element name = "TestSpecificationID"      
                                                         type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
             <xsd:group   ref  = "Extended:PersonnelClass"
