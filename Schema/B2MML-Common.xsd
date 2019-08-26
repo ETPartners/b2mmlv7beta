@@ -544,14 +544,14 @@ Defined values are:
         </xsd:simpleContent>
     </xsd:complexType>
     <!--     -->    
-        <xsd:complexType name = "EvaluatedPropertyReferenceType">
-          <xsd:sequence>
+    <xsd:complexType name = "EvaluatedPropertyReferenceType">
+        <xsd:sequence>
             <xsd:element name = "TestSpecificationID"   type = "IdentifierType"/>
             <xsd:element name = "EvaluatedPropertyID"   type = "IdentifierType"/>
             <xsd:group   ref  = "Extended:EvaluatedPropertyReference"
                                                         minOccurs = "0" maxOccurs = "1"/>
-          </xsd:sequence>
-        </xsd:complexType>
+        </xsd:sequence>
+    </xsd:complexType>
     <!--     -->    
     <xsd:complexType name="HierarchyScopeType">
 		<xsd:annotation> 
@@ -1476,8 +1476,7 @@ Defined values are
             <xsd:element name="ID" type="IdentifierType"/>
             <xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="Dependency" type="DependencyType"/>
-            <xsd:element name="TimingFactor" type="ValueType" minOccurs="0" maxOccurs="unbounded"/>
-            <xsd:element name="UnitOfMeasure" type="UnitOfMeasureType" nillable="true" minOccurs="0"/>
+	    <xsd:element name="DependencyFactor" type="ValueType" minOccurs="0"/>
             <xsd:choice minOccurs="0" maxOccurs="unbounded">
                 <xsd:element name="ProductSegmentID" type="IdentifierType"/>
                 <xsd:element name="ProcessSegmentID" type="IdentifierType"/>
