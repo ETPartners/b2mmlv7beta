@@ -172,7 +172,7 @@
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialCapability"      type = "OpMaterialCapabilityType" 
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "ProcessSegmentCapability"
+      <xsd:element name = "ProcessSegmentCapabilityChild"
                                                     type = "OpProcessSegmentCapabilityType" 
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:OpProcessSegmentCapability"
@@ -206,7 +206,7 @@
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialCapability"      type = "OpMaterialCapabilityType" 
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "OperationsSegmentCapability"
+      <xsd:element name = "OperationsSegmentCapabilityChild"
                                                     type = "OpOperationsSegmentCapabilityType" 
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:OpOperationsSegmentCapability"
