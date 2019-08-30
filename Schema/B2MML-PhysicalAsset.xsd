@@ -183,7 +183,7 @@ A physical asset class may be made up of zero or more physical asset classes.
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetProperty"   type = "PhysicalAssetPropertyType"  
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "PhysicalAsset"       type = "PhysicalAssetType"  
+      <xsd:element name = "PhysicalAssetChild"       type = "PhysicalAssetType"  
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetClassID" type = "IdentifierType"   
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
@@ -202,9 +202,6 @@ A physical asset class may be made up of zero or more physical asset classes.
       <xsd:element name = "Value"               type = "ValueType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetProperty"   type = "PhysicalAssetPropertyType"  
-                                                minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EvaluatedPropertyReference"
-                                                type = "EvaluatedPropertyReferenceType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:PhysicalAssetProperty"
                                                 minOccurs = "0" maxOccurs = "1"/>
@@ -229,9 +226,6 @@ A physical asset class may be made up of zero or more physical asset classes.
       <xsd:element name = "PhysicalAssetClassChild"
                                                 type = "PhysicalAssetClassType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "UsesPropertiesOfPhysicalAssetClassID"
-                                                type = "IdentifierType"
-                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetClassProperty"
                                                 type = "PhysicalAssetClassPropertyType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
@@ -254,7 +248,7 @@ A physical asset class may be made up of zero or more physical asset classes.
 						minOccurs="0"/>
       <xsd:element name = "Value"               type = "ValueType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "PhysicalAssetClassProperty"
+      <xsd:element name = "PhysicalAssetClassPropertyChild"
                                                 type = "PhysicalAssetClassPropertyType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
    
