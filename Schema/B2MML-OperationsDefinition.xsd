@@ -86,7 +86,6 @@
   <xsd:element name = "CancelOperationsDefinitionInformation"      type = "CancelOperationsDefinitionInformationType"/>
   <xsd:element name = "SyncOperationsDefinitionInformation"        type = "SyncOperationsDefinitionInformationType"/>
 
-
   <xsd:element name = "GetOperationsDefinition"            type = "GetOperationsDefinitionType"/>
   <xsd:element name = "ShowOperationsDefinition"           type = "ShowOperationsDefinitionType"/>
   <xsd:element name = "ProcessOperationsDefinition"        type = "ProcessOperationsDefinitionType"/>
@@ -96,16 +95,14 @@
   <xsd:element name = "CancelOperationsDefinition"         type = "CancelOperationsDefinitionType"/>
   <xsd:element name = "SyncOperationsDefinition"           type = "SyncOperationsDefinitionType"/>
 
-  <xsd:element name = "GetOperationsSegment"            type = "GetOperationsSegmentType"/>
-  <xsd:element name = "ShowOperationsSegment"           type = "ShowOperationsSegmentType"/>
-  <xsd:element name = "ProcessOperationsSegment"        type = "ProcessOperationsSegmentType"/>
-  <xsd:element name = "AcknowledgeOperationsSegment"    type = "AcknowledgeOperationsSegmentType"/>
-  <xsd:element name = "ChangeOperationsSegment"         type = "ChangeOperationsSegmentType"/>
-  <xsd:element name = "RespondOperationsSegment"        type = "RespondOperationsSegmentType"/>
-  <xsd:element name = "CancelOperationsSegment"         type = "CancelOperationsSegmentType"/>
-  <xsd:element name = "SyncOperationsSegment"           type = "SyncOperationsSegmentType"/>
-
-
+  <xsd:element name = "GetOperationsMaterailBill"            type = "GetOperationsMaterailBillType"/>
+  <xsd:element name = "ShowOperationsMaterailBill"           type = "ShowOperationsMaterailBillType"/>
+  <xsd:element name = "ProcessOperationsMaterailBill"        type = "ProcessOperationsMaterailBillType"/>
+  <xsd:element name = "AcknowledgeOperationsMaterailBill"    type = "AcknowledgeOperationsMaterailBillType"/>
+  <xsd:element name = "ChangeOperationsMaterailBill"         type = "ChangeOperationsMaterailBillType"/>
+  <xsd:element name = "RespondOperationsMaterailBill"        type = "RespondOperationsMaterailBillType"/>
+  <xsd:element name = "CancelOperationsMaterailBill"         type = "CancelOperationsMaterailBillType"/>
+  <xsd:element name = "SyncOperationsMaterailBill"           type = "SyncOperationsMaterailBillType"/>
 <!-- Simple & Complex Types  -->
 
   <xsd:complexType name = "OperationsDefinitionInformationType">
@@ -115,12 +112,14 @@
       <xsd:element name = "Description"                 type = "DescriptionType"         
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
-														minOccurs = "0"/>
+							minOccurs = "0"/>
       <xsd:element name = "PublishedDate"               type = "DateTimeType" 
-														minOccurs = "0"/>
+							minOccurs = "0"/>
       <xsd:element name = "OperationsDefinition"        type = "OperationsDefinitionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsSegment"           type = "OperationsSegmentType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "OperationsMaterialBill"      type = "OperationsMaterialBillType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:OperationsDefinitionInformation" minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -153,7 +152,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "BillOfResourcesID"           type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "OperationsMaterialBill"      type = "OperationsMaterialBillType" 
+      <xsd:element name = "OperationsMaterialBillID"    type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsDefinitionParentID"
                                                         type = "IdentifierType"
@@ -227,7 +226,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "BillOfResourcesID"           type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "OperationsMaterialBill"  	type = "OperationsMaterialBillType" 
+      <xsd:element name = "OperationsMaterialBillID"  	type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsSegmentParentID"	type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -581,18 +580,18 @@
 
 
 <!-- - - - - - - - - - - - - - - - - - -  -->
-<!-- OperationsSegment Transaction Types  -->
+<!-- OperationsMaterailBill Transaction Types  -->
 <!-- - - - - - - - - - - - - - - - - - -  -->
 
-  <xsd:complexType name = "GetOperationsSegmentType">
+  <xsd:complexType name = "GetOperationsMaterailBillType">
     <xsd:sequence>      
       <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
               <xsd:element name = "Get"         type = "TransGetType"/>
-              <xsd:element name = "OperationsSegment"
-                                                type = "OperationsSegmentType"
+              <xsd:element name = "OperationsMaterailBill"
+                                                type = "OperationsMaterailBillType"
                                                 minOccurs = "1" 
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
@@ -604,15 +603,15 @@
   </xsd:complexType>
 
 
-  <xsd:complexType name = "ShowOperationsSegmentType">
+  <xsd:complexType name = "ShowOperationsMaterailBillType">
     <xsd:sequence>
       <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
               <xsd:element name = "Show"        type = "TransShowType"/>
-              <xsd:element name = "OperationsSegment"
-                                                type = "OperationsSegmentType"
+              <xsd:element name = "OperationsMaterailBill"
+                                                type = "OperationsMaterailBillType"
                                                 minOccurs = "1" 
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
@@ -624,15 +623,15 @@
   </xsd:complexType>
 
 
-  <xsd:complexType name = "ProcessOperationsSegmentType">
+  <xsd:complexType name = "ProcesOperationsMaterailBillType">
     <xsd:sequence>
       <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
               <xsd:element name = "Process"     type = "TransProcessType"/>
-              <xsd:element name = "OperationsSegment"
-                                                type = "OperationsSegmentType"
+              <xsd:element name = "OperationsMaterailBill"
+                                                type = "OperationsMaterailBillType"
                                                 minOccurs = "1" 
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
@@ -644,15 +643,15 @@
   </xsd:complexType>
 
 
-  <xsd:complexType name = "AcknowledgeOperationsSegmentType">
+  <xsd:complexType name = "AcknowledgeOperationsMaterailBillType">
     <xsd:sequence>
       <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
               <xsd:element name = "Acknowledge" type = "TransAcknowledgeType"/>
-              <xsd:element name = "OperationsSegment"
-                                                type = "OperationsSegmentType"
+              <xsd:element name = "OperationsMaterailBill"
+                                                type = "OperationsMaterailBillType"
                                                 minOccurs = "1" 
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
@@ -664,15 +663,15 @@
   </xsd:complexType>
 
 
-  <xsd:complexType name = "ChangeOperationsSegmentType">
+  <xsd:complexType name = "ChangeOperationsMaterailBillType">
     <xsd:sequence>
       <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
               <xsd:element name = "Change"      type = "TransChangeType"/>
-              <xsd:element name = "OperationsSegment"
-                                                type = "OperationsSegmentType"
+              <xsd:element name = "OperationsMaterailBill"
+                                                type = "OperationsMaterailBillType"
                                                 minOccurs = "1" 
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
@@ -684,15 +683,15 @@
   </xsd:complexType>
 
 
-  <xsd:complexType name = "RespondOperationsSegmentType">
+  <xsd:complexType name = "RespondOperationsMaterailBillType">
     <xsd:sequence>
       <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
               <xsd:element name = "Respond"     type = "TransRespondType"/>
-              <xsd:element name = "OperationsSegment"
-                                                type = "OperationsSegmentType"
+              <xsd:element name = "OperationsMaterailBill"
+                                                type = "OperationsMaterailBillType"
                                                 minOccurs = "1" 
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
@@ -704,15 +703,15 @@
   </xsd:complexType>
 
 
-  <xsd:complexType name = "CancelOperationsSegmentType">
+  <xsd:complexType name = "CancelOperationsMaterailBillType">
     <xsd:sequence>
       <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
               <xsd:element name = "Cancel"      type = "TransCancelType"/>
-              <xsd:element name = "OperationsSegment"
-                                                type = "OperationsSegmentType"
+              <xsd:element name = "OperationsMaterailBill"
+                                                type = "OperationsMaterailBillType"
                                                 minOccurs = "1" 
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
@@ -724,15 +723,15 @@
   </xsd:complexType>
 
 
-  <xsd:complexType name = "SyncOperationsSegmentType">
+  <xsd:complexType name = "SyncOperationsMaterailBillType">
     <xsd:sequence>
       <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
               <xsd:element name = "Sync"        type = "TransSyncType"/>
-              <xsd:element name = "OperationsSegment"
-                                                type = "OperationsSegmentType"
+              <xsd:element name = "OperationsMaterailBill"
+                                                type = "OperationsMaterailBillType"
                                                 minOccurs = "1" 
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
