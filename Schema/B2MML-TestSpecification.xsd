@@ -146,7 +146,7 @@ of test specifications.
                                                         minOccurs = "0"/>
       <xsd:element name = "RecurrenceTimeInterval"	type = "DurationType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "PhysicalSample"		type = "IndicatorType"
+      <xsd:element name = "PhysicalSampleRequired"	type = "IndicatorType"
                                                         minOccurs = "0"/>
       <xsd:element name = "TestSpecificationChild"      type = "TestSpecificationType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
