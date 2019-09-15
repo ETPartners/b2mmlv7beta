@@ -295,7 +295,7 @@ referenced work master shall have the same value as that of the process segment.
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType" minOccurs = "0"/>
       <xsd:element name = "SpatialDefinition"     	type = "SpatialDefinitionType"     
                                                         minOccurs = "0" />
-      <xsd:element name = "OperationalLocation" 	type = "ResourceLocationType"     
+      <xsd:element name = "PhysicalLocation" 		type = "ResourceLocationType"     
                                                         minOccurs = "0" />
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -347,7 +347,7 @@ referenced work master shall have the same value as that of the process segment.
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType" minOccurs = "0"/>
       <xsd:element name = "SpatialDefinition"     	type = "SpatialDefinitionType"     
                                                         minOccurs = "0" />
-      <xsd:element name = "OperationalLocation" 	type = "ResourceLocationType"     
+      <xsd:element name = "StorageLocation" 	type = "ResourceLocationType"     
                                                         minOccurs = "0" />
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
