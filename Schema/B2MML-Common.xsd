@@ -1531,7 +1531,7 @@ Spatial definition identifies a value and the predefined coordinate reference sy
 			</xsd:documentation>
 		</xsd:annotation> 
         <xsd:sequence>
-            <xsd:element name="Value" type="TextType"/>
+            <xsd:element name="Value" type="ValueType"/>
             <xsd:element name="Format" type="IdentifierType"/>
 			<xsd:element name="SRID" type = "IdentifierType" minOccurs = "0"/>
             <xsd:element name="SRIDAuthority" type="TextType" minOccurs="0"/>
