@@ -676,7 +676,27 @@ Defined values are
     </xsd:complexType>
     <!--     -->    
     <!--  LocationType kept in V05 for use with the Production element definitions. Not used in other elements.  -->
-    <!--     -->    
+    <!--     -->
+	
+   <!--Spatial Data Format Enumeration Data types as defined in ISAS-95 Part 2 commom object models Spatial data definitions.    -->
+	
+    <xsd:complexType name="SpatialFormatDataType">
+	<xsd:simpleContent>
+	    <xsd:restriction base="CodeType">
+		<xsd:enumeration value="WKT"/> <!--Well-Known Text ISO/IEC 13249-3:2011 Standard -->  
+	        <xsd:enumeration value="WKT"/> <!--Well-Known Binary ISO/IEC 13249-3:2011 Standard --> 
+                <xsd:enumeration value="GML"/> <!--Geographical Markup Language  --> 
+                <xsd:enumeration value="KML"/> <!--Keyhole Markup Language  --> 
+                <xsd:enumeration value="GPX"/> <!--GPS Exchange Format  --> 
+                <xsd:enumeration value="GeoJSON"/> <!--Geographical JSON 1.0 Format  --> 
+                <xsd:enumeration value="SVG"/> <!--Scalable Vector Graphics XML 2D or 3D format -->
+		<xsd:enumeration value="Other"/> <!--Other undefined Spatial Unknown format --> 
+            </xsd:restriction>
+        </xsd:simpleContent>
+    </xsd:complexType>	
+	
+
+	
     <xsd:complexType name="MaterialUse1Type">
         <xsd:simpleContent>
             <xsd:restriction base="CodeType">
@@ -1148,8 +1168,9 @@ Defined values for inventory operations defined values are
         </xsd:sequence>
     </xsd:complexType>
     <!--     -->    
-    <!--     -->    
-    <xsd:complexType name="OperationsType1Type">
+    
+	
+   <xsd:complexType name="OperationsType1Type">
         <xsd:simpleContent>
             <xsd:restriction base="CodeType">
                 <xsd:enumeration value="Production"/>
