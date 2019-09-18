@@ -684,7 +684,7 @@ Defined values are
 	<xsd:simpleContent>
 	    <xsd:restriction base="CodeType">
 		<xsd:enumeration value="WKT"/> <!--Well-Known Text ISO/IEC 13249-3:2011 Standard -->  
-	        <xsd:enumeration value="WKT"/> <!--Well-Known Binary ISO/IEC 13249-3:2011 Standard --> 
+	        <xsd:enumeration value="WKB"/> <!--Well-Known Binary ISO/IEC 13249-3:2011 Standard --> 
                 <xsd:enumeration value="GML"/> <!--Geographical Markup Language  --> 
                 <xsd:enumeration value="KML"/> <!--Keyhole Markup Language  --> 
                 <xsd:enumeration value="GPX"/> <!--GPS Exchange Format  --> 
