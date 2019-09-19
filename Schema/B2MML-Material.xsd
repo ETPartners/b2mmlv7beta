@@ -270,7 +270,7 @@
       <xsd:element name = "MaterialDefinitionPropertyChild"  type = "MaterialDefinitionPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialClassPropertyID"   	type = "IdentifierType"
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "0" maxOccurs = "1"/>  
       <xsd:group   ref  = "Extended:MaterialDefinitionProperty"     minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -328,7 +328,7 @@
       <xsd:element name = "MaterialLotPropertyChild"    type = "MaterialLotPropertyType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialDefinitionPropertyID" type = "IdentifierType"
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "0" maxOccurs = "1"/>  
       <xsd:group   ref  = "Extended:MaterialLotProperty" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
