@@ -269,6 +269,9 @@ function or activity.
 							minOccurs="0"/>
       <xsd:element name = "Value"                       type = "ValueType"      
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "OperationsEventClassPropertyID"  
+		   					type = "IdentifierType"  
+		   					minOccurs = "0" maxOccurs = "1"/>  
       <xsd:element name = "OperationsEventDefinitionPropertyChild"
 		   					type = "OperationsEventDefinitionPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>  <!-- "Contains" relationship -->
@@ -322,15 +325,15 @@ function or activity.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                       type = "ValueType"      
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "OperationsEventDefinitionPropertyID" 
+		   					type = "IdentifierType"  
+		   					minOccurs = "0" maxOccurs = "1"/> 
       <xsd:element name = "OperationsEventPropertyChild"     
 		   					type = "OperationsEventPropertyType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:OperationsEventProperty" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
-
-
-
 
 <!-- - - - - - - - - - - - - - - - - - - - - -->
 <!-- OperationsEventInformation Transaction Types   -->
