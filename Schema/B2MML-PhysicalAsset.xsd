@@ -183,7 +183,7 @@ A physical asset class may be made up of zero or more physical asset classes.
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetProperty"   type = "PhysicalAssetPropertyType"  
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "PhysicalAssetChild"       type = "PhysicalAssetType"  
+      <xsd:element name = "PhysicalAssetChild"	type = "PhysicalAssetType"  
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetClassID" type = "IdentifierType"   
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
@@ -201,8 +201,12 @@ A physical asset class may be made up of zero or more physical asset classes.
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"               type = "ValueType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "PhysicalAssetProperty"   type = "PhysicalAssetPropertyType"  
+      <xsd:element name = "PhysicalAssetPropertyChild"
+		   				type = "PhysicalAssetPropertyType"  
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "PhysicalAssetClassPropertyID"  
+		   				type = "IdentifierType"  
+		   				minOccurs = "0" maxOccurs = "1"/>   
       <xsd:group   ref  = "Extended:PhysicalAssetProperty"
                                                 minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -251,7 +255,6 @@ A physical asset class may be made up of zero or more physical asset classes.
       <xsd:element name = "PhysicalAssetClassPropertyChild"
                                                 type = "PhysicalAssetClassPropertyType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-   
       <xsd:group   ref  = "Extended:PhysicalAssetClassProperty"
                                                 minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
