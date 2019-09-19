@@ -207,7 +207,10 @@ A person may be a member of zero or more personnel classes.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
             <xsd:element name = "PersonPropertyChild"        type = "PersonPropertyType"     
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-            <xsd:element name = "EvaluatedPropertyReference"      
+     	    <xsd:element name = "PersonnelClassPropertyID"   
+			 				type = "IdentifierType"  
+                                                	minOccurs = "0" maxOccurs = "1"/>  
+	    <xsd:element name = "EvaluatedPropertyReference"      
                                                         type = "EvaluatedPropertyReferenceType"   
                                                         minOccurs = "0" />
             <xsd:group   ref  = "Extended:PersonProperty"
