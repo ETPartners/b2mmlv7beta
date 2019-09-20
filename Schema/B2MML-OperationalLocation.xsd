@@ -127,8 +127,7 @@ may be made up of other operational locations.
 <!-- Simple & Complex Types  -->
   <xsd:complexType name = "OperationalLocationInformationType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"                  
-                                                        minOccurs = "0" nillable="true"/>
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"         
                                                         minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
@@ -146,8 +145,7 @@ may be made up of other operational locations.
   
   <xsd:complexType name = "OperationalLocationType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"
-                                                        minOccurs = "0"/>
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
@@ -167,8 +165,7 @@ may be made up of other operational locations.
 
   <xsd:complexType name = "OperationalLocationClassType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"
-                                                        minOccurs = "0"/>
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
