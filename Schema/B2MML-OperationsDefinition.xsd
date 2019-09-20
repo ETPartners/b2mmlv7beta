@@ -230,7 +230,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsSegmentParentID"	type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "Parameter"                   type = "ParameterType" 
+      <xsd:element name = "ParameterSpecification"      type = "ParameterType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PersonnelSpecification"      type = "OpPersonnelSpecificationType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
