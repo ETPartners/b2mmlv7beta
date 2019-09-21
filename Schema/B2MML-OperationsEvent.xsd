@@ -315,7 +315,7 @@ function or activity.
 	                                                minOccurs = "0" /> 
       <xsd:element name = "OperationsEventChild"   	type = "OperationsEventType" 
 	                                                minOccurs = "0" maxOccurs = "unbounded"/> <!-- "Is made up of" relationship -->
-      <xsd:element name = "OperationsEventRecord"   	type = "OperationsRecordEntryTemplateType" 
+      <xsd:element name = "OperationsEventRecord"   	type = "OperationsRecordTemplateType" 
 	                                                minOccurs = "0" maxOccurs = "unbounded"/> <!-- "Is a collection of" relationship -->
       <xsd:group   ref  = "Extended:OperationsEvent"    minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
