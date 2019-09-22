@@ -182,8 +182,8 @@ function or activity.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"         	type = "HierarchyScopeType"   
                                                  	minOccurs = "0" />
-      <xsd:element name = "Extension"            	type = "IdentifierType"   
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Extension"            	type = "ExtensionType"   
+                                                        minOccurs = "0" />
       <xsd:element name = "OperationsEventClassChild"   type = "OperationsEventClassType" 
 	                                                minOccurs = "0" maxOccurs = "unbounded"/> <!-- "Is assembled from" relationship -->
       <xsd:element name = "UsesPropertiesOfOperationsEventClassID"
