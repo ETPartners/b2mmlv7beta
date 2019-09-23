@@ -304,8 +304,6 @@ Defines the type of the property. Defined types are
                 <xsd:enumeration value="ClassType"/>
                 <xsd:enumeration value="InstanceType"/>
                 <xsd:enumeration value="DefaultType"/>
-                <xsd:enumeration value="Inventory"/>
-                <xsd:enumeration value="Mixed"/>
                 <xsd:enumeration value="Other"/>
             </xsd:restriction>
         </xsd:simpleContent>
