@@ -136,7 +136,6 @@
     </xsd:complexType>
     
     <!--     -->    
-	
     <xsd:complexType name="ActionType">
 		<xsd:annotation> 
 			<xsd:documentation>
@@ -154,7 +153,6 @@ If no action is specified, this is equivalent to all actions being allowed.
     </xsd:complexType>
 	
     <!--     -->    
-	
     <xsd:complexType name="AnyGenericValueType">
         <xsd:simpleContent>
             <xsd:extension base="xsd:string">
@@ -504,6 +502,47 @@ Defined values for the disposition of a material lot are
     <xsd:simpleType name="DurationType">
         <xsd:restriction base="xsd:duration"/>
     </xsd:simpleType>
+
+    <!--     -->   
+    <xsd:complexType name="EnterpriseFunction1Type">
+        <xsd:simpleContent>
+            <xsd:restriction base="CodeType">
+                <xsd:enumeration value="Order processing"/>
+                <xsd:enumeration value="Operations scheduling"/>
+                <xsd:enumeration value="Production control"/>
+                <xsd:enumeration value="Material and energy control"/>
+                <xsd:enumeration value="Procurement"/>
+                <xsd:enumeration value="Quality assurance"/>
+		<xsd:enumeration value="Product inventory control"/>
+                <xsd:enumeration value="product cost accounting"/>
+                <xsd:enumeration value="Product shipping administration"/>
+                <xsd:enumeration value="Maintenance management"/>
+		<xsd:enumeration value="Marketing and sales"/>
+                <xsd:enumeration value="R&D"/>
+                <xsd:enumeration value="Engineering"/>
+                <xsd:enumeration value="Other"/>
+            </xsd:restriction>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    
+    <!--     -->    
+    <xsd:complexType name="EntepriseFunctionType">
+		<xsd:annotation> 
+			<xsd:documentation>
+Defines the enterprise function of the operations event publisher.
+Defined values from Part 1 Functional Model are
+order processing, operations scheduling, production control, material and energy control, 
+procurement, quality assurance, product inventory control, product cost accounting, 
+product shipping administration, maintenance management, marketing and sales, R&D, and engineering.
+			</xsd:documentation>
+		</xsd:annotation> 
+         <xsd:simpleContent>
+            <xsd:extension base="OperationsEventType1Type">
+                <xsd:attribute name="OtherValue" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	
     <!--     -->    
     <xsd:complexType name="EquipmentAssetMappingType">
         <xsd:sequence>
@@ -581,7 +620,7 @@ Defined values are:
         </xsd:sequence>
     </xsd:complexType>
 
-<!--     -->    
+    <!--     -->    
     <xsd:complexType name="Extension1Type">
         <xsd:simpleContent>
             <xsd:restriction base="CodeType">
@@ -593,7 +632,6 @@ Defined values are:
     </xsd:complexType>
     
     <!--     -->    
-	
     <xsd:complexType name="ExtensionType">
 		<xsd:annotation> 
 			<xsd:documentation>
@@ -780,7 +818,100 @@ Defined values for inventory operations defined values are
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
+
+    <!--     -->   
+    <xsd:complexType name="MOMFunction1Type">
+        <xsd:simpleContent>
+            <xsd:restriction base="CodeType">
+                <xsd:enumeration value="Resource management"/>
+                <xsd:enumeration value="Definition management"/>
+                <xsd:enumeration value="Detailed scheduling"/>
+                <xsd:enumeration value="Dispatching"/>
+                <xsd:enumeration value="Execution management"/>
+                <xsd:enumeration value="Data collection"/>
+                <xsd:enumeration value="Performance analysis"/>
+                <xsd:enumeration value="Tracking"/>
+                <xsd:enumeration value="Other"/>
+            </xsd:restriction>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    
+    <!--     --> 
+    <xsd:complexType name="MOMFunctionType">
+		<xsd:annotation> 
+			<xsd:documentation>
+Defines the MOM function of the operations event publisher.  
+Part 3 MOM Activity Model defined values are
+resource management, definition management, detailed scheduling, 
+dispatching, execution management, data collection, performance analysis, and tracking
+			</xsd:documentation>
+		</xsd:annotation> 
+         <xsd:simpleContent>
+            <xsd:extension base="MOMFunctionType">
+                <xsd:attribute name="OtherValue" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>	
+	
+    <!--     -->   
+    <xsd:complexType name="OperationsEventLevel1Type">
+        <xsd:simpleContent>
+            <xsd:restriction base="CodeType">
+                <xsd:enumeration value="Level 2"/>
+                <xsd:enumeration value="Level 3"/>
+                <xsd:enumeration value="Level 4"/>
+                <xsd:enumeration value="Other"/>
+            </xsd:restriction>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    
     <!--     -->    
+    <xsd:complexType name="OperationsEventLevelType">
+		<xsd:annotation> 
+			<xsd:documentation>
+The type of Level 3 operations event. 
+Defined values are 
+event, alert, and alarm. 
+This attribute must be defined in the corresponding operations event definition.
+			</xsd:documentation>
+		</xsd:annotation> 
+         <xsd:simpleContent>
+            <xsd:extension base="OperationsEventLevel1Type">
+                <xsd:attribute name="OtherValue" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <!--     -->   
+    <xsd:complexType name="OperationsEventType1Type">
+        <xsd:simpleContent>
+            <xsd:restriction base="CodeType">
+                <xsd:enumeration value="Event"/>
+                <xsd:enumeration value="Alert"/>
+                <xsd:enumeration value="Alarm"/>
+                <xsd:enumeration value="Other"/>
+            </xsd:restriction>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    
+    <!--     -->    
+    <xsd:complexType name="OperationsEventTypeType">
+		<xsd:annotation> 
+			<xsd:documentation>
+The type of Level 3 operations event. 
+Defined values are 
+event, alert, and alarm. 
+This attribute must be defined in the corresponding operations event definition.
+			</xsd:documentation>
+		</xsd:annotation> 
+         <xsd:simpleContent>
+            <xsd:extension base="OperationsEventType1Type">
+                <xsd:attribute name="OtherValue" type="xsd:string"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+	
+    <!--     --> 
     <xsd:complexType name="OperationsRecordEntryTemplateType">
         <xsd:sequence>
              <xsd:element name="ID" 				type="IdentifierType"/>
