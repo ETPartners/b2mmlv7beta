@@ -102,8 +102,7 @@
 
   <xsd:complexType name = "WorkflowSpecificationInformationType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"                  
-                                                        minOccurs = "0"/>
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"         
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
@@ -124,7 +123,7 @@
 
   <xsd:complexType name = "WorkflowSpecificationType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Version"                     type = "VersionType"
                                                         minOccurs = "0"/>
       <xsd:element name = "Description"                 type = "DescriptionType"       
@@ -154,7 +153,7 @@
 	
   <xsd:complexType name = "WorkflowSpecificationNodeType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"       
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkflowSpecificationNodeTypeID"
@@ -181,7 +180,7 @@
   
   <xsd:complexType name = "WorkflowSpecificationConnectionType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"       
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkflowSpecificationConnectionTypeID"
@@ -224,7 +223,7 @@
 
   <xsd:complexType name = "WorkflowSpecificationConnectionTypeType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Version"                     type = "VersionType"
                                                         minOccurs = "0"/>
       <xsd:element name = "Description"                 type = "DescriptionType"       
@@ -252,7 +251,7 @@
 	
   <xsd:complexType name = "WorkflowSpecificationPropertyType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                       type = "ValueType"       
@@ -268,7 +267,7 @@
 	
   <xsd:complexType name = "WorkflowSpecificationNodePropertyType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                       type = "ValueType"       
@@ -287,7 +286,7 @@
 	
   <xsd:complexType name = "WorkflowSpecificationConnectionPropertyType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                       type = "ValueType"       
@@ -306,7 +305,7 @@
 	
   <xsd:complexType name = "WorkflowSpecificationNodeTypePropertyType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                       type = "ValueType"       
@@ -322,7 +321,7 @@
 	
   <xsd:complexType name = "WorkflowSpecificationConnectionTypePropertyType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                       type = "ValueType"       
