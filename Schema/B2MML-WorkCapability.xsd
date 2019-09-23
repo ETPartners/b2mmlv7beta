@@ -92,8 +92,7 @@
 <!-- Simple & Complex Types  -->
   <xsd:complexType name = "WorkCapabilityInformationType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"                  
-                                                        minOccurs = "0" nillable="true"/>
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"         
                                                         minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
@@ -109,8 +108,7 @@
   
   <xsd:complexType name = "WorkCapabilityType">
     <xsd:sequence>
-      <xsd:element name = "ID"                      type = "IdentifierType"
-                                                    minOccurs = "0"/>
+      <xsd:element name = "ID"                      type = "IdentifierType"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
@@ -144,7 +142,7 @@
 
   <xsd:complexType name = "WorkMasterCapabilityType">
     <xsd:sequence>
-      <xsd:element name = "ID"                      type = "IdentifierType" minOccurs = "0"/>
+      <xsd:element name = "ID"                      type = "IdentifierType"/>
       <xsd:element name = "Description"             type = "DescriptionType" 
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkMasterID"            type = "IdentifierType"
