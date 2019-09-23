@@ -106,8 +106,7 @@
 
   <xsd:complexType name = "WorkDefinitionInformationType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"                  
-                                                        minOccurs = "0"/>
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"         
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
@@ -128,7 +127,7 @@
 
   <xsd:group name = "WorkDefinitionType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Version"                     type = "VersionType"
                                                         minOccurs = "0"/>
       <xsd:element name = "Description"                 type = "DescriptionType"       
@@ -162,8 +161,7 @@
   <xsd:complexType name = "WorkMasterType">
     <xsd:sequence>
       <xsd:group   ref  = "WorkDefinitionType"/>
-      <xsd:element name = "JobOrderSourceID"            type = "IdentifierType"
-                                                        minOccurs = "0"/>
+      <xsd:element name = "JobOrderSourceID"            type = "IdentifierType"/>
       <xsd:element name = "WorkMasterChild"         	type = "WorkMasterType"       
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkflowSpecification"       type = "WorkflowSpecificationType" 
@@ -185,8 +183,7 @@
   <xsd:complexType name = "WorkDirectiveType">
     <xsd:sequence>
       <xsd:group   ref  = "WorkDefinitionType"/>
-      <xsd:element name = "WorkMasterID"                type = "IdentifierType"       
-                                                        minOccurs = "0"/>
+      <xsd:element name = "WorkMasterID"                type = "IdentifierType"/>
       <xsd:element name = "JobOrderSourceID"            type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkDirectiveChild"          type = "WorkDirectiveType"       
