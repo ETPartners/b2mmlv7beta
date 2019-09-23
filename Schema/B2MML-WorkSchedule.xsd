@@ -97,8 +97,7 @@
   
   <xsd:complexType name = "WorkScheduleType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"                  
-                                                        minOccurs = "0"/>
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"         
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
@@ -123,8 +122,7 @@
 
   <xsd:complexType name = "WorkRequestType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"
-                                                        minOccurs = "0"/>
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
@@ -153,8 +151,7 @@
 
   <xsd:complexType name = "JobListType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"
-                                                        minOccurs = "0"/>
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
@@ -175,16 +172,14 @@
 
   <xsd:complexType name = "JobOrderType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"
-                                                        minOccurs = "0"/>
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkType"                    type = "OperationsTypeType"   
                                                         minOccurs = "0"/>
-      <xsd:element name = "WorkMasterID"                type = "IdentifierType" 
-	                                                    minOccurs = "0"/>
+      <xsd:element name = "WorkMasterID"                type = "IdentifierType"/>
       <xsd:element name = "WorkMasterVersion"           type = "VersionType" 
 	                                                    minOccurs = "0"/>
       <xsd:element name = "StartTime"                   type = "DateTimeType"  
