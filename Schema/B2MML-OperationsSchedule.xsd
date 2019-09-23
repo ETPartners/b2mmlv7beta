@@ -88,8 +88,7 @@
   
   <xsd:complexType name = "OperationsScheduleType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"                  
-                                                        minOccurs = "0"/>
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"         
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
@@ -112,8 +111,7 @@
 
   <xsd:complexType name = "OperationsRequestType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"
-                                                        minOccurs = "0"/>
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
@@ -142,26 +140,22 @@
 
   <xsd:complexType name = "OpSegmentRequirementType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"
-                                                        minOccurs = "0"/>
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
                                                         minOccurs = "0"/>
       <xsd:element name = "OperationsType"              type = "OperationsTypeType"   
                                                         minOccurs = "0"/>
-      <xsd:element name = "ProcessSegmentID"            type = "IdentifierType" 
-	                                                    minOccurs = "0"/>
+      <xsd:element name = "ProcessSegmentID"            type = "IdentifierType"/>
       <xsd:element name = "EarliestStartTime"           type = "DateTimeType"  
                                                         minOccurs = "0"/>
       <xsd:element name = "LatestEndTime"               type = "DateTimeType"      
                                                         minOccurs = "0"/>
       <xsd:element name = "Duration"                    type = "DurationType"           
                                                         minOccurs = "0"/>
-      <xsd:element name = "OperationsDefinitionID"      type = "IdentifierType" 
-	                                                    minOccurs = "0"/>
-      <xsd:element name = "OperationsSegmentID"         type = "IdentifierType"    
-                                                        minOccurs = "0"/>
+      <xsd:element name = "OperationsDefinitionID"      type = "IdentifierType"/>
+      <xsd:element name = "OperationsSegmentID"         type = "IdentifierType"/>
       <xsd:element name = "SegmentState"                type = "RequestStateType"
                                                         minOccurs = "0"/>
       <xsd:element name = "SegmentParameter"            type = "ParameterType" 
