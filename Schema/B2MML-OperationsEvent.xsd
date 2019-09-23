@@ -213,8 +213,6 @@ function or activity.
       <xsd:element name = "OperationsEventClassPropertyChild" 
 		   					type = "OperationsEventClassPropertyType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>  <!-- "Contains" relationship -->
-      <xsd:element name = "EvaluatedPropertyReference"  type = "EvaluatedPropertyReferenceType"
-							minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:OperationsEvenClassProperty" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -228,16 +226,16 @@ function or activity.
                                                         minOccurs = "0" />
       <xsd:element name = "Priority"              	type = "NumericType"   
                                                         minOccurs = "0" />
-      <xsd:element name = "OperationsEventType"         type = "OperationsTypeType"   
+      <xsd:element name = "OperationsEventType"         type = "OperationsEventType"   
                                                         minOccurs = "0" />
-      <xsd:element name = "OperationsEventLevel"        type = "NumericType"   
+      <xsd:element name = "OperationsEventLevel"        type = "OperationsEventLevelType"   
                                                         minOccurs = "0" />
       <xsd:element name = "OperationsType"        	type = "OperationsTypeType"   
                                                         minOccurs = "0" />
-      <xsd:element name = "MOMFunction"        		type = "IdentifierType"   
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EnterpriseFunction"  	type = "IdentifierType"   
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "MOMFunction"        		type = "MOMFunctionType"   
+                                                        minOccurs = "0" />
+      <xsd:element name = "EnterpriseFunction"  	type = "EnterpriseFunctionType"   
+                                                        minOccurs = />
       <xsd:element name = "Category"  			type = "IdentifierType"   
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Acknowledgement"  		type = "IdentifierType"   
@@ -247,6 +245,8 @@ function or activity.
       <xsd:element name = "OperationsEventDefinitionChild"   
 		   					type = "OperationsEventDefinitionType" 
 	                                                minOccurs = "0" maxOccurs = "unbounded"/> <!-- "Is assembled from" relationship -->
+      <xsd:element name = "OperationsEventClassID       type = "IdentifierType"    
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "UsesPropertiesOfOperationsEventDefinitionID"
                                                         type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/> <!-- "Includes properties of" relationship -->
@@ -294,16 +294,16 @@ function or activity.
                                                         minOccurs = "0" />
       <xsd:element name = "Priority"              	type = "NumericType"   
                                                         minOccurs = "0" />
-      <xsd:element name = "OperationsEventType"         type = "OperationsTypeType"   
+      <xsd:element name = "OperationsEventType"         type = "OperationsEventTypeType"   
                                                         minOccurs = "0" />
-      <xsd:element name = "OperationsEventLevel"        type = "NumericType"   
+      <xsd:element name = "OperationsEventLevel"        type = "OperationsEventLevelType"   
                                                         minOccurs = "0" />
       <xsd:element name = "OperationsType"        	type = "OperationsTypeType"   
                                                         minOccurs = "0" />
-      <xsd:element name = "MOMFunction"        		type = "IdentifierType"   
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EnterpriseFunction"  	type = "IdentifierType"   
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "MOMFunction"        		type = "MOMFunctionType"   
+                                                        minOccurs = "0" />
+      <xsd:element name = "EnterpriseFunction"  	type = "EnterpriseFunctionType"   
+                                                        minOccurs = "0" />
       <xsd:element name = "Category"  			type = "IdentifierType"   
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Acknowledgement"  		type = "IdentifierType"   
@@ -328,8 +328,7 @@ function or activity.
       <xsd:element name = "Value"                       type = "ValueType"      
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsEventDefinitionPropertyID" 
-		   					type = "IdentifierType"  
-		   					minOccurs = "0" maxOccurs = "1"/> 
+		   					type = "IdentifierType"/> 
       <xsd:element name = "OperationsEventPropertyChild"     
 		   					type = "OperationsEventPropertyType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
