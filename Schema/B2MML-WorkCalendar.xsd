@@ -266,7 +266,7 @@
 		   				type = "IdentifierType"  
 		   				minOccurs = "0" maxOccurs = "1"/>  
       <xsd:element name = "WorkCalendarEntryPropertyChild"
-		   				type = "WorkCalendarPropertyType" 
+		   				type = "WorkCalendarEntryPropertyType" 
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkCalendarEntryProperty"
                                                 minOccurs = "0" maxOccurs = "1"/>
