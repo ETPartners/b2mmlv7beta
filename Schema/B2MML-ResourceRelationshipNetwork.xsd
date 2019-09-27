@@ -189,7 +189,7 @@
 
   <xsd:complexType name = "ResourceReferencePropertyType">
     <xsd:sequence>
-      <xsd:element name = "ID"                                  type = "IdentifierType" />
+      <xsd:element name = "ID"                                  type = "IdentifierType"/>
       <xsd:element name = "Description"                         type = "DescriptionType" 
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "ResourcePropertyID"                  type = "IdentifierType" 
@@ -226,8 +226,8 @@
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                               type = "ValueType" 
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "RNCTypePropertyChild" 		type = "RNCTypePropertyType" 
-		   						minOccurs ="0" maxOccurs="unbounded"/
+      <xsd:element name = "RNCTypePropertyChild"   		type = "IdentifierType"  
+                                                		minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:RNCTypeProperty"  		minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -239,6 +239,8 @@
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                               type = "ValueType" 
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "RNCTypePropertyID" 			type = "IdentifierType"  
+                                                		minOccurs = "0" maxOccurs = "1"/>
       <xsd:element name = "RNCPropertyChild" 			type = "RNCPropertyType" 
 		   						minOccurs="0" maxOccurs="unbounded"/
       <xsd:group   ref  = "Extended:RNCProperty"  		minOccurs = "0" maxOccurs = "1"/>
