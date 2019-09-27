@@ -1632,6 +1632,11 @@ Defined values are
                 <xsd:enumeration value="Physical Asset Class"/>
                 <xsd:enumeration value="Work Master"/>
                 <xsd:enumeration value="Process Segment"/>
+                <xsd:enumeration value="Operation Definition"/>
+                <xsd:enumeration value="Operational Location"/>
+                <xsd:enumeration value="Operations Segment"/>
+                <xsd:enumeration value="Test Specification"/>
+                <xsd:enumeration value="Test Result"/>		    
                 <xsd:enumeration value="Other"/>
             </xsd:restriction>
         </xsd:simpleContent>
