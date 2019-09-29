@@ -101,7 +101,7 @@
       <xsd:element name = "PublishedDate"               type = "DateTimeType" 
                                                         minOccurs = "0"/>
       <xsd:element name = "OperationsResponse"          type = "OperationsResponseType" 
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "1" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:OperationsPerformance"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -131,7 +131,7 @@
       <xsd:element name = "ResponseState"               type = "ResponseStateType"
                                                         minOccurs = "0"/>
       <xsd:element name = "SegmentResponse"             type = "OpSegmentResponseType"
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "1" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:OperationsResponse" minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
