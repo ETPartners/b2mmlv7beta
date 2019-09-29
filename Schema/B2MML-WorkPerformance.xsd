@@ -119,7 +119,7 @@
       <xsd:element name = "PublishedDate"               type = "DateTimeType" 
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkResponse"                type = "WorkResponseType" 
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "1" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkPerformance"             type = "WorkPerformanceType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkPerformance"
@@ -146,7 +146,7 @@
       <xsd:element name = "WorkResponse"                type = "WorkResponseType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "JobResponse"                 type = "JobResponseType"
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "1" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkResponse"       minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
