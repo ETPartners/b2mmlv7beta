@@ -115,7 +115,7 @@
       <xsd:element name = "WorkSchedule"                type = "WorkScheduleType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkRequest"                 type = "WorkRequestType" 
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "1" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkSchedule"       minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -144,7 +144,7 @@
       <xsd:element name = "WorkRequest"                 type = "WorkRequestType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "JobOrder"                    type = "JobOrderType" 
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "1" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkRequest"  minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
