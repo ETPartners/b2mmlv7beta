@@ -518,7 +518,7 @@ Defined values for the disposition of a material lot are
                 <xsd:enumeration value="Product shipping administration"/>
                 <xsd:enumeration value="Maintenance management"/>
 		<xsd:enumeration value="Marketing and sales"/>
-                <xsd:enumeration value="R&D"/>
+                <xsd:enumeration value="Research and Development"/>
                 <xsd:enumeration value="Engineering"/>
                 <xsd:enumeration value="Other"/>
             </xsd:restriction>
