@@ -226,7 +226,7 @@ function or activity.
                                                         minOccurs = "0" />
       <xsd:element name = "Priority"              	type = "NumericType"   
                                                         minOccurs = "0" />
-      <xsd:element name = "OperationsEventType"         type = "OperationsEventType"   
+      <xsd:element name = "OperationsEventType"         type = "OperationsEventTypeType"   
                                                         minOccurs = "0" />
       <xsd:element name = "OperationsEventLevel"        type = "OperationsEventLevelType"   
                                                         minOccurs = "0" />
@@ -235,7 +235,7 @@ function or activity.
       <xsd:element name = "MOMFunction"        		type = "MOMFunctionType"   
                                                         minOccurs = "0" />
       <xsd:element name = "EnterpriseFunction"  	type = "EnterpriseFunctionType"   
-                                                        minOccurs = />
+                                                        minOccurs = "0" />
       <xsd:element name = "Category"  			type = "IdentifierType"   
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Acknowledgement"  		type = "IdentifierType"   
