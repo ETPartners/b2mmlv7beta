@@ -212,9 +212,7 @@
       <xsd:element name = "Value"                               type = "ValueType" 
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "RRNPropertyChild" 			type = "RRNPropertyType" 
-		   						minOccurs ="0" maxOccurs="unbounded"/
-      <xsd:element name = "RNCTypePropertyeTypeID"   		type = "IdentifierType"  
-                                                		minOccurs = "0" maxOccurs = "1"/> 
+		   						minOccurs ="0" maxOccurs="unbounded"/ 
       <xsd:group   ref  = "Extended:RRNProperty"  		minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
