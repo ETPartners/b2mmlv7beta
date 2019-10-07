@@ -181,15 +181,15 @@
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Version"                     type = "VersionType"/>	
-                                                        minOccurs = "0" />
+                                                        minOccurs = "0"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EffectiveFrom"               type = "DateTimeType" 
-                                                        minOccurs = "0" />	    
+                                                        minOccurs = "0"/>	    
       <xsd:element name = "EffectiveTo"                 type = "DateTimeType" 
-                                                        minOccurs = "0" />
+                                                        minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"   
-                                                        minOccurs = "0" />
+                                                        minOccurs = "0"/>
       <xsd:element name = "MaterialClassParentID"       type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialClassProperty"       type = "MaterialClassPropertyType"
@@ -231,13 +231,13 @@
       <xsd:element name = "Description"                 type = "DescriptionType"                
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EffectiveFrom"               type = "DateTimeType"
-                                                        minOccurs = "0" />	    
+                                                        minOccurs = "0"/>	    
       <xsd:element name = "EffectiveTo"                 type = "DateTimeType" 
-                                                        minOccurs = "0" />
+                                                        minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"   
-                                                        minOccurs = "0" />
+                                                        minOccurs = "0"/>
       <xsd:element name = "SpatialDefinition"           type = "SpatialDefinitionType"     
-                                                        minOccurs = "0" />
+                                                        minOccurs = "0"/>
       <xsd:element name = "MaterialDefinitionProperty"  type = "MaterialDefinitionPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialClassID"             type = "IdentifierType"    
@@ -279,17 +279,17 @@
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Version"             	type = "VersionType"/>	
-                                                	minOccurs = "0" />
+                                                	minOccurs = "0"/>
       <xsd:element name = "Description"         	type = "DescriptionType"        
                                                 	minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EffectiveFrom"       	type = "DateTimeType" 
-                                                	minOccurs = "0" />	    
+                                                	minOccurs = "0"/>	    
       <xsd:element name = "EffectiveTo"         	type = "DateTimeType" 
-                                                	minOccurs = "0" />
+                                                	minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"   
-                                                        minOccurs = "0" />
+                                                        minOccurs = "0"/>
       <xsd:element name = "SpatialDefinition"     	type = "SpatialDefinitionType"     
-                                                        minOccurs = "0" />
+                                                        minOccurs = "0"/>
       <xsd:element name = "MaterialDefinitionID"        type = "IdentifierType"       
                                                         minOccurs = "0"/>
       <xsd:element name = "Status"                      type = "StatusType"
@@ -337,15 +337,17 @@
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Version"             	type = "VersionType"/>	
-                                                	minOccurs = "0" />
+                                                	minOccurs = "0"/>
       <xsd:element name = "Description"         	type = "DescriptionType"        
                                                 	minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EffectiveFrom"       	type = "DateTimeType" 
-                                                	minOccurs = "0" />	    
+                                                	minOccurs = "0"/>	    
       <xsd:element name = "EffectiveTo"         	type = "DateTimeType" 
-                                                	minOccurs = "0" />
+                                                	minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"   
-                                                        minOccurs = "0" />
+                                                        minOccurs = "0"/>
+      <xsd:element name = "SpatialDefinition"     	type = "SpatialDefinitionType"     
+                                                        minOccurs = "0"/>
       <xsd:element name = "Status"                      type = "StatusType"     
                                                         minOccurs = "0"/>
       <xsd:element name = "Disposition"                 type = "DispositionType" 
