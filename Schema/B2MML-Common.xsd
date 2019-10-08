@@ -1230,7 +1230,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:element name="Quantity" 			type="QuantityValueType" minOccurs="0" maxOccurs="unbounded"/>
 	    <xsd:element name="MaterialClassPropertyID" 	type="IdentifierType" minOccurs="0"/>
 	    <xsd:element name="MaterialDefinitionPropertyID" 	type="IdentifierType" minOccurs="0"/>
-            <xsd:element name="MaterialPropertyID" 		type="IdentifierType" minOccurs="0"/>
+            <xsd:element name="MaterialLotPropertyID"		type="IdentifierType" minOccurs="0"/>
             <xsd:element name="MaterialSpecificationPropertyChild" 
 			 					type="OpMaterialSpecificationPropertyType" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:group ref="Extended:OpMaterialSpecificationProperty" minOccurs="0" maxOccurs="1"/>
