@@ -162,12 +162,13 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "PersonnelActualPropertyChild"     type = "OpPersonnelActualPropertyType" 
+      <xsd:element name = "PersonnelActualPropertyChild"     
+		   					type = "OpPersonnelActualPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PersonnelClassPropertyID" 	type = "IdentifierType"   
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "0"/>
       <xsd:element name = "PersonPropertyID"     	type = "IdentifierType"        
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "0"/>
       <xsd:group   ref  = "Extended:OpPersonnelActualProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -210,12 +211,13 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EquipmentActualPropertyChild"     type = "OpEquipmentActualPropertyType" 
+      <xsd:element name = "EquipmentActualPropertyChild"
+		   					type = "OpEquipmentActualPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentClassPropertyID" 	type = "IdentifierType"   
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "0"/>
       <xsd:element name = "EquipmentPropertyID"     	type = "IdentifierType"        
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "0"/>
       <xsd:group   ref  = "Extended:OpEquipmentActualProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -261,9 +263,9 @@
       <xsd:element name = "PhysicalAssetActualPropertyChild"     type = "OpPhysicalAssetActualPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetClassPropertyID" type = "IdentifierType"   
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "0"/>
       <xsd:element name = "PhysicalAssetPropertyID"     type = "IdentifierType"        
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "0"/>
       <xsd:group   ref  = "Extended:OpPhysicalAssetActualProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -318,11 +320,11 @@
       <xsd:element name = "MaterialActualPropertyChild" type = "OpMaterialActualPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialClassPropertyID" 	type = "IdentifierType"   
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "0"/>
       <xsd:element name = "MaterialDefinitionPropertyID" type = "IdentifierType"   
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>      
+                                                        minOccurs = "0"/>      
       <xsd:element name = "MaterialLotPropertyID"     	type = "IdentifierType"        
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+                                                        minOccurs = "0"/>
       <xsd:group   ref  = "Extended:OpMaterialActualProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
