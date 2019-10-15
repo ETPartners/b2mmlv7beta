@@ -229,6 +229,8 @@ referenced work master shall have the same value as that of the process segment.
       <xsd:element name = "PersonnalSegmentSpecificationPropertyChild" 
 							type = "PersonnelSegmentSpecificationPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "PersonnelClassPropertyID" 	type = "IdentifierType" minOccurs="0"/>
+      <xsd:element name = "PersonPropertyID" 		type = "IdentifierType" minOccurs="0"/>
       <xsd:group   ref  = "Extended:PersonnelSegmentSpecificationProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -275,6 +277,8 @@ referenced work master shall have the same value as that of the process segment.
       <xsd:element name = "EquipmentSegmentSpecificationPropertyChild" 
 							type = "EquipmentSegmentSpecificationPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "EquipmentClassPropertyID" 	type = "IdentifierType" minOccurs="0"/>
+      <xsd:element name = "EquipmentPropertyID" 	type = "IdentifierType" minOccurs="0"/>
       <xsd:group   ref  = "Extended:EquipmentSegmentSpecificationProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -311,7 +315,7 @@ referenced work master shall have the same value as that of the process segment.
 
   <xsd:complexType name = "PhysicalAssetSegmentSpecificationPropertyType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                       type = "ValueType"
@@ -321,6 +325,9 @@ referenced work master shall have the same value as that of the process segment.
       <xsd:element name = "PhysicalAssetSegmentSpecificationPropertyChild" 
 							type = "PhysicalAssetSegmentSpecificationPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "PhysicalAssetClassPropertyID" 
+		   					type = "IdentifierType" minOccurs="0"/>
+      <xsd:element name = "PhysicalAssetPropertyID" 	type = "IdentifierType" minOccurs="0"/> 
       <xsd:group   ref  = "Extended:PhysicalAssetSegmentSpecificationProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -372,6 +379,11 @@ referenced work master shall have the same value as that of the process segment.
       <xsd:element name = "MaterialSegmentSpecificationPropertyChild" 
 							type = "MaterialSegmentSpecificationPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "MaterialClassPropertyID" 
+		   					type = "IdentifierType" minOccurs="0"/>
+      <xsd:element name = "MaterialDefinitionPropertyID" 
+		   					type = "IdentifierType" minOccurs="0"/>
+      <xsd:element name = "MaterialLotPropertyID" 	type = "IdentifierType" minOccurs="0"/> 	    
       <xsd:group   ref  = "Extended:MaterialSegmentSpecificationProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
