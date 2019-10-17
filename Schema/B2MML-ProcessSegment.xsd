@@ -174,8 +174,8 @@ referenced work master shall have the same value as that of the process segment.
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "ProcessSegmentChild"         type = "ProcessSegmentType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "ProcessSegmentParentID"	type = "IdentifierType"
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "ProcessSegmentPatternID"	type = "IdentifierType"
+                                                        minOccurs = "0"/>
       <xsd:element name = "WorkMasterSourceID"		type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsSegmentSourceID"
