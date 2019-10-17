@@ -173,7 +173,7 @@ may be made up of other operational locations.
       <xsd:element name = "OperationalLocationClassChild"
 		   					type = "OperationalLocationClassType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "OperationalLocationClassParentID"  
+      <xsd:element name = "OperationalLocationClassMemberID"  
 		   					type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationalLocationID"       type = "IdentifierType" 
