@@ -172,7 +172,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "ProcessSegmentID"         	type = "IdentifierType"     
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "WorkMasterParentID        	type = "IdentifierType"       
+      <xsd:element name = "WorkMasterPatternID        	type = "IdentifierType"       
                                                         minOccurs = "0"/>
       <xsd:element name = "DefinitionType"              type = "DefinitionTypeType" 
                                                         minOccurs = "0"/>
