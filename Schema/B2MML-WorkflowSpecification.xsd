@@ -141,8 +141,9 @@
       <xsd:element name = "WorkflowSpecificationConnection"
 		   					type = "WorkflowSpecificationConnectionType"       
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "WorkflowSpecificationParent" type = "IdentifierType"       
-                                                        minOccurs = "0" maxOccurs = "1"/>
+      <xsd:element name = "WorkflowSpecificationPatternID" 
+		   					type = "IdentifierType"       
+                                                        minOccurs = "0"/>
       <xsd:element name = "WorkflowSpecificationProperty" 
 		   					type = "WorkflowSpecificationPropertyType"       
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
