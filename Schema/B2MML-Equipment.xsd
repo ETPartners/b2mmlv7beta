@@ -172,25 +172,25 @@ zero or more equipment classes.
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType"/>
       <xsd:element name = "Version"             type = "VersionType"/>	
-                                                minOccurs = "0" />
+                                                minOccurs = "0"/>
       <xsd:element name = "Description"         type = "DescriptionType"        
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EffectiveFrom"       type = "DateTimeType" 
-                                                minOccurs = "0" />	    
+                                                minOccurs = "0"/>	    
       <xsd:element name = "EffectiveTo"         type = "DateTimeType" 
-                                                minOccurs = "0" />	    
+                                                minOccurs = "0"/>	    
       <xsd:element name = "HierarchyScope"      type = "HierarchyScopeType"   
-                                                minOccurs = "0" />
+                                                minOccurs = "0"/>
       <xsd:element name = "EquipmentLevel"      type = "EquipmentLevelType"   
-                                                minOccurs = "0" />
+                                                minOccurs = "0"/>
       <xsd:element name = "SpatialDefinition"   type = "SpatialDefinitionType"     
-                                                minOccurs = "0" />
+                                                minOccurs = "0"/>
       <xsd:element name = "EquipmentAssetMapping" type = "EquipmentAssetMappingType"   
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetID"     type = "PhysicalAssetIDType"   
-                                                minOccurs = "0" />
+                                                minOccurs = "0"/>
       <xsd:element name = "OperationalLocation" type = "ResourceLocationType"     
-                                                minOccurs = "0" />
+                                                minOccurs = "0"/>
       <xsd:element name = "EquipmentProperty"   type = "EquipmentPropertyType"  
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentChild"      type = "EquipmentType"  
@@ -199,7 +199,7 @@ zero or more equipment classes.
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "TestSpecificationID" type = "IdentifierType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:group   ref  = "Extended:Equipment"  minOccurs = "0" maxOccurs = "1"/>
+      <xsd:group   ref  = "Extended:Equipment"  minOccurs = "0"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -213,9 +213,9 @@ zero or more equipment classes.
       <xsd:element name = "EquipmentPropertyChild"   type = "EquipmentPropertyType"  
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentClassPropertyID"   type = "IdentifierType"  
-                                                minOccurs = "0" maxOccurs = "1"/>
+                                                minOccurs = "0"/>
       <xsd:group   ref  = "Extended:EquipmentProperty"
-                                                minOccurs = "0" maxOccurs = "1"/>
+                                                minOccurs = "0"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -223,23 +223,23 @@ zero or more equipment classes.
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType"/>
       <xsd:element name = "Version"             type = "VersionType"/>	
-                                                minOccurs = "0" />
+                                                minOccurs = "0"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EffectiveFrom"       type = "DateTimeType" 
-                                                minOccurs = "0" />	    
+                                                minOccurs = "0"/>	    
       <xsd:element name = "EffectiveTo"         type = "DateTimeType" 
-                                                minOccurs = "0" />	    
+                                                minOccurs = "0"/>	    
       <xsd:element name = "HierarchyScope"      type = "HierarchyScopeType"   
-                                                minOccurs = "0" />
+                                                minOccurs = "0"/>
       <xsd:element name = "EquipmentLevel"      type = "EquipmentLevelType"   
-                                                minOccurs = "0" />
+                                                minOccurs = "0"/>
       <xsd:element name = "EquipmentClassProperty"
                                                 type = "EquipmentClassPropertyType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentClassChild" type = "EquipmentClassType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EquipmentClassParentID"
+      <xsd:element name = "EquipmentClassMemberID"
                                                 type = "IdentifierType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentID"         type = "IdentifierType"
@@ -247,7 +247,7 @@ zero or more equipment classes.
       <xsd:element name = "TestSpecificationID  type = "IdentifierType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:EquipmentClass"
-                                                minOccurs = "0" maxOccurs = "1"/>
+                                                minOccurs = "0"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -264,7 +264,7 @@ zero or more equipment classes.
                                                 type = "EquipmentClassPropertyType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:EquipmentClassProperty"
-                                                minOccurs = "0" maxOccurs = "1"/>
+                                                minOccurs = "0"/>
     </xsd:sequence>
   </xsd:complexType>
 
