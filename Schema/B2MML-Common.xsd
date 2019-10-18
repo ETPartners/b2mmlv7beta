@@ -935,7 +935,7 @@ This attribute must be defined in the corresponding operations event definition.
              <xsd:element name="EffectiveTimestamp" 		type="DateTimeType" 	minOccurs="0"/>
              <xsd:element name="RecordTimestamp" 		type="DateTimeType" 	minOccurs="0"/>
 	     <xsd:element name="OperationsRecordEntryID"	type="IdentifierType" 	minOccurs="1" maxOccurs="unbounded"/>
-	     <xsd:element name="OperationsRecordSpecTemplateID"	type="OperationsRecordSpecTemplateType"/>
+	     <xsd:element name="OperationsRecordSpecTemplateID"	type="IdentifierType"/>
 	     <xsd:element name="OperationsRecordTemplateChild"	type="OperationsRecordTemplateType"    minOccurs="0" maxOccurs="unbounded"/>
            <xsd:group ref="Extended:OperationsRecordTemplate" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
