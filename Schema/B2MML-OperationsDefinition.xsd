@@ -153,7 +153,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsMaterialBillID"    type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "OperationsDefinitionMemberID"
+      <xsd:element name = "OperationsDefinitionPatternID"
                                                         type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:group   ref  = "Extended:OperationsDefinition"  minOccurs = "0"/>
@@ -227,8 +227,8 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsMaterialBillID"  	type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "OperationsSegmentParentID"	type = "IdentifierType"
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "OperationsSegmentPatternID"	type = "IdentifierType"
+                                                        minOccurs = "0"/>
       <xsd:element name = "ParameterSpecification"      type = "ParameterType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PersonnelSpecification"      type = "OpPersonnelSpecificationType" 
