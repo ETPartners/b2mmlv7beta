@@ -81,7 +81,7 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "PostingDate"                 type = "DateTimeType"      
                                                         minOccurs = "0"/>
-      <xsd:element name = "SegmentRequirement"          type = "OpSegmentRequirementType" 
+      <xsd:element name = "SegmentRequirementID"        type = "IdentifierType"    
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsDefinitionID"      type = "IdentifierType"    
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
