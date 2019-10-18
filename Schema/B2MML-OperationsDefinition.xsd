@@ -120,19 +120,19 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsMaterialBill"      type = "OperationsMaterialBillType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:group   ref  = "Extended:OperationsDefinitionInformation" minOccurs = "0" maxOccurs = "1"/>
+      <xsd:group   ref  = "Extended:OperationsDefinitionInformation" minOccurs = "0"/>
     </xsd:sequence>
   </xsd:complexType>
 
   <xsd:complexType name = "OperationsDefinitionType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Version"                     type = "VersionType"
                                                         minOccurs = "0"/>
       <xsd:element name = "EffectiveFrom"               type = "DateTimeType" 
-                                                        minOccurs = "0" />	    
+                                                        minOccurs = "0"/>	    
       <xsd:element name = "EffectiveTo"                 type = "DateTimeType" 
-                                                        minOccurs = "0" />
+                                                        minOccurs = "0"/>
       <xsd:element name = "Description"                 type = "DescriptionType"       
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType" 
@@ -153,16 +153,16 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsMaterialBillID"    type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "OperationsDefinitionParentID"
+      <xsd:element name = "OperationsDefinitionMemberID"
                                                         type = "IdentifierType"
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:group   ref  = "Extended:OperationsDefinition"  minOccurs = "0" maxOccurs = "1"/>
+                                                        minOccurs = "0"/>
+      <xsd:group   ref  = "Extended:OperationsDefinition"  minOccurs = "0"/>
     </xsd:sequence>
   </xsd:complexType>
 
   <xsd:complexType name = "OperationsMaterialBillType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"        
                                                         minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType" 
@@ -173,13 +173,13 @@
                                                         minOccurs = "0" maxOccurs="unbounded"/>
       <xsd:element name = "OperationsMaterialBillChild"	type = "OperationsMaterialBillType"
                                                 	minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:group   ref  = "Extended:OperationsMaterialBill"  minOccurs = "0" maxOccurs = "1"/>
+      <xsd:group   ref  = "Extended:OperationsMaterialBill"  minOccurs = "0"/>
     </xsd:sequence>
   </xsd:complexType>
 
   <xsd:complexType name = "OperationsMaterialBillItemType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"        
                                                         minOccurs = "0"/>
       <xsd:element name = "MaterialClassID"             type = "IdentifierType"
@@ -200,13 +200,13 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Quantity"                    type = "QuantityValueType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:group   ref  = "Extended:OperationsBillOfMaterialItem"  minOccurs = "0" maxOccurs = "1"/>
+      <xsd:group   ref  = "Extended:OperationsBillOfMaterialItem"  minOccurs = "0"/>
     </xsd:sequence>
   </xsd:complexType>
 
   <xsd:complexType name = "OperationsSegmentType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType" />
+      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"      
                                                         minOccurs = "0"/>
       <xsd:element name = "OperationsType"              type = "OperationsTypeType" 
@@ -245,7 +245,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsSegmentChild"      type = "OperationsSegmentType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:group   ref  = "Extended:OperationsSegment"  minOccurs = "0" maxOccurs = "1"/>
+      <xsd:group   ref  = "Extended:OperationsSegment"  minOccurs = "0"/>
     </xsd:sequence>
   </xsd:complexType>
 
