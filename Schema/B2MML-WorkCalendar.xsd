@@ -222,6 +222,9 @@
       <xsd:element name = "WorkCalendarPropertyChild"
 		   				type = "WorkCalendarPropertyType" 
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "WorkCalendarDefintionPropertyID" 
+		   				type = "IdentifierType"  
+		   				minOccurs = "0" maxOccurs = "1"/> 
       <xsd:group   ref  = "Extended:WorkCalendarProperty"
                                                 minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
