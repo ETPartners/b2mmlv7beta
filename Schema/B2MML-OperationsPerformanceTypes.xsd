@@ -105,6 +105,9 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "SegmentResponseChild"        type = "OpSegmentResponseType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "RequiredByRequestedSegmentResponse"
+                                                        type = "RequiredByRequestedSegmentResponseType"
+                                                        minOccurs = "0"/ 
       <xsd:group   ref  = "Extended:OpSegmentResponse"  minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -120,6 +123,9 @@
 							minOccurs="0" maxOccurs="unbounded"/>
        <xsd:element name = "SegmentDataChild" 		type="OpSegmentDataType" 
 							minOccurs="0" maxOccurs="unbounded"/>
+       <xsd:element name = "RequiredByRequestedSegmentResponse"
+                                                        type = "RequiredByRequestedSegmentResponseType"
+                                                        minOccurs = "0"/
        <xsd:group   ref  = "Extended:OpSegmentData" 	minOccurs="0" maxOccurs="1"/>
      </xsd:sequence>
   </xsd:complexType>
@@ -148,7 +154,9 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PersonnelActualChild"        type = "OpPersonnelActualType"   
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-
+      <xsd:element name = "RequiredByRequestedSegmentResponse"
+                                                        type = "RequiredByRequestedSegmentResponseType"
+                                                        minOccurs = "0"/
       <xsd:group   ref  = "Extended:OpPersonnelActual"  minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -169,6 +177,9 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "PersonPropertyID"     	type = "IdentifierType"        
                                                         minOccurs = "0"/>
+      <xsd:element name = "RequiredByRequestedSegmentResponse"
+                                                        type = "RequiredByRequestedSegmentResponseType"
+                                                        minOccurs = "0"/
       <xsd:group   ref  = "Extended:OpPersonnelActualProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -198,6 +209,9 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentActualChild"        type = "OpEquipmentActualType"   
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "RequiredByRequestedSegmentResponse"
+                                                        type = "RequiredByRequestedSegmentResponseType"
+                                                        minOccurs = "0"/
       <xsd:group   ref  = "Extended:OpEquipmentActual"    minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -218,6 +232,9 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "EquipmentPropertyID"     	type = "IdentifierType"        
                                                         minOccurs = "0"/>
+      <xsd:element name = "RequiredByRequestedSegmentResponse"
+                                                        type = "RequiredByRequestedSegmentResponseType"
+                                                        minOccurs = "0"/
       <xsd:group   ref  = "Extended:OpEquipmentActualProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -247,6 +264,9 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetActualChild"   	type = "OpPhysicalAssetActualType"   
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "RequiredByRequestedSegmentResponse"
+                                                        type = "RequiredByRequestedSegmentResponseType"
+                                                        minOccurs = "0"/
       <xsd:group   ref  = "Extended:OpPhysicalAssetActual" minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -266,6 +286,9 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "PhysicalAssetPropertyID"     type = "IdentifierType"        
                                                         minOccurs = "0"/>
+      <xsd:element name = "RequiredByRequestedSegmentResponse"
+                                                        type = "RequiredByRequestedSegmentResponseType"
+                                                        minOccurs = "0"/
       <xsd:group   ref  = "Extended:OpPhysicalAssetActualProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -303,6 +326,9 @@
 	                                                minOccurs = "0" maxOccurs = "unbounded"/
       <xsd:element name = "MaterialActualProperty"      type = "OpMaterialActualPropertyType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "RequiredByRequestedSegmentResponse"
+                                                        type = "RequiredByRequestedSegmentResponseType"
+                                                        minOccurs = "0"/
       <xsd:group   ref  = "Extended:OpMaterialActual"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -325,6 +351,9 @@
                                                         minOccurs = "0"/>      
       <xsd:element name = "MaterialLotPropertyID"     	type = "IdentifierType"        
                                                         minOccurs = "0"/>
+      <xsd:element name = "RequiredByRequestedSegmentResponse"
+                                                        type = "RequiredByRequestedSegmentResponseType"
+                                                        minOccurs = "0"/
       <xsd:group   ref  = "Extended:OpMaterialActualProperty"
                                                         minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
