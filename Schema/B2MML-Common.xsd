@@ -992,6 +992,8 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:element name="EquipmentPropertyID" 	type="IdentifierType" minOccurs="0"/>	
             <xsd:element name="EquipmentRequirementPropertyChild" 
 			 				type="OpEquipmentRequirementPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+	    <xsd:element name="RequiredByRequestedSegmentResponse" 
+			 					type="RequiredByRequestedSegmentResponseType" minOccurs="0"/>
             <xsd:group ref="Extended:OpEquipmentRequirementProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
@@ -1026,6 +1028,8 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:element name="PersonPropertyID" 		type="IdentifierType" minOccurs="0"/>
             <xsd:element name="PersonnelRequirementPropertyChild" 
 			 					type="OpPersonnelRequirementPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+	     <xsd:element name="RequiredByRequestedSegmentResponse" 
+			 					type="RequiredByRequestedSegmentResponseType" minOccurs="0"/>
             <xsd:group ref="Extended:OpPersonnelRequirementProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
@@ -1062,6 +1066,8 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:element name="PhysicalAssetPropertyID" 	type="IdentifierType" minOccurs="0"/>	
 	    <xsd:element name="PhysicalAssetRequirementPropertyChild" 
 			 					type="OpPhysicalAssetRequirementPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="RequiredByRequestedSegmentResponse" 
+			 					type="RequiredByRequestedSegmentResponseType" minOccurs="0"/>
             <xsd:group ref="Extended:OpPhysicalAssetRequirementProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
@@ -1101,6 +1107,8 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:element name="MaterialLotPropertyID" 		type="IdentifierType" minOccurs="0"/>	
             <xsd:element name="MaterialRequirementPropertyChild" 
 			 					type="OpMaterialRequirementPropertyType" minOccurs="0" maxOccurs="unbounded"/>
+	    <xsd:element name="RequiredByRequestedSegmentResponse" 
+			 					type="RequiredByRequestedSegmentResponseType" minOccurs="0"/>
             <xsd:group ref="Extended:OpMaterialRequirementProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
