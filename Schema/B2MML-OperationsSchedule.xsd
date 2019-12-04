@@ -132,8 +132,11 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "SegmentRequirement"          type = "OpSegmentRequirementType" 
                                                         minOccurs = "1" maxOccurs = "unbounded"/>
-      <xsd:element name = "SegmentResponse"             type = "OpSegmentResponseType" 
+      <xsd:element name = "RequestedSegmentResponse"    type = "OpSegmentResponseType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "RequiredByRequestedSegmentResponse"
+                                                        type = "RequiredByRequestedSegmentResponseType"
+                                                        minOccurs = "0"/>	    
       <xsd:group   ref  = "Extended:OperationsRequest"  minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -170,6 +173,8 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "SegmentRequirementChild"     type = "OpSegmentRequirementType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "RequestedSegmentResponse"    type = "OpSegmentResponseType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/> 
       <xsd:element name = "RequiredByRequestedSegmentResponse"
                                                         type = "RequiredByRequestedSegmentResponseType"
                                                         minOccurs = "0"/>
