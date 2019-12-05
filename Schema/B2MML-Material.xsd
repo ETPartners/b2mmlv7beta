@@ -190,7 +190,7 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"   
                                                         minOccurs = "0"/>
-      <xsd:element name = "MaterialClassMemberID"       type = "IdentifierType"
+      <xsd:element name = "MaterialClassBaseID"       	type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialClassProperty"       type = "MaterialClassPropertyType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
