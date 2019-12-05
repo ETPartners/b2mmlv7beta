@@ -211,7 +211,7 @@
                          				minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
 							minOccurs = "0"/>
-      <xsd:element name = "WorkflowSpecificationNodeMemberID"  
+      <xsd:element name = "WorkflowSpecificationNodeTypeBaseID"  
 		   					type = "IdentifierType" 
 		   					minOccurs = "0" maxOccurs = "unbounded"/>  
       <xsd:element name = "WorkflowSpecificationNodeTypeProperty"
@@ -242,7 +242,7 @@
       <xsd:element name = "Dependency" 			type = "DependencyType"/>
       <xsd:element name = "DependencyFactor" 		type = "ValueType" 
 		   					minOccurs = "0"/>
-      <xsd:element name = "WorkflowSpecificationConnectionMemberID"   
+      <xsd:element name = "WorkflowSpecificationConnectionTypeBaseID"   
 		   					type = "IdentifierType" 
 		   					minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkflowSpecificationConnectionTypeProperty"
