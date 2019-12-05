@@ -186,7 +186,7 @@ function or activity.
                                                         minOccurs = "0"/>
       <xsd:element name = "OperationsEventClassChild"   type = "OperationsEventClassType" 
 	                                                minOccurs = "0" maxOccurs = "unbounded"/> <!-- "Is assembled from" relationship -->
-      <xsd:element name = "OperationsEventClassMemmberID"
+      <xsd:element name = "OperationsEventClassBaseID"
                                                         type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/> <!-- "Includes properties of" relationship -->
       <xsd:element name = "OperationsEventClassProperty"
