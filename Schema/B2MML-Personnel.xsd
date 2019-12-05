@@ -230,7 +230,7 @@ A person may be a member of zero or more personnel classes.
                                                 	minOccurs = "0"/>	    
 	    <xsd:element name = "HierarchyScope"        type = "HierarchyScopeType"    
                                                         minOccurs = "0"/>
-            <xsd:element name = "PersonnelClassMemberID"
+            <xsd:element name = "PersonnelClassBaseID"
                                                         type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
             <xsd:element name = "PersonnelClassProperty"
