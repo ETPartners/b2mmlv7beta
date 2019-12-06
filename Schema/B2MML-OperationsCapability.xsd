@@ -113,7 +113,7 @@
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "WorkType"           	    type = "OperationsTypeType"   
+      <xsd:element name = "OperationsType"          type = "OperationsTypeType"   
                                                     minOccurs = "0"/>
       <xsd:element name = "CapabilityType"          type = "CapabilityTypeType" 
                                                     minOccurs = "0"/>
