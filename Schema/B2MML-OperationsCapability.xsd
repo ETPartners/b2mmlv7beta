@@ -159,9 +159,7 @@
       <xsd:element name = "Reason"                  type = "ReasonType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
-                                                    minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EquipmentElementLevel"   type = "EquipmentElementLevelType" 
-                                                    minOccurs = "0" maxOccurs = "unbounded"/>
+                                                    minOccurs = "0" maxOccurs = "unbounded"/>>
       <xsd:element name = "StartTime"               type = "DateTimeType"
                                                     minOccurs = "0"/>
       <xsd:element name = "EndTime"                 type = "DateTimeType"
@@ -194,8 +192,6 @@
       <xsd:element name = "Reason"                  type = "ReasonType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
-                                                    minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EquipmentElementLevel"   type = "EquipmentElementLevelType" 
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "StartTime"               type = "DateTimeType"
                                                     minOccurs = "0"/>
