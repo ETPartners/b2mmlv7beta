@@ -176,7 +176,7 @@ may be made up of other operational locations.
       <xsd:element name = "OperationalLocationClassBaseID"  
 		   					type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "OperationalLocationID"       type = "IdentifierType" 
+      <xsd:element name = "OperationalLocationSourceID"       type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationalLocationClassProperty" 
 		   					type = "OperationalLocationClassPropertyType" 
