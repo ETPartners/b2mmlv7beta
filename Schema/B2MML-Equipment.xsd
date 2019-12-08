@@ -242,7 +242,7 @@ zero or more equipment classes.
       <xsd:element name = "EquipmentClassBaseID"
                                                 type = "IdentifierType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EquipmentID"         type = "IdentifierType"
+      <xsd:element name = "EquipmentSourceID"   type = "IdentifierType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "TestSpecificationID  type = "IdentifierType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
