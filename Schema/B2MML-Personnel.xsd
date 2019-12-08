@@ -233,7 +233,7 @@ A person may be a member of zero or more personnel classes.
             <xsd:element name = "PersonnelClassProperty"
                                                         type = "PersonnelClassPropertyType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-            <xsd:element name = "PersonID"              type = "IdentifierType"  
+            <xsd:element name = "PersonSourceID"              type = "IdentifierType"  
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
             <xsd:element name = "TestSpecificationID"      
                                                         type = "IdentifierType"
