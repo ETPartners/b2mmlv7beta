@@ -1215,6 +1215,8 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:element name="ID" 				type="IdentifierType"/>
             <xsd:element name="MaterialClassID" 		type="IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="MaterialDefinitionID" 		type="IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="MaterialLotID" 			type="IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="MaterialSubLotID" 		type="IdentifierType" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="Description" 			type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="MaterialUse" 			type="MaterialUseType" minOccurs="0"/>
             <xsd:element name="HierarchyScope" 			type="HierarchyScopeType" minOccurs="0"/>
