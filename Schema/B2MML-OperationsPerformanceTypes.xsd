@@ -134,6 +134,7 @@
                   
   <xsd:complexType name = "OpPersonnelActualType">
     <xsd:sequence>
+      <xsd:element name = "ID" 				type="IdentifierType"/>
       <xsd:element name = "PersonnelClassID"            type = "IdentifierType"   
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PersonID"                    type = "IdentifierType"   
@@ -189,6 +190,7 @@
 
   <xsd:complexType name = "OpEquipmentActualType">
     <xsd:sequence>
+      <xsd:element name = "ID" 				type="IdentifierType"/>
       <xsd:element name = "EquipmentClassID"            type = "IdentifierType"   
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentID"                 type = "IdentifierType"        
@@ -244,6 +246,7 @@
 
   <xsd:complexType name = "OpPhysicalAssetActualType">
     <xsd:sequence>
+      <xsd:element name = "ID" 				type="IdentifierType"/>
       <xsd:element name = "PhysicalAssetClassID"        type = "IdentifierType"   
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PhysicalAssetID"             type = "IdentifierType"        
@@ -298,6 +301,7 @@
 
   <xsd:complexType name = "OpMaterialActualType">
     <xsd:sequence>
+      <xsd:element name = "ID" 				type="IdentifierType"/>
       <xsd:element name = "MaterialClassID"             type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialDefinitionID"        type = "IdentifierType" 
