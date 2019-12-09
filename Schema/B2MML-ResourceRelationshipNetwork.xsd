@@ -108,19 +108,19 @@
     <xsd:sequence>
       <xsd:element name = "ID"                                   type = "IdentifierType"/>
       <xsd:element name = "Version"  				 type = "VersionType"/> 
-	    							 minOccurs = "0" />
+	    							 minOccurs = "0"/>
       <xsd:element name = "Description"                          type = "DescriptionType" 
                                                                  minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EffectiveFrom" 			 type = "DateTimeType" 
-		   						 minOccurs = "0" />
+		   						 minOccurs = "0"/>
       <xsd:element name = "EffectiveTo" 			 type = "DateTimeType" 
-		   						 minOccurs = "0" />
+		   						 minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"                       type = "HierarchyScopeType"    
                                                                  minOccurs = "0"/>
       <xsd:element name = "PublishedDate"                        type = "DateTimeType" 
                                                                  minOccurs = "0"/>
       <xsd:element name = "ConnectionType"         		 type = "IdentifierType"/>    
-      <xsd:element name = "ResourceNetworkConnectionID"          type = "IdentifierType" minOccurs = "0"/>
+      <xsd:element name = "ResourceNetworkConnectionSourceID"    type = "IdentifierType" minOccurs = "0"/>
       <xsd:element name = "RNCTypeProperty"                  
 		   						 type = "RNCTypePropertyType" 
                                                                  minOccurs = "0" maxOccurs = "unbounded"/>
@@ -135,13 +135,13 @@
     <xsd:sequence>
       <xsd:element name = "ID"                                   type = "IdentifierType"/>
       <xsd:element name = "Version"  				 type = "VersionType"/> 
-	    							 minOccurs = "0" />
+	    							 minOccurs = "0"/>
       <xsd:element name = "Description"                          type = "DescriptionType"         
                                                                  minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EffectiveFrom" 			 type = "DateTimeType" 
-		   						 minOccurs = "0" />
+		   						 minOccurs = "0"/>
       <xsd:element name = "EffectiveTo" 			 type = "DateTimeType" 
-		   						 minOccurs = "0" />
+		   						 minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"                       type = "HierarchyScopeType"    
                                                                  minOccurs = "0"/>
       <xsd:element name = "RelationshipType"                     type = "RelationshipTypeType"    
