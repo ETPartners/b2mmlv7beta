@@ -112,7 +112,7 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "PublishedDate"               type = "DateTimeType" 
                                                         minOccurs = "0"/>
-      <xsd:element name = "WorkSchedule"                type = "WorkScheduleType" 
+      <xsd:element name = "WorkScheduleChild"           type = "WorkScheduleType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkRequest"                 type = "WorkRequestType" 
                                                         minOccurs = "1" maxOccurs = "unbounded"/>
@@ -141,7 +141,7 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "RequestState"                type = "RequestStateType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "WorkRequest"                 type = "WorkRequestType" 
+      <xsd:element name = "WorkRequestChild"            type = "WorkRequestType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "JobOrder"                    type = "JobOrderType" 
                                                         minOccurs = "1" maxOccurs = "unbounded"/>
@@ -179,21 +179,22 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkType"                    type = "OperationsTypeType"   
                                                         minOccurs = "0"/>
-      <xsd:element name = "WorkMasterID"                type = "IdentifierType"/>
+      <xsd:element name = "WorkMasterID"                type = "IdentifierType"
+		   					minOccurs = "0"/>
       <xsd:element name = "WorkMasterVersion"           type = "VersionType" 
-	                                                    minOccurs = "0"/>
+	                                                minOccurs = "0"/>
       <xsd:element name = "StartTime"                   type = "DateTimeType"  
                                                         minOccurs = "0"/>
       <xsd:element name = "EndTime"                     type = "DateTimeType"      
                                                         minOccurs = "0"/>
       <xsd:element name = "Priority"                    type = "PriorityType" 
-	                                                    minOccurs = "0"/>
+	                                                minOccurs = "0"/>
       <xsd:element name = "Command"                     type = "JobOrderCommandType" 
-	                                                    minOccurs = "0"/>
+	                                                minOccurs = "0"/>
       <xsd:element name = "CommandRule"                 type = "JobOrderCommandRuleType" 
-	                                                    minOccurs = "0"/>
+	                                                minOccurs = "0"/>
       <xsd:element name = "DispatchStatus"              type = "JobOrderDispatchStatusType" 
-	                                                    minOccurs = "0"/>
+	                                                minOccurs = "0"/>
       <xsd:element name = "JobOrderParameter"           type = "ParameterType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PersonnelRequirement"        type = "OpPersonnelRequirementType" 
@@ -203,8 +204,6 @@
       <xsd:element name = "PhysicalAssetRequirement"    type = "OpPhysicalAssetRequirementType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialRequirement"         type = "OpMaterialRequirementType" 
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "OperationsRequestID"         type = "IdentifierType"    
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "SegmentRequirementID"        type = "IdentifierType"    
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
