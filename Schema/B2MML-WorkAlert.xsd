@@ -129,7 +129,8 @@
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Category"                type = "IdentifierType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "Property"                type = "WorkAlertPropertyType"
+      <xsd:element name = "WorkAlertDefinitionProperty"
+		   				    type = "WorkAlertDefinitionPropertyType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkAlertDefinition"
                                                     minOccurs = "0" maxOccurs = "1"/>
@@ -166,7 +167,7 @@
                                                     minOccurs = "0"/>
       <xsd:element name = "Category"                type = "IdentifierType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "Property"                type = "WorkAlertPropertyType"
+      <xsd:element name = "WorkAlertProperty"       type = "WorkAlertPropertyType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkAlert"
                                                     minOccurs = "0" maxOccurs = "1"/>
@@ -182,7 +183,7 @@
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkAlertDefinitionPropertyID"   
 		   				    type = "IdentifierType"  
-                                                    minOccurs = "0" maxOccurs = "1"/>
+                                                    minOccurs = "0"/>
       <xsd:element name = "WorkAlertPropertyChid'   type = "WorkAlertPropertyType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkAlertProperty"
