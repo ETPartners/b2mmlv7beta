@@ -147,7 +147,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "BillOfMaterialsID"           type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "WorkMasterID"            	type = "IdentifierType"     
+      <xsd:element name = "WorkMasterSourceID"          type = "IdentifierType"     
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "BillOfResourcesID"           type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -171,8 +171,8 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "OperationsMaterialBillItem"  type = "OperationsMaterialBillItemType"
                                                         minOccurs = "0" maxOccurs="unbounded"/>
-      <xsd:element name = "OperationsMaterialBillChild"	type = "OperationsMaterialBillType"
-                                                	minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "BillOfMaterialsID"           type = "IdentifierType" 
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:OperationsMaterialBill"  minOccurs = "0"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -182,10 +182,6 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"        
                                                         minOccurs = "0"/>
-      <xsd:element name = "MaterialClassID"             type = "IdentifierType"
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "MaterialDefinitionID"        type = "IdentifierType" 
-                                                        minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "UseType"                     type = "CodeType" 
                                                         minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType" 
@@ -221,7 +217,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "BillOfMaterialsID"           type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "WorkMasterID"            	type = "IdentifierType"     
+      <xsd:element name = "WorkMasterSourceID"          type = "IdentifierType"     
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "BillOfResourcesID"           type = "IdentifierType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
