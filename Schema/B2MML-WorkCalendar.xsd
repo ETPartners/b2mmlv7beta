@@ -162,13 +162,13 @@
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
                                                     minOccurs = "0"/>
       <xsd:element name = "StartRule"               type = "CodeType" 
-                                                    minOccurs = "0" maxOccurs = "1"/>
+                                                    minOccurs = "0"/>
       <xsd:element name = "RecurrenceTime"          type = "CodeType" 
-                                                    minOccurs = "0" maxOccurs = "1"/>
+                                                    minOccurs = "0"/>
       <xsd:element name = "DurationRule"            type = "CodeType" 
-                                                    minOccurs = "0" maxOccurs = "1"/>
+                                                    minOccurs = "0"/>
       <xsd:element name = "EntryType"               type = "CodeType" 
-                                                    minOccurs = "0" maxOccurs = "1"/>
+                                                    minOccurs = "0"/>
       <xsd:element name = "WorkCalendarDefinitionEntryChild"
 						    type = "WorkCalendarDefinitionEntryType" 
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
@@ -206,6 +206,9 @@
                                                     minOccurs = "0"/>
       <xsd:element name = "WorkCalendarEntry"       type = "WorkCalendarEntryType" 
                                                     minOccurs = "1" maxOccurs = "unbounded"/>
+      <xsd:element name = "WorkCalendarPropertyChild"
+		   				type = "WorkCalendarPropertyType" 
+                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkCalendar"
                                                     minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -224,7 +227,7 @@
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkCalendarDefintionPropertyID" 
 		   				type = "IdentifierType"  
-		   				minOccurs = "0" maxOccurs = "1"/> 
+		   				minOccurs = "0"/> 
       <xsd:group   ref  = "Extended:WorkCalendarProperty"
                                                 minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -239,16 +242,16 @@
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
                                                     minOccurs = "0"/>
       <xsd:element name = "StartDateTime"           type = "DateTimeType" 
-                                                    minOccurs = "0" maxOccurs = "1"/>
+                                                    minOccurs = "0"/>
       <xsd:element name = "FinishDateTime"          type = "DateTimeType" 
-                                                    minOccurs = "0" maxOccurs = "1"/>
+                                                    minOccurs = "0"/>
       <xsd:element name = "EntryType"               type = "CodeType" 
-                                                    minOccurs = "0" maxOccurs = "1"/>
+                                                    minOccurs = "0"/>
       <xsd:element name = "WorkCalendarEntryChild"  type = "WorkCalendarEntryType" 
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkCalendarDefintionEntryID"   
 		   				    type = "IdentifierType"  
-                                                    minOccurs = "0" maxOccurs = "1"/> 
+                                                    minOccurs = "0"/> 
       <xsd:element name = "WorkCalendarEntryProperty"
 						    type = "WorkCalendarEntryPropertyType" 
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
@@ -267,7 +270,7 @@
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkCalendarDefintionEntryPropertyID" 
 		   				type = "IdentifierType"  
-		   				minOccurs = "0" maxOccurs = "1"/>  
+		   				minOccurs = "0"/>  
       <xsd:element name = "WorkCalendarEntryPropertyChild"
 		   				type = "WorkCalendarEntryPropertyType" 
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
