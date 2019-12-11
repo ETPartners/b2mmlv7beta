@@ -361,7 +361,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "TestSpecificationID"		type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "MaterialSubLot"              type = "MaterialSubLotType"
+      <xsd:element name = "MaterialSubLotChild"         type = "MaterialSubLotType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialLotID"               type = "IdentifierType" 
                                                         minOccurs="0"/>
