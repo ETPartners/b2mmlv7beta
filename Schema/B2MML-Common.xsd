@@ -577,7 +577,7 @@ product shipping administration, maintenance management, marketing and sales, RD
         </xsd:simpleContent>
     </xsd:complexType>
     <!--     -->
-    <xsd:complexType name="EquipmentElementLevelType">
+    <xsd:complexType name="EquipmentLevelType">
 		<xsd:annotation>
 			<xsd:documentation>
 Defines the role based equipment hierarchy level as defined in ISA 95.
@@ -599,7 +599,7 @@ Defined values are:
 			</xsd:documentation>
 		</xsd:annotation>
         <xsd:simpleContent>
-            <xsd:extension base="EquipmentElementLevel1Type">
+            <xsd:extension base="EquipmentLevel1Type">
                 <xsd:attribute name="OtherValue" type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
