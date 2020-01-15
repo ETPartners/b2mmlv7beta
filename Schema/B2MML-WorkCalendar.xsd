@@ -3,13 +3,13 @@
 <xsd:schema     xmlns:xsd            = "http://www.w3.org/2001/XMLSchema"
                 targetNamespace      = "http://www.mesa.org/xml/B2MML"
                 xmlns                = "http://www.mesa.org/xml/B2MML"
-                xmlns:Extended       = "http://www.mesa.org/xml/B2MML-AllExtensions" 
+                xmlns:Extended       = "http://www.mesa.org/xml/B2MML-AllExtensions"
                 elementFormDefault   = "qualified"
                 attributeFormDefault = "unqualified">
-  
+
 <!-- Import the Extension Schema         -->
 
-<xsd:import     namespace="http://www.mesa.org/xml/B2MML-AllExtensions" 
+<xsd:import     namespace="http://www.mesa.org/xml/B2MML-AllExtensions"
                 schemaLocation="B2MML-AllExtensions.xsd"/>
 
 <!-- Include the Common schema   -->
@@ -17,54 +17,54 @@
   <xsd:include schemaLocation = "B2MML-Common.xsd"/>
 
 
-<xsd:annotation> 
+<xsd:annotation>
    <xsd:documentation>
 
         Copyright 2019 MESA International, Version 0700
-		All Rights Reserved. http://www.mesa.org
+    All Rights Reserved. http://www.mesa.org
 
-        This MESA International work (including specifications, documents, 
-        software, and related items) referred to as the Business To 
-        Manufacturing Markup Language (B2MML) is provided by the copyright 
-        holders under the following license. 
+        This MESA International work (including specifications, documents,
+        software, and related items) referred to as the Business To
+        Manufacturing Markup Language (B2MML) is provided by the copyright
+        holders under the following license.
 
-        Permission to use, copy, modify, or redistribute this Work and its 
-        documentation, with or without modification, for any purpose and 
-        without fee or royalty is hereby granted provided MESA International 
-        is acknowledged as the originator of this Work using the 
+        Permission to use, copy, modify, or redistribute this Work and its
+        documentation, with or without modification, for any purpose and
+        without fee or royalty is hereby granted provided MESA International
+        is acknowledged as the originator of this Work using the
         following statement:
 
-        "The Business To Manufacturing Markup Language (B2MML) is used 
+        "The Business To Manufacturing Markup Language (B2MML) is used
         courtesy of MESA International."
 
-        In no event shall MESA International, its members, or any 
-        third party be liable for any costs, expenses, losses, damages or 
-        injuries incurred by use of the Work or as a result of this 
+        In no event shall MESA International, its members, or any
+        third party be liable for any costs, expenses, losses, damages or
+        injuries incurred by use of the Work or as a result of this
         agreement.
-          
-		Based upon the ANSI/ISA-95.00.04-2018 Enterprise-Control System 
-        Integration Part 4: Objects and Attributes for Manufacturing 
-		Operations Management Integration and the ANSI/ISA-95.00.05-2018 
-		Enterprise-Control System Integration Part 5: Business to 
-		Manufacturing Transactions. 
+
+    Based upon the ANSI/ISA-95.00.04-2018 Enterprise-Control System
+        Integration Part 4: Objects and Attributes for Manufacturing
+    Operations Management Integration and the ANSI/ISA-95.00.05-2018
+    Enterprise-Control System Integration Part 5: Business to
+    Manufacturing Transactions.
    </xsd:documentation>
 
-   <xsd:documentation> 
+   <xsd:documentation>
 
       Revision History
 
         Ver     Date            Person          Note
         ---     ----            ------          ----
-        V0600   17 Mar 2013     D. Brandl       Initial version                                 
+        V0600   17 Mar 2013     D. Brandl       Initial version
         V0700   21 Dec 2018     D. Brandl       Updated Version for 2018 update of ISA 95 Part 4
-												Changed all intermediate date and time types to DatTimeType
-				29 Mar 2019		D. Brandl		All future comments and revisions to be recorded in GitHub
+                        Changed all intermediate date and time types to DatTimeType
+        29 Mar 2019    D. Brandl    All future comments and revisions to be recorded in GitHub
 
    </xsd:documentation>
 </xsd:annotation>
 
 <!-- Elements -->
-  
+
   <xsd:element name = "WorkCalendarInformation" type ="WorkCalendarInformationType" />
   <xsd:element name = "WorkCalendar"            type ="WorkCalendarType" />
   <xsd:element name = "WorkCalendarDefinition"  type ="WorkCalendarDefinitionType" />
@@ -102,23 +102,23 @@
 <!-- Simple & Complex Types  -->
   <xsd:complexType name = "WorkCalendarInformationType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"                  
+      <xsd:element name = "ID"                          type = "IdentifierType"
                                                         minOccurs = "0" nillable="true"/>
-      <xsd:element name = "Description"                 type = "DescriptionType"         
+      <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>
-      <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
+      <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
                                                         minOccurs = "0"  nillable="true"/>
-      <xsd:element name = "PublishedDate"               type = "DateTimeType" 
+      <xsd:element name = "PublishedDate"               type = "DateTimeType"
                                                         minOccurs = "0"  nillable="true"/>
-      <xsd:element name = "WorkCalendar"                type = "WorkCalendarType"      
+      <xsd:element name = "WorkCalendar"                type = "WorkCalendarType"
                                                         minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>
-      <xsd:element name = "WorkCalendarDefinition"      type = "WorkCalendarDefinitionType"      
+      <xsd:element name = "WorkCalendarDefinition"      type = "WorkCalendarDefinitionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"  nillable="true"/>
       <xsd:group   ref  = "Extended:WorkCalendarInformation" minOccurs="0" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
-  
+
   <xsd:complexType name = "WorkCalendarDefinitionType">
     <xsd:sequence>
       <xsd:element name = "ID"                      type = "IdentifierType"/>
@@ -127,17 +127,17 @@
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
                                                     minOccurs = "0"/>
       <xsd:element name = "WorkCalendarDefinitionEntry"
-		   				    type = "WorkCalendarDefinitionEntryType" 
+                   type = "WorkCalendarDefinitionEntryType"
                                                     minOccurs = "1" maxOccurs = "unbounded"/>
-      <xsd:element name = "WorkCalendarDefinitionProperty"  
-		   				    type = "WorkCalendarDefinitionPropertyType" 
-                                                    minOccurs = "0" maxOccurs = "unbounded"/> 
+      <xsd:element name = "WorkCalendarDefinitionProperty"
+                   type = "WorkCalendarDefinitionPropertyType"
+                                                    minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkCalendarDefinition"
                                                     minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
 
- 
+
   <xsd:complexType name = "WorkCalendarDefinitionPropertyType">
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType"/>
@@ -146,13 +146,13 @@
       <xsd:element name = "Value"               type = "ValueType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkCalendarDefinitionPropertyChild"
-		   				type = "WorkCalendarDefinitionPropertyType" 
+               type = "WorkCalendarDefinitionPropertyType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkCalendarDefinitionProperty"
                                                 minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
- 
+
   <xsd:complexType name = "WorkCalendarDefinitionEntryType">
     <xsd:sequence>
       <xsd:element name = "ID"                      type = "IdentifierType"
@@ -161,26 +161,26 @@
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "StartRule"               type = "CodeType" 
+      <xsd:element name = "StartRule"               type = "CodeType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "RecurrenceTime"          type = "CodeType" 
+      <xsd:element name = "RecurrenceTime"          type = "CodeType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "DurationRule"            type = "CodeType" 
+      <xsd:element name = "DurationRule"            type = "CodeType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "EntryType"               type = "CodeType" 
+      <xsd:element name = "EntryType"               type = "CodeType"
                                                     minOccurs = "0"/>
       <xsd:element name = "WorkCalendarDefinitionEntryChild"
-						    type = "WorkCalendarDefinitionEntryType" 
+                type = "WorkCalendarDefinitionEntryType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "WorkCalendarDefinitionEntryProperty"  
-		   				    type = "WorkCalendarDefinitionEntryPropertyType" 
+      <xsd:element name = "WorkCalendarDefinitionEntryProperty"
+                   type = "WorkCalendarDefinitionEntryPropertyType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkCalendarDefinitionEntry"
                                                     minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
-	
- 
+
+
   <xsd:complexType name = "WorkCalendarDefinitionEntryPropertyType">
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType"/>
@@ -189,14 +189,14 @@
       <xsd:element name = "Value"               type = "ValueType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkCalendarDefinitionEntryPropertyChild"
-		   				type = "WorkCalendarDefinitionEntryPropertyType" 
+               type = "WorkCalendarDefinitionEntryPropertyType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkCalendarDefinitionEntryProperty"
                                                 minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
-  </xsd:complexType>	
-	
-  
+  </xsd:complexType>
+
+
   <xsd:complexType name = "WorkCalendarType">
     <xsd:sequence>
       <xsd:element name = "ID"                      type = "IdentifierType"/>
@@ -204,17 +204,17 @@
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "WorkCalendarEntry"       type = "WorkCalendarEntryType" 
+      <xsd:element name = "WorkCalendarEntry"       type = "WorkCalendarEntryType"
                                                     minOccurs = "1" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkCalendarProperty"
-		   				    type = "WorkCalendarPropertyType" 
+                   type = "WorkCalendarPropertyType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkCalendar"
                                                     minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
 
-	
+
    <xsd:complexType name = "WorkCalendarPropertyType">
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType"/>
@@ -223,17 +223,17 @@
       <xsd:element name = "Value"               type = "ValueType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkCalendarPropertyChild"
-		   				type = "WorkCalendarPropertyType" 
+               type = "WorkCalendarPropertyType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "WorkCalendarDefintionPropertyID" 
-		   				type = "IdentifierType"  
-		   				minOccurs = "0"/> 
+      <xsd:element name = "WorkCalendarDefintionPropertyID"
+               type = "IdentifierType"
+               minOccurs = "0"/>
       <xsd:group   ref  = "Extended:WorkCalendarProperty"
                                                 minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
-	
-  
+
+
   <xsd:complexType name = "WorkCalendarEntryType">
     <xsd:sequence>
       <xsd:element name = "ID"                      type = "IdentifierType"/>
@@ -241,26 +241,26 @@
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "StartDateTime"           type = "DateTimeType" 
+      <xsd:element name = "StartDateTime"           type = "DateTimeType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "FinishDateTime"          type = "DateTimeType" 
+      <xsd:element name = "FinishDateTime"          type = "DateTimeType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "EntryType"               type = "CodeType" 
+      <xsd:element name = "EntryType"               type = "CodeType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "WorkCalendarEntryChild"  type = "WorkCalendarEntryType" 
+      <xsd:element name = "WorkCalendarEntryChild"  type = "WorkCalendarEntryType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "WorkCalendarDefintionEntryID"   
-		   				    type = "IdentifierType"  
-                                                    minOccurs = "0"/> 
+      <xsd:element name = "WorkCalendarDefintionEntryID"
+                   type = "IdentifierType"
+                                                    minOccurs = "0"/>
       <xsd:element name = "WorkCalendarEntryProperty"
-						    type = "WorkCalendarEntryPropertyType" 
+                type = "WorkCalendarEntryPropertyType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkCalendarEntry"
                                                     minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
 
-  
+
    <xsd:complexType name = "WorkCalendarEntryPropertyType">
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType"/>
@@ -268,11 +268,11 @@
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"               type = "ValueType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "WorkCalendarDefintionEntryPropertyID" 
-		   				type = "IdentifierType"  
-		   				minOccurs = "0"/>  
+      <xsd:element name = "WorkCalendarDefintionEntryPropertyID"
+               type = "IdentifierType"
+               minOccurs = "0"/>
       <xsd:element name = "WorkCalendarEntryPropertyChild"
-		   				type = "WorkCalendarEntryPropertyType" 
+               type = "WorkCalendarEntryPropertyType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkCalendarEntryProperty"
                                                 minOccurs = "0" maxOccurs = "1"/>
@@ -285,7 +285,7 @@
 <!-- - - - - - - - - - - - - - - - - - - - - -->
 
   <xsd:complexType name = "GetWorkCalendarInformationType">
-    <xsd:sequence>      
+    <xsd:sequence>
          <xsd:element name = "ApplicationArea"  type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
@@ -293,7 +293,7 @@
               <xsd:element name = "Get"         type = "TransGetType"/>
               <xsd:element name = "WorkCalendarInformation"
                                                 type = "WorkCalendarInformationType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -313,7 +313,7 @@
               <xsd:element name = "Show"        type = "TransShowType"/>
               <xsd:element name = "WorkCalendarInformation"
                                                 type = "WorkCalendarInformationType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -334,7 +334,7 @@
               <xsd:element name = "Process"     type = "TransProcessType"/>
               <xsd:element name = "WorkCalendarInformation"
                                                 type = "WorkCalendarInformationType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -355,7 +355,7 @@
               <xsd:element name = "Acknowledge" type = "TransAcknowledgeType"/>
               <xsd:element name = "WorkCalendarInformation"
                                                 type = "WorkCalendarInformationType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -376,7 +376,7 @@
               <xsd:element name = "Change"      type = "TransChangeType"/>
               <xsd:element name = "WorkCalendarInformation"
                                                 type = "WorkCalendarInformationType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -397,7 +397,7 @@
               <xsd:element name = "Respond"     type = "TransRespondType"/>
               <xsd:element name = "WorkCalendarInformation"
                                                 type = "WorkCalendarInformationType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -418,7 +418,7 @@
               <xsd:element name = "Cancel"      type = "TransCancelType"/>
               <xsd:element name = "WorkCalendarInformation"
                                                 type = "WorkCalendarInformationType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -439,7 +439,7 @@
               <xsd:element name = "Sync"        type = "TransSyncType"/>
               <xsd:element name = "WorkCalendarInformation"
                                                 type = "WorkCalendarInformationType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -455,7 +455,7 @@
 <!-- - - - - - - - - - - - - - - - - - - - - -->
 
   <xsd:complexType name = "GetWorkCalendarType">
-    <xsd:sequence>      
+    <xsd:sequence>
          <xsd:element name = "ApplicationArea"  type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
@@ -463,7 +463,7 @@
               <xsd:element name = "Get"         type = "TransGetType"/>
               <xsd:element name = "WorkCalendar"
                                                 type = "WorkCalendarType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -483,7 +483,7 @@
               <xsd:element name = "Show"        type = "TransShowType"/>
               <xsd:element name = "WorkCalendar"
                                                 type = "WorkCalendarType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -504,7 +504,7 @@
               <xsd:element name = "Process"     type = "TransProcessType"/>
               <xsd:element name = "WorkCalendar"
                                                 type = "WorkCalendarType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -525,7 +525,7 @@
               <xsd:element name = "Acknowledge" type = "TransAcknowledgeType"/>
               <xsd:element name = "WorkCalendar"
                                                 type = "WorkCalendarType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -546,7 +546,7 @@
               <xsd:element name = "Change"      type = "TransChangeType"/>
               <xsd:element name = "WorkCalendar"
                                                 type = "WorkCalendarType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -567,7 +567,7 @@
               <xsd:element name = "Respond"     type = "TransRespondType"/>
               <xsd:element name = "WorkCalendar"
                                                 type = "WorkCalendarType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -588,7 +588,7 @@
               <xsd:element name = "Cancel"      type = "TransCancelType"/>
               <xsd:element name = "WorkCalendar"
                                                 type = "WorkCalendarType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -609,7 +609,7 @@
               <xsd:element name = "Sync"        type = "TransSyncType"/>
               <xsd:element name = "WorkCalendar"
                                                 type = "WorkCalendarType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -626,7 +626,7 @@
 <!-- - - - - - - - - - - - - - - - - - - - - -->
 
   <xsd:complexType name = "GetWorkCalendarDefinitionType">
-    <xsd:sequence>      
+    <xsd:sequence>
          <xsd:element name = "ApplicationArea"  type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
@@ -634,7 +634,7 @@
               <xsd:element name = "Get"         type = "TransGetType"/>
               <xsd:element name = "WorkCalendarDefinition"
                                                 type = "WorkCalendarDefinitionType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -654,7 +654,7 @@
               <xsd:element name = "Show"        type = "TransShowType"/>
               <xsd:element name = "WorkCalendarDefinition"
                                                 type = "WorkCalendarDefinitionType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -675,7 +675,7 @@
               <xsd:element name = "Process"     type = "TransProcessType"/>
               <xsd:element name = "WorkCalendarDefinition"
                                                 type = "WorkCalendarDefinitionType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -696,7 +696,7 @@
               <xsd:element name = "Acknowledge" type = "TransAcknowledgeType"/>
               <xsd:element name = "WorkCalendarDefinition"
                                                 type = "WorkCalendarDefinitionType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -717,7 +717,7 @@
               <xsd:element name = "Change"      type = "TransChangeType"/>
               <xsd:element name = "WorkCalendarDefinition"
                                                 type = "WorkCalendarDefinitionType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -738,7 +738,7 @@
               <xsd:element name = "Respond"     type = "TransRespondType"/>
               <xsd:element name = "WorkCalendarDefinition"
                                                 type = "WorkCalendarDefinitionType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -759,7 +759,7 @@
               <xsd:element name = "Cancel"      type = "TransCancelType"/>
               <xsd:element name = "WorkCalendarDefinition"
                                                 type = "WorkCalendarDefinitionType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
@@ -780,7 +780,7 @@
               <xsd:element name = "Sync"        type = "TransSyncType"/>
               <xsd:element name = "WorkCalendarDefinition"
                                                 type = "WorkCalendarDefinitionType"
-                                                minOccurs = "1" 
+                                                minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
