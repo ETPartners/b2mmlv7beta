@@ -1801,7 +1801,7 @@ Defined values are
     <xsd:complexType name="SpatialDefinitionFormatType">
 		<xsd:annotation>
 			<xsd:documentation>
-For the SpatialDefintionType, the Spatial Defintion Format element's Enumeration types as defined in ISAS-95 Part 2 commom object models Spatial data definitions.
+For the SpatialDefintionType, the Spatial Definition Format element's Enumeration types as defined in ISAS-95 Part 2 commom object models Spatial data definitions.
 			</xsd:documentation>
 		</xsd:annotation>
          <xsd:simpleContent>
