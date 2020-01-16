@@ -757,7 +757,7 @@ Defined values are
     <xsd:complexType name="LocationType">
         <xsd:sequence>
             <xsd:element name="EquipmentID" type="IdentifierType"/>
-            <xsd:element name="EquipmentElementLevel" type="EquipmentElementLevelType"/>
+            <xsd:element name="EquipmentElementLevel" type="EquipmentLevelType"/>
             <xsd:element name="LocationChild" type="LocationType" minOccurs="0"/>
             <xsd:group ref="Extended:Location" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
