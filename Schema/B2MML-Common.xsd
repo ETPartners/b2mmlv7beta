@@ -610,15 +610,6 @@ Defined values are:
             <xsd:restriction base="CodeType"/>
         </xsd:simpleContent>
     </xsd:complexType>
-    <!--     -->
-    <xsd:complexType name = "EvaluatedPropertyReferenceType">
-        <xsd:sequence>
-            <xsd:element name = "TestSpecificationID"   type = "IdentifierType"/>
-            <xsd:element name = "EvaluatedPropertyID"   type = "IdentifierType"/>
-            <xsd:group   ref  = "Extended:EvaluatedPropertyReference"
-                                                        minOccurs = "0" maxOccurs = "1"/>
-        </xsd:sequence>
-    </xsd:complexType>
 
     <!--     -->
     <xsd:complexType name="Extension1Type">
