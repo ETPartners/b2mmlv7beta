@@ -102,7 +102,6 @@
 
   <xsd:complexType name = "WorkPerformanceType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"         
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
@@ -121,7 +120,7 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkResponse"                type = "WorkResponseType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "WorkPerformanceChild"             type = "WorkPerformanceType" 
+      <xsd:element name = "WorkPerformance"             type = "WorkPerformanceType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkPerformance"
                                                         minOccurs = "0" maxOccurs = "1"/>
@@ -130,7 +129,6 @@
 
   <xsd:complexType name = "WorkResponseType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"         
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
@@ -145,20 +143,16 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "ResponseState"               type = "ResponseStateType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "WorkResponseChild"           type = "WorkResponseType" 
+      <xsd:element name = "WorkResponse"                type = "WorkResponseType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "JobResponse"                 type = "JobResponseType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "RequiredByRequestedSegmentResponse"
-                                                        type = "RequiredByRequestedSegmentResponseType"
-                                                        minOccurs = "0"/ 
       <xsd:group   ref  = "Extended:WorkResponse"       minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
 
   <xsd:complexType name = "JobResponseType">
     <xsd:sequence>
-      <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"         
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"    
@@ -171,9 +165,9 @@
                                                         minOccurs = "0" />
       <xsd:element name = "WorkDirectiveVersion"        type = "VersionType"    
                                                         minOccurs = "0" />
-      <xsd:element name = "WorkMasterID"             	type = "IdentifierType"    
+      <xsd:element name = "WorkMasterID"             	  type = "IdentifierType"    
                                                         minOccurs = "0" />
-      <xsd:element name = "WorkMasterVersion"        	type = "VersionType"    
+      <xsd:element name = "WorkMasterVersion"        	  type = "VersionType"    
                                                         minOccurs = "0" />
       <xsd:element name = "WorkflowSpecificationID"     type = "IdentifierType"    
                                                         minOccurs = "0" />
@@ -185,7 +179,7 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "JobState"                    type = "ResponseStateType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "JobResponseData"            type = "OpSegmentDataType" 
+      <xsd:element name = "JobResponsetData"            type = "OpSegmentDataType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "PersonnelActual"             type = "OpPersonnelActualType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -195,9 +189,6 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialActual"              type = "OpMaterialActualType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-       <xsd:element name = "RequiredByRequestedSegmentResponse"
-                                                        type = "RequiredByRequestedSegmentResponseType"
-                                                        minOccurs = "0"/
       <xsd:group   ref  = "Extended:JobResponse"    	minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -221,7 +212,7 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "JobState"                    type = "ResponseStateType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "JobResponse"   		type = "JobResponseType" 
+      <xsd:element name = "JobResponset"   		type = "JobResponseType" 
                                                         minOccurs = "1" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:JobResponseList"    minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
