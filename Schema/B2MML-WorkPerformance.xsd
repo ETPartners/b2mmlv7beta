@@ -137,7 +137,7 @@
       <xsd:element name = "WorkType"                    type = "OperationsTypeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkRequestID"               type = "IdentifierType"
-                 minOccurs = "0"/>
+                                                        minOccurs = "0"/>
       <xsd:element name = "StartTime"                   type = "DateTimeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "EndTime"                     type = "DateTimeType"
@@ -148,6 +148,8 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "JobResponse"                 type = "JobResponseType"
                                                         minOccurs = "1" maxOccurs = "unbounded"/>
+      <xsd:element name = "RequiredByRequestedSegmentResponse"  type = "RequiredByRequestedSegmentResponseType" 
+                                                        minOccurs = "0"/>
       <xsd:group   ref  = "Extended:WorkResponse"       minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -190,6 +192,8 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "MaterialActual"              type = "OpMaterialActualType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "RequiredByRequestedSegmentResponse"  type = "RequiredByRequestedSegmentResponseType" 
+                                                        minOccurs = "0"/>
       <xsd:group   ref  = "Extended:JobResponse"        minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
