@@ -838,7 +838,7 @@ dispatching, execution management, data collection, performance analysis, and tr
 			</xsd:documentation>
 		</xsd:annotation>
          <xsd:simpleContent>
-            <xsd:extension base="MOMFunctionType1">
+            <xsd:extension base="MOMFunction1Type">
                 <xsd:attribute name="OtherValue" type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
