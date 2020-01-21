@@ -165,7 +165,8 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "JobOrderID"                  type = "IdentifierType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "WorkDirective"               type = "WorkDirectiveType" minOccurs = "0"/>
+      <xsd:element name = "WorkDirective"               type = "WorkDirectiveType" 
+                                                        minOccurs = "0"/>
       <xsd:element name = "WorkDirectiveVersion"        type = "VersionType"
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkMasterID"                type = "IdentifierType"
