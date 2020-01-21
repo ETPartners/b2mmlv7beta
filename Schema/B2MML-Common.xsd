@@ -487,7 +487,7 @@ Defined values for the disposition of a material lot are
 			</xsd:documentation>
 		</xsd:annotation>
           <xsd:simpleContent>
-            <xsd:extension base="DispositionType">
+            <xsd:extension base="Disposition1Type">
                 <xsd:attribute name="OtherValue" type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
