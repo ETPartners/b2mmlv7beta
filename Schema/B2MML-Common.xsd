@@ -657,6 +657,31 @@ The hierarchy scope identifies the associated instance in the role-based equipme
         </xsd:sequence>
     </xsd:complexType>
 
+    <xsd:complexType name="InformationObjectType">
+        <xsd:sequence>
+          <xsd:choice>
+            <xsd:element name = "Equipment"  type = "EquipmentType"/>
+            <xsd:element name = "EquipmentClass"  type = "EquipmentClassType"/>
+          </xsd:choice>
+          <xsd:annotation>
+			<xsd:documentation>
+CONTINUE with list of all ISA-95 first order types
+            </xsd:documentation>
+           </xsd:annotation> 
+        </xsd:sequence>
+     </xsd:complexType>
+
+
+
+
+
+
+
+
+
+
+
+
     <!--     -->
     <xsd:complexType name="JobOrderCommand1Type">
         <xsd:simpleContent>
@@ -907,12 +932,14 @@ This attribute must be defined in the corresponding operations event definition.
         <xsd:sequence>
              <xsd:element name="ID" 				type="IdentifierType"/>
              <xsd:element name="Description" 			type="DescriptionType" 	minOccurs="0" maxOccurs="unbounded"/>
-             <xsd:element name="InformationObject" 		type="TextType" 	minOccurs="0"/>
-             <xsd:element name="InformationObjectID" 		type="IdentifierType"/>
+             <xsd:choice>
+                <xsd:element name="InformationObject" type="InformationObjectType"/>
+                <xsd:element name= "ExternalReferenceID"  type="IdentifierType"/>
+              </xsd:choice>
              <xsd:element name="EffectiveTimestamp" 		type="DateTimeType" 	minOccurs="0"/>
              <xsd:element name="RecordTimestamp" 		type="DateTimeType" 	minOccurs="0"/>
              <xsd:element name="InformationObjectType" 		type="IdentifierType" 	minOccurs="0"/>
-	     <xsd:element name="OperationsRecordEntryTemplateChild"
+	         <xsd:element name="OperationsRecordEntryTemplateChild"
 			  					type="OperationsRecordEntryTemplateType"    minOccurs="0" maxOccurs="unbounded"/>
           <xsd:group ref="Extended:OperationsRecordEntryTemplate" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
