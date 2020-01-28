@@ -890,13 +890,7 @@ of elements when used in an XML document.
 
 <!-- B2MML extension groups for ResourceRelationshipNetwork schema-->
 
-        <xsd:group name = "ResourceRelationshipNetworkType">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
-        <xsd:group name = "ResourceNetworkConnectionInformation">
+         <xsd:group name = "ResourceRelationshipNetworkInformation">
                 <xsd:sequence>
                         <!-- add extended elements here -->
                 </xsd:sequence>
@@ -931,6 +925,25 @@ of elements when used in an XML document.
                         <!-- add extended elements here -->
                 </xsd:sequence>
         </xsd:group>
+
+        <xsd:group name = "RRNTypeProperty">
+                <xsd:sequence>
+                        <!-- add extended elements here -->
+                </xsd:sequence>
+        </xsd:group>
+
+        <xsd:group name = "RRNProperty">
+                <xsd:sequence>
+                        <!-- add extended elements here -->
+                </xsd:sequence>
+        </xsd:group>
+
+        <xsd:group name = "RNCProperty">
+                <xsd:sequence>
+                        <!-- add extended elements here -->
+                </xsd:sequence>
+        </xsd:group>
+
 
         
 <!-- B2MML extension groups for TransactionProfile schema  -->

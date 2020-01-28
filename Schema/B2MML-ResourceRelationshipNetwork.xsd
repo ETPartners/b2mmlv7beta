@@ -97,7 +97,7 @@
   <xsd:element name = "CancelResourceNetworkConnectionType"      type = "CancelResourceNetworkConnectionTypeType"/>
   <xsd:element name = "SyncResourceNetworkConnectionType"        type = "SyncResourceNetworkConnectionTypeType"/>
 
-<!-- Resource Network Connection Types  -->
+<!-- Resource Relationship Network Types  -->
 
   <xsd:complexType name = "ResourceRelationshipNetworkInformationType">
     <xsd:sequence>
@@ -106,7 +106,7 @@
                                                                  minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"                       type = "HierarchyScopeType"
                                                                  minOccurs = "0"/>
-      <xsd:element name = "ResourceRelationshipNetwork"           type = "ResourceRelationshipNetworkType"
+      <xsd:element name = "ResourceRelationshipNetwork"          type = "ResourceRelationshipNetworkType"
                                                                  minOccurs = "1" maxOccurs = "unbounded"/>
       <xsd:element name = "ResourceNetworkConnectionType"        type = "ResourceNetworkConnectionTypeType"
                                                                  minOccurs = "1" maxOccurs = "unbounded"/>
@@ -114,56 +114,53 @@
     </xsd:sequence>
   </xsd:complexType>
 
-    <xsd:complexType name = "ResourceNetworkConnectionTypeType">
+  <xsd:complexType name = "ResourceNetworkConnectionTypeType">
     <xsd:sequence>
       <xsd:element name = "ID"                                  type = "IdentifierType"/>
-      <xsd:element name = "Version"           type = "VersionType"
+      <xsd:element name = "Version"                             type = "VersionType"
                                                                 minOccurs = "0"/>
       <xsd:element name = "Description"                         type = "DescriptionType"
-                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EffectiveFrom"        type = "DateTimeType"
-                    minOccurs = "0"/>
-      <xsd:element name = "EffectiveTo"        type = "DateTimeType"
-                    minOccurs = "0"/>
-      <xsd:element name = "HierarchyScope"                       type = "HierarchyScopeType"
-                                                                 minOccurs = "0"/>
-      <xsd:element name = "PublishedDate"                        type = "DateTimeType"
-                                                                 minOccurs = "0"/>
-      <xsd:element name = "ConnectionType"              type = "IdentifierType"/>
-      <xsd:element name = "ResourceNetworkConnectionSourceID"    type = "IdentifierType" minOccurs = "0"/>
-      <xsd:element name = "RNCTypeProperty"
-                    type = "RNCTypePropertyType"
-                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
+                                                                minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "EffectiveFrom"                       type = "DateTimeType"
+                                                                minOccurs = "0"/>
+      <xsd:element name = "EffectiveTo"                         type = "DateTimeType"
+                                                                minOccurs = "0"/>
+      <xsd:element name = "HierarchyScope"                      type = "HierarchyScopeType"
+                                                                minOccurs = "0"/>
+      <xsd:element name = "PublishedDate"                       type = "DateTimeType"
+                                                                minOccurs = "0"/>
+      <xsd:element name = "ConnectionType"                      type = "IdentifierType"/>
+      <xsd:element name = "ResourceNetworkConnectionSourceID"   type = "IdentifierType" 
+                                                                minOccurs = "0"/>
+      <xsd:element name = "RNCTypeProperty"                     type = "RNCTypePropertyType"
+                                                                minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:ResourceNetworkConnectionType"  minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
 
-
-<!-- Resource Relationship Network Instances  -->
-
   <xsd:complexType name = "ResourceRelationshipNetworkType">
     <xsd:sequence>
-      <xsd:element name = "ID"                                   type = "IdentifierType"/>
-      <xsd:element name = "Version"           type = "VersionType"
-                     minOccurs = "0"/>
-      <xsd:element name = "Description"                          type = "DescriptionType"
-                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "EffectiveFrom"        type = "DateTimeType"
-                    minOccurs = "0"/>
-      <xsd:element name = "EffectiveTo"        type = "DateTimeType"
-                    minOccurs = "0"/>
-      <xsd:element name = "HierarchyScope"                       type = "HierarchyScopeType"
-                                                                 minOccurs = "0"/>
-      <xsd:element name = "RelationshipType"                     type = "RelationshipTypeType"
-                                                                 minOccurs = "0"/>
-      <xsd:element name = "RelationshipForm"                     type = "RelationshipFormType"
-                                                                 minOccurs = "0"/>
-      <xsd:element name = "PublishedDate"                        type = "DateTimeType"
-                                                                 minOccurs = "0"/>
-      <xsd:element name = "RRNProperty"                     type = "RRNPropertyType"
-                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "ResourceNetworkConnection"            type = "ResourceNetworkConnectionType"
-                                                                 minOccurs = "1" maxOccurs = "unbounded"/>
+      <xsd:element name = "ID"                                  type = "IdentifierType"/>
+      <xsd:element name = "Version"                             type = "VersionType"
+                                                                minOccurs = "0"/>
+      <xsd:element name = "Description"                         type = "DescriptionType"
+                                                                minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "EffectiveFrom"                       type = "DateTimeType"
+                                                                minOccurs = "0"/>
+      <xsd:element name = "EffectiveTo"                         type = "DateTimeType"
+                                                                minOccurs = "0"/>
+      <xsd:element name = "HierarchyScope"                      type = "HierarchyScopeType"
+                                                                minOccurs = "0"/>
+      <xsd:element name = "RelationshipType"                    type = "RelationshipTypeType"
+                                                                minOccurs = "0"/>
+      <xsd:element name = "RelationshipForm"                    type = "RelationshipFormType"
+                                                                minOccurs = "0"/>
+      <xsd:element name = "PublishedDate"                       type = "DateTimeType"
+                                                                minOccurs = "0"/>
+      <xsd:element name = "RRNProperty"                         type = "RRNPropertyType"
+                                                                minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "ResourceNetworkConnection"           type = "ResourceNetworkConnectionType"
+                                                                minOccurs = "1" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:ResourceRelationshipNetwork" minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -176,7 +173,7 @@
       <xsd:element name = "ResourceNetworkConnectionTypeID"     type = "IdentifierType"/>
       <xsd:element name = "FromResourceReference"               type = "ResourceReferenceType"/>
       <xsd:element name = "ToResourceReference"                 type = "ResourceReferenceType"/>
-      <xsd:element name = "RNCProperty"                   type = "RNCPropertyType"
+      <xsd:element name = "RNCProperty"                         type = "RNCPropertyType"
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:ResourceNetworkConnection"  minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
@@ -186,9 +183,9 @@
     <xsd:sequence>
       <xsd:element name = "ID"                                  type = "IdentifierType"/>
       <xsd:element name = "ResourceID"                          type = "IdentifierType"
-                   minOccurs = "0"/>
+                                                                minOccurs = "0"/>
       <xsd:element name = "ResourceClassID"                     type = "IdentifierType"
-                   minOccurs = "0"/>
+                                                                minOccurs = "0"/>
       <xsd:element name = "ResourceType"                        type = "ResourceReferenceTypeType"
                                                                 minOccurs = "0"/>
       <xsd:element name = "ResourceReferenceProperty"           type = "ResourceReferencePropertyType"
@@ -203,9 +200,9 @@
       <xsd:element name = "Description"                         type = "DescriptionType"
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "ResourcePropertyID"                  type = "IdentifierType"
-                   minOccurs = "0"/>
+                                                                minOccurs = "0"/>
       <xsd:element name = "ResourceClassPropertyID"             type = "IdentifierType"
-                   minOccurs = "0"/>
+                                                                minOccurs = "0"/>
       <xsd:element name = "Value"                               type = "ValueType"
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "ResourceReferencePropertyChild"      type ="ResourceReferencePropertyType"
@@ -221,9 +218,9 @@
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                               type = "ValueType"
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "RRNPropertyChild"       type = "RRNPropertyType"
-                   minOccurs ="0" maxOccurs="unbounded"/>
-      <xsd:group   ref  = "Extended:RRNProperty"      minOccurs = "0" maxOccurs = "1"/>
+      <xsd:element name = "RRNPropertyChild"                    type = "RRNPropertyType"
+                                                                minOccurs ="0" maxOccurs="unbounded"/>
+      <xsd:group   ref  = "Extended:RRNProperty"                minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -234,9 +231,9 @@
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                               type = "ValueType"
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "RNCTypePropertyChild"       type = "IdentifierType"
-                                                    minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:group   ref  = "Extended:RNCTypeProperty"      minOccurs = "0" maxOccurs = "1"/>
+      <xsd:element name = "RNCTypePropertyChild"                type = "IdentifierType"
+                                                                minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:group   ref  = "Extended:RNCTypeProperty"            minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -247,11 +244,11 @@
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Value"                               type = "ValueType"
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "RNCTypePropertyID"       type = "IdentifierType"
-                                                    minOccurs = "0"/>
-      <xsd:element name = "RNCPropertyChild"       type = "RNCPropertyType"
-                   minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:group   ref  = "Extended:RNCProperty"      minOccurs = "0" maxOccurs = "1"/>
+      <xsd:element name = "RNCTypePropertyID"                   type = "IdentifierType"
+                                                                minOccurs = "0"/>
+      <xsd:element name = "RNCPropertyChild"                    type = "RNCPropertyType"
+                                                                minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:group   ref  = "Extended:RNCProperty"                minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
 
@@ -262,13 +259,12 @@
 
   <xsd:complexType name = "GetResourceRelationshipNetworkType">
     <xsd:sequence>
-         <xsd:element name = "ApplicationArea"
-                                type = "TransApplicationAreaType"/>
+         <xsd:element name = "ApplicationArea"  type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
               <xsd:element name = "Get"         type = "TransGetType"/>
-              <xsd:element      name = "ResourceRelationshipNetwork"
+              <xsd:element name = "ResourceRelationshipNetwork"
                                                 type = "ResourceRelationshipNetworkType"
                                                 minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
@@ -283,12 +279,12 @@
 
   <xsd:complexType name = "ShowResourceRelationshipNetworkType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
               <xsd:element name = "Show"        type = "TransShowType"/>
-              <xsd:element      name = "ResourceRelationshipNetwork"
+              <xsd:element name = "ResourceRelationshipNetwork"
                                                 type = "ResourceRelationshipNetworkType"
                                                 minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
@@ -304,7 +300,7 @@
 
   <xsd:complexType name = "ProcessResourceRelationshipNetworkType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -325,7 +321,7 @@
 
   <xsd:complexType name = "AcknowledgeResourceRelationshipNetworkType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -346,11 +342,11 @@
 
   <xsd:complexType name = "ChangeResourceRelationshipNetworkType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name = "Change"     type = "TransChangeType"/>
+              <xsd:element name = "Change"      type = "TransChangeType"/>
               <xsd:element name = "ResourceRelationshipNetwork"
                                                 type = "ResourceRelationshipNetworkType"
                                                 minOccurs = "1"
@@ -367,7 +363,7 @@
 
   <xsd:complexType name = "RespondResourceRelationshipNetworkType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -388,7 +384,7 @@
 
   <xsd:complexType name = "CancelResourceRelationshipNetworkType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -409,11 +405,11 @@
 
   <xsd:complexType name = "SyncResourceRelationshipNetworkType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name = "Sync"        type =                  "TransSyncType"/>
+              <xsd:element name = "Sync"        type = "TransSyncType"/>
               <xsd:element name = "ResourceRelationshipNetwork"
                                                 type = "ResourceRelationshipNetworkType"
                                                 minOccurs = "1"
@@ -433,13 +429,12 @@
 
   <xsd:complexType name = "GetResourceRelationshipNetworkInformationType">
     <xsd:sequence>
-         <xsd:element name = "ApplicationArea"
-                                type = "TransApplicationAreaType"/>
+         <xsd:element name = "ApplicationArea"  type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
               <xsd:element name = "Get"         type = "TransGetType"/>
-              <xsd:element      name = "ResourceRelationshipNetworkInformation"
+              <xsd:element name = "ResourceRelationshipNetworkInformation"
                                                 type = "ResourceRelationshipNetworkInformationType"
                                                 minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
@@ -454,12 +449,12 @@
 
   <xsd:complexType name = "ShowResourceRelationshipNetworkInformationType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
               <xsd:element name = "Show"        type = "TransShowType"/>
-              <xsd:element      name = "ResourceRelationshipNetworkInformation"
+              <xsd:element name = "ResourceRelationshipNetworkInformation"
                                                 type = "ResourceRelationshipNetworkInformationType"
                                                 minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
@@ -475,7 +470,7 @@
 
   <xsd:complexType name = "ProcessResourceRelationshipNetworkInformationType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -496,7 +491,7 @@
 
   <xsd:complexType name = "AcknowledgeResourceRelationshipNetworkInformationType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -517,11 +512,11 @@
 
   <xsd:complexType name = "ChangeResourceRelationshipNetworkInformationType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name = "Change"     type = "TransChangeType"/>
+              <xsd:element name = "Change"      type = "TransChangeType"/>
               <xsd:element name = "ResourceRelationshipNetworkInformation"
                                                 type = "ResourceRelationshipNetworkInformationType"
                                                 minOccurs = "1"
@@ -538,7 +533,7 @@
 
   <xsd:complexType name = "RespondResourceRelationshipNetworkInformationType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -559,7 +554,7 @@
 
   <xsd:complexType name = "CancelResourceRelationshipNetworkInformationType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -580,11 +575,11 @@
 
   <xsd:complexType name = "SyncResourceRelationshipNetworkInformationType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name = "Sync"        type =                  "TransSyncType"/>
+              <xsd:element name = "Sync"        type = "TransSyncType"/>
               <xsd:element name = "ResourceRelationshipNetworkInformation"
                                                 type = "ResourceRelationshipNetworkInformationType"
                                                 minOccurs = "1"
@@ -606,13 +601,12 @@
 
 <xsd:complexType name = "GetResourceNetworkConnectionTypeType">
   <xsd:sequence>
-       <xsd:element name = "ApplicationArea"
-                              type = "TransApplicationAreaType"/>
+       <xsd:element name = "ApplicationArea"  type = "TransApplicationAreaType"/>
     <xsd:element name = "DataArea">
        <xsd:complexType>
           <xsd:sequence>
             <xsd:element name = "Get"         type = "TransGetType"/>
-            <xsd:element      name = "ResourceNetworkConnectionType"
+            <xsd:element name = "ResourceNetworkConnectionType"
                                               type = "ResourceNetworkConnectionTypeType"
                                               minOccurs = "1"
                                               maxOccurs = "unbounded"/>
@@ -627,7 +621,7 @@
 
 <xsd:complexType name = "ShowResourceNetworkConnectionTypeType">
   <xsd:sequence>
-    <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
     <xsd:element name = "DataArea">
        <xsd:complexType>
           <xsd:sequence>
@@ -648,7 +642,7 @@
 
 <xsd:complexType name = "ProcessResourceNetworkConnectionTypeType">
   <xsd:sequence>
-    <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
     <xsd:element name = "DataArea">
        <xsd:complexType>
           <xsd:sequence>
@@ -669,7 +663,7 @@
 
 <xsd:complexType name = "AcknowledgeResourceNetworkConnectionTypeType">
   <xsd:sequence>
-    <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
     <xsd:element name = "DataArea">
        <xsd:complexType>
           <xsd:sequence>
@@ -690,11 +684,11 @@
 
 <xsd:complexType name = "ChangeResourceNetworkConnectionTypeType">
   <xsd:sequence>
-    <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
     <xsd:element name = "DataArea">
        <xsd:complexType>
           <xsd:sequence>
-            <xsd:element name = "Change"     type = "TransChangeType"/>
+            <xsd:element name = "Change"      type = "TransChangeType"/>
             <xsd:element name = "ResourceNetworkConnectionType"
                                               type = "ResourceNetworkConnectionTypeType"
                                               minOccurs = "1"
@@ -711,7 +705,7 @@
 
 <xsd:complexType name = "RespondResourceNetworkConnectionTypeType">
   <xsd:sequence>
-    <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
     <xsd:element name = "DataArea">
        <xsd:complexType>
           <xsd:sequence>
@@ -732,7 +726,7 @@
 
 <xsd:complexType name = "CancelResourceNetworkConnectionTypeType">
   <xsd:sequence>
-    <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
     <xsd:element name = "DataArea">
        <xsd:complexType>
           <xsd:sequence>
@@ -753,11 +747,11 @@
 
 <xsd:complexType name = "SyncResourceNetworkConnectionTypeType">
   <xsd:sequence>
-    <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
     <xsd:element name = "DataArea">
        <xsd:complexType>
           <xsd:sequence>
-            <xsd:element name = "Sync"        type =                  "TransSyncType"/>
+            <xsd:element name = "Sync"        type = "TransSyncType"/>
             <xsd:element name = "ResourceNetworkConnectionType"
                                               type = "ResourceNetworkConnectionTypeType"
                                               minOccurs = "1"
