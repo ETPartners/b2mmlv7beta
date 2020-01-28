@@ -920,13 +920,13 @@ of elements when used in an XML document.
                 </xsd:sequence>
         </xsd:group>
 
-        <xsd:group name = "ResourceProperty">
+        <xsd:group name = "ResourceReferenceProperty">
                 <xsd:sequence>
                         <!-- add extended elements here -->
                 </xsd:sequence>
         </xsd:group>
 
-        <xsd:group name = "RRNTypeProperty">
+        <xsd:group name = "RNCTypeProperty">
                 <xsd:sequence>
                         <!-- add extended elements here -->
                 </xsd:sequence>
