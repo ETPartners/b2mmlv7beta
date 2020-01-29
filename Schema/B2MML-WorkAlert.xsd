@@ -148,7 +148,7 @@
       <xsd:element name = "WorkAlertDefinitionPropertyChild"
 		   				    type = "WorkAlertPropertyType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:group   ref  = "Extended:WorkAlertProperty"
+      <xsd:group   ref  = "Extended:WorkAlertDefinitionProperty"
                                                     minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
