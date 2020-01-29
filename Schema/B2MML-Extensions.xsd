@@ -982,7 +982,7 @@ of elements when used in an XML document.
 
         <xsd:group name = "WorkAlertDefinitionProperty">
                 <xsd:sequence>
-                        <!-- add extended elements here -->
+                        <!-- add extended elements here  -->
                 </xsd:sequence>
         </xsd:group>
 
@@ -1013,6 +1013,12 @@ of elements when used in an XML document.
                 </xsd:sequence>
         </xsd:group>
 
+        <xsd:group name = "WorkCalendarDefinitionEntryProperty">
+                <xsd:sequence>
+                        <!-- add extended elements here -->
+                </xsd:sequence>
+        </xsd:group>
+
         <xsd:group name = "WorkCalendarDefinitionProperty">
                 <xsd:sequence>
                         <!-- add extended elements here -->
@@ -1026,6 +1032,12 @@ of elements when used in an XML document.
         </xsd:group>
 
         <xsd:group name = "WorkCalendarEntry">
+                <xsd:sequence>
+                        <!-- add extended elements here -->
+                </xsd:sequence>
+        </xsd:group>
+
+        <xsd:group name = "WorkCalendarEntryProperty">
                 <xsd:sequence>
                         <!-- add extended elements here -->
                 </xsd:sequence>
