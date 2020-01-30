@@ -67,6 +67,7 @@
 
   <xsd:element name = "WorkflowSpecificationInformation"   type = "WorkflowSpecificationInformationType" />
   <xsd:element name = "WorkflowSpecification"              type = "WorkflowSpecificationType" />
+  <xsd:element name = "WorkflowSpecificationNodeType"      type = "WorkflowSpecificationNodeTypeType" />
 
 
 <!-- Transaction Elements -->
@@ -87,6 +88,15 @@
   <xsd:element name = "RespondWorkflowSpecification"         type = "RespondWorkflowSpecificationType"/>
   <xsd:element name = "CancelWorkflowSpecification"          type = "CancelWorkflowSpecificationType"/>
   <xsd:element name = "SyncWorkflowSpecification"            type = "SyncWorkflowSpecificationType"/>
+
+  <xsd:element name = "GetWorkflowSpecificationNodeType"            type = "GetWorkflowSpecificationNodeTypeType"/>
+  <xsd:element name = "ShowWorkflowSpecificationNodeType"           type = "ShowWorkflowSpecificationNodeTypeType"/>
+  <xsd:element name = "ProcessWorkflowSpecificationNodeType"        type = "ProcessWorkflowSpecificationNodeTypeType"/>
+  <xsd:element name = "AcknowledgeWorkflowSpecificationNodeType"    type = "AcknowledgeWorkflowSpecificationNodeTypeType"/>
+  <xsd:element name = "ChangeWorkflowSpecificationNodeType"         type = "ChangeWorkflowSpecificationNodeTypeType"/>
+  <xsd:element name = "RespondWorkflowSpecificationNodeType"        type = "RespondWorkflowSpecificationNodeTypeType"/>
+  <xsd:element name = "CancelWorkflowSpecificationNodeType"         type = "CancelWorkflowSpecificationNodeTypeType"/>
+  <xsd:element name = "SyncWorkflowSpecificationNodeType"           type = "SyncWorkflowSpecificationNodeTypeType"/>
 
 
 <!-- Simple & Complex Types  -->
@@ -173,8 +183,8 @@
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkflowSpecificationConnectionTypeID"
-                 type = "IdentifierType"
-                     minOccurs = "0"/>
+                                                        type = "IdentifierType"
+                                                        minOccurs = "0"/>
       <xsd:element name = "FromWSNodeID"                type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "ToWSNodeID"                  type = "DescriptionType"
@@ -268,10 +278,10 @@
       <xsd:element name = "Value"                       type = "ValueType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkflowSpecificationNodeTypePropertyID"
-                 type = "IdentifierType"
-                  minOccurs = "0"/>
+                                                        type = "IdentifierType"
+                                                        minOccurs = "0"/>
       <xsd:element name = "WorkflowSpecificationNodePropertyChild"
-                 type = "WorkflowSpecificationNodePropertyType"
+                                                        type = "WorkflowSpecificationNodePropertyType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkflowSpecificationNodeProperty"
                                                         minOccurs = "0"/>
@@ -287,10 +297,10 @@
       <xsd:element name = "Value"                       type = "ValueType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkflowSpecificationConnectionTypePropertyID"
-                 type = "IdentifierType"
-                  minOccurs = "0"/>
+                                                        type = "IdentifierType"
+                                                        minOccurs = "0"/>
       <xsd:element name = "WorkflowSpecificationConnectionPropertyChild"
-                 type = "WorkflowSpecificationConnectionPropertyType"
+                                                        type = "WorkflowSpecificationConnectionPropertyType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkflowSpecificationConnectionProperty"
                                                         minOccurs = "0"/>
@@ -306,7 +316,7 @@
       <xsd:element name = "Value"                       type = "ValueType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkflowSpecificationNodeTypePropertyChild"
-                 type = "WorkflowSpecificationNodeTypePropertyType"
+                                                        type = "WorkflowSpecificationNodeTypePropertyType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkflowSpecificationNodeTypeProperty"
                                                         minOccurs = "0"/>
@@ -322,7 +332,7 @@
       <xsd:element name = "Value"                       type = "ValueType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkflowSpecificationConnectionTypePropertyChild"
-                 type = "WorkflowSpecificationConnectionTypePropertyType"
+                                                        type = "WorkflowSpecificationConnectionTypePropertyType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkflowSpecificationConnectionTypeProperty"
                                                         minOccurs = "0"/>
@@ -656,6 +666,170 @@
     <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
     <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
   </xsd:complexType>
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- WorkflowSpecificationNodeType Transaction Types -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+<xsd:complexType name = "GetWorkflowSpecificationNodeTypeType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Get"         type = "TransGetType"/>
+            <xsd:element name = "WorkflowSpecificationNodeType"
+                                              type = "WorkflowSpecificationNodeTypeType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "ShowWorkflowSpecificationNodeTypeType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Show"        type = "TransShowType"/>
+            <xsd:element name = "WorkflowSpecificationNodeType"
+                                              type = "WorkflowSpecificationNodeTypeType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "ProcessWorkflowSpecificationNodeTypeType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Process"     type = "TransProcessType"/>
+            <xsd:element name = "WorkflowSpecificationNodeType"
+                                              type = "WorkflowSpecificationNodeTypeType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "AcknowledgeWorkflowSpecificationNodeTypeType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Acknowledge" type = "TransAcknowledgeType"/>
+            <xsd:element name = "WorkflowSpecificationNodeType"
+                                              type = "WorkflowSpecificationNodeTypeType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "ChangeWorkflowSpecificationNodeTypeType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Change"      type = "TransChangeType"/>
+            <xsd:element name = "WorkflowSpecificationNodeType"
+                                              type = "WorkflowSpecificationNodeTypeType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "RespondWorkflowSpecificationNodeTypeType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Respond"     type = "TransRespondType"/>
+            <xsd:element name = "WorkflowSpecificationNodeType"
+                                              type = "WorkflowSpecificationNodeTypeType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "CancelWorkflowSpecificationNodeTypeType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Cancel"      type = "TransCancelType"/>
+            <xsd:element name = "WorkflowSpecificationNodeType"
+                                              type = "WorkflowSpecificationNodeTypeType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "SyncWorkflowSpecificationNodeTypeType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Sync"        type = "TransSyncType"/>
+            <xsd:element name = "WorkflowSpecificationNodeType"
+                                              type = "WorkflowSpecificationNodeTypeType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
 
 
 </xsd:schema>
