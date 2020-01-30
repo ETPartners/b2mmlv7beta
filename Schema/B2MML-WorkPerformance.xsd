@@ -12,9 +12,10 @@
 <xsd:import     namespace="http://www.mesa.org/xml/B2MML-AllExtensions"
                 schemaLocation="B2MML-AllExtensions.xsd"/>
 
-<!-- Include the Common schema and OP-->
+<!-- Include the Common schema, WorkDefinition schema, and OperationsPerformanceTypes schema-->
 
   <xsd:include  schemaLocation = "B2MML-Common.xsd"/>
+  <xsd:include  schemaLocation = "B2MML-WorkDefinition.xsd"/>
   <xsd:include  schemaLocation = "B2MML-OperationsPerformanceTypes.xsd"/>
 
 <xsd:annotation>
