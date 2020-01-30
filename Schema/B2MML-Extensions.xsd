@@ -1134,6 +1134,30 @@ of elements when used in an XML document.
                         <!-- add extended elements here -->
                 </xsd:sequence>
         </xsd:group>
+         
+        <xsd:group name = "WorkflowSpecificationNodeProperty">
+                <xsd:sequence>
+                        <!-- add extended elements here -->
+                </xsd:sequence>
+        </xsd:group>
+
+        <xsd:group name = "WorkflowSpecificationNodeTypeProperty">
+                <xsd:sequence>
+                        <!-- add extended elements here -->
+                </xsd:sequence>
+        </xsd:group>       
+        
+        <xsd:group name = "WorkflowSpecificationConnectionProperty">
+                <xsd:sequence>
+                        <!-- add extended elements here -->
+                </xsd:sequence>
+        </xsd:group>
+
+        <xsd:group name = "WorkflowSpecificationConnectionTypeProperty">
+                <xsd:sequence>
+                        <!-- add extended elements here -->
+                </xsd:sequence>
+        </xsd:group>
 
 <!-- B2MML extension groups for WorkPerformance schemas  -->
 
