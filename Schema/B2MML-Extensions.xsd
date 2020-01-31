@@ -117,12 +117,6 @@ of elements when used in an XML document.
                 </xsd:sequence>
         </xsd:group>
 
-        <xsd:group name = "EquipmentCapabilityTestSpecification">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
         <xsd:group name = "TestedEquipmentProperty">
                 <xsd:sequence>
                         <!-- add extended elements here -->
@@ -164,12 +158,6 @@ of elements when used in an XML document.
         </xsd:group>
 
         <xsd:group name = "PhysicalAssetClassProperty">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
-        <xsd:group name = "PhysicalAssetCapabilityTestSpecification">
                 <xsd:sequence>
                         <!-- add extended elements here -->
                 </xsd:sequence>
@@ -238,12 +226,6 @@ of elements when used in an XML document.
                 </xsd:sequence>
         </xsd:group>
 
-        <xsd:group name = "MaterialTestSpecification">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
         <xsd:group name = "TestedMaterialClassProperty">
                 <xsd:sequence>
                         <!-- add extended elements here -->
@@ -261,7 +243,6 @@ of elements when used in an XML document.
                         <!-- add extended elements here -->
                 </xsd:sequence>
         </xsd:group>
-
 
 
 
@@ -292,12 +273,6 @@ of elements when used in an XML document.
         </xsd:group>
 
         <xsd:group name = "PersonnelClassProperty">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
-        <xsd:group name = "QualificationTestSpecification">
                 <xsd:sequence>
                         <!-- add extended elements here -->
                 </xsd:sequence>
