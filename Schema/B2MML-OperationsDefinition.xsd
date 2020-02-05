@@ -112,9 +112,9 @@
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
-              minOccurs = "0"/>
+                                                        minOccurs = "0"/>
       <xsd:element name = "PublishedDate"               type = "DateTimeType"
-              minOccurs = "0"/>
+                                                        minOccurs = "0"/>
       <xsd:element name = "OperationsDefinition"        type = "OperationsDefinitionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsSegment"           type = "OperationsSegmentType"
@@ -128,14 +128,16 @@
   <xsd:complexType name = "OperationsDefinitionType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
-      <xsd:element name = "Version"                     type = "VersionType"
-                                                        minOccurs = "0"/>
-      <xsd:element name = "EffectiveFrom"               type = "DateTimeType"
-                                                        minOccurs = "0"/>
-      <xsd:element name = "EffectiveTo"                 type = "DateTimeType"
-                                                        minOccurs = "0"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                     type = "VersionType"
+                                                        minOccurs = "0"/>
+      <xsd:element name = "PublishedDate"               type = "DateTimeType"
+                                                        minOccurs = "0"/>                                                        
+      <xsd:element name = "EffectiveStartDate"          type = "DateTimeType"
+                                                        minOccurs = "0"/>
+      <xsd:element name = "EffectiveEndDate"            type = "DateTimeType"
+                                                        minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "OperationsType"              type = "OperationsTypeType"
@@ -166,6 +168,12 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0"/>
+      <xsd:element name = "PublishedDate"               type = "DateTimeType"
+                                                        minOccurs = "0"/>                                                        
+      <xsd:element name = "EffectiveStartDate"          type = "DateTimeType"
+                                                        minOccurs = "0"/>
+      <xsd:element name = "EffectiveEndDate"            type = "DateTimeType"
+                                                        minOccurs = "0"/>                                                 
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "UseType"                     type = "CodeType"
@@ -206,6 +214,12 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0"/>
+      <xsd:element name = "PublishedDate"               type = "DateTimeType"
+                                                        minOccurs = "0"/>                                                        
+      <xsd:element name = "EffectiveStartDate"          type = "DateTimeType"
+                                                        minOccurs = "0"/>
+      <xsd:element name = "EffectiveEndDate"            type = "DateTimeType"
+                                                        minOccurs = "0"/>                                            
       <xsd:element name = "OperationsType"              type = "OperationsTypeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "DefinitionType"              type = "DefinitionTypeType"
