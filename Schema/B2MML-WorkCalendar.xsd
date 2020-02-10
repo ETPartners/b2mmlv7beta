@@ -124,13 +124,19 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "PublishedDate"               type = "DateTimeType"
+                                                        minOccurs = "0"/>
+      <xsd:element name = "EffectiveStartDate           type = "DateTimeType"
+                                                        minOccurs = "0"/>      
+      <xsd:element name = "EffectiveEndDate             type = "DateTimeType"
+                                                        minOccurs = "0"/>        
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkCalendarDefinitionEntry"
-                   type = "WorkCalendarDefinitionEntryType"
+                                                        type = "WorkCalendarDefinitionEntryType"
                                                         minOccurs = "1" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkCalendarDefinitionProperty"
-                   type = "WorkCalendarDefinitionPropertyType"
+                                                        type = "WorkCalendarDefinitionPropertyType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkCalendarDefinition"
                                                         minOccurs = "0" maxOccurs = "1"/>
@@ -159,9 +165,13 @@
                                                     minOccurs = "0"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
+      <xsd:element name = "PublishedDate"           type = "DateTimeType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "StartRule"               type = "CodeType"
+      <xsd:element name = "EffectiveStartDate       type = "DateTimeType"
+                                                    minOccurs = "0"/>      
+      <xsd:element name = "EffectiveEndDate         type = "DateTimeType"
+                                                    minOccurs = "0"/>  
+      <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
                                                     minOccurs = "0"/>
       <xsd:element name = "RecurrenceTime"          type = "CodeType"
                                                     minOccurs = "0"/>
@@ -202,12 +212,18 @@
       <xsd:element name = "ID"                      type = "IdentifierType"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "PublishedDate"           type = "DateTimeType"
+                                                    minOccurs = "0"/>
+      <xsd:element name = "EffectiveStartDate       type = "DateTimeType"
+                                                    minOccurs = "0"/>      
+      <xsd:element name = "EffectiveEndDate         type = "DateTimeType"
+                                                    minOccurs = "0"/> 
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
                                                     minOccurs = "0"/>
       <xsd:element name = "WorkCalendarEntry"       type = "WorkCalendarEntryType"
                                                     minOccurs = "1" maxOccurs = "unbounded"/>
       <xsd:element name = "WorkCalendarProperty"
-                   type = "WorkCalendarPropertyType"
+                                                    type = "WorkCalendarPropertyType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:group   ref  = "Extended:WorkCalendar"
                                                     minOccurs = "0" maxOccurs = "1"/>
@@ -239,12 +255,14 @@
       <xsd:element name = "ID"                      type = "IdentifierType"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
+      <xsd:element name = "PublishedDate"           type = "DateTimeType"
                                                     minOccurs = "0"/>
       <xsd:element name = "StartDateTime"           type = "DateTimeType"
                                                     minOccurs = "0"/>
       <xsd:element name = "FinishDateTime"          type = "DateTimeType"
                                                     minOccurs = "0"/>
+      <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
+                                                    minOccurs = "0"/>                                              
       <xsd:element name = "EntryType"               type = "CodeType"
                                                     minOccurs = "0"/>
       <xsd:element name = "WorkCalendarEntryChild"  type = "WorkCalendarEntryType"
