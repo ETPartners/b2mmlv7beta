@@ -203,12 +203,6 @@ of elements when used in an XML document.
                 </xsd:sequence>
         </xsd:group>
 
-        <xsd:group name = "TestedMaterialClassProperty">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
 
 
 <!-- B2MML extension groups for Personnel schema-->
@@ -397,7 +391,7 @@ of elements when used in an XML document.
 
 
 
-<!-- B2MML extension groups for OperationsCapability and ProductionCapability schema-->
+<!-- B2MML extension groups for OperationsCapability schema-->
 
         <xsd:group name = "OperationsCapability">
                 <xsd:sequence>
@@ -608,12 +602,6 @@ of elements when used in an XML document.
 <!-- B2MML extension groups for OperationsSchedule schema-->
 
         <xsd:group name = "OperationsSchedule">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
-        <xsd:group name = "ProductionSchedule">
                 <xsd:sequence>
                         <!-- add extended elements here -->
                 </xsd:sequence>
