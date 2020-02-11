@@ -329,7 +329,7 @@ of elements when used in an XML document.
                 </xsd:sequence>
         </xsd:group>
 
-        <xsd:group name = "OperationsBillOfMaterialItem">
+        <xsd:group name = "OperationsMaterialBillItem">
                 <xsd:sequence>
                         <!-- add extended elements here -->
                 </xsd:sequence>
@@ -546,8 +546,6 @@ of elements when used in an XML document.
                         <!-- add extended elements here -->
                 </xsd:sequence>
         </xsd:group>
-
-<!-- Included for ProductionPerformance schema -->
  
         <xsd:group name = "PersonnelActual">
                 <xsd:sequence>

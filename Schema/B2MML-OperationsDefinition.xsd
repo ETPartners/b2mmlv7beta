@@ -205,7 +205,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Quantity"                    type = "QuantityValueType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:group   ref  = "Extended:OperationsBillOfMaterialItem"  minOccurs = "0"/>
+      <xsd:group   ref  = "Extended:OperationsMaterialBillItem"  minOccurs = "0"/>
     </xsd:sequence>
   </xsd:complexType>
 
