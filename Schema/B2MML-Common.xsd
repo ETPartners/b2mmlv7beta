@@ -923,51 +923,56 @@ This attribute must be defined in the corresponding operations event definition.
     <!--     -->
     <xsd:complexType name="OperationsRecordEntryTemplateType">
         <xsd:sequence>
-             <xsd:element name="ID" 				type="IdentifierType"/>
-             <xsd:element name="Description" 			type="DescriptionType" 	minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:element name="ID" 				      type="IdentifierType"/>
+             <xsd:element name="Description" 			  type="DescriptionType"  minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:element name="RecordTimestamp" 		  type="DateTimeType"     minOccurs="0"/>
+             <xsd:element name="EffectiveTimestamp"       type="DateTimeType"     minOccurs="0"/>
+             <xsd:element name="EffectiveEndDate"         type="DateTimeType"     minOccurs = "0"/>
              <xsd:choice>
-                <xsd:element name="InformationObject" type="InformationObjectType"/>
-                <xsd:element name= "ExternalReferenceID"  type="IdentifierType"/>
+                <xsd:element name="InformationObject"     type="InformationObjectType"/>
+                <xsd:element name="ExternalReferenceID"   type="IdentifierType"/>
               </xsd:choice>
-             <xsd:element name="EffectiveTimestamp" 		type="DateTimeType" 	minOccurs="0"/>
-             <xsd:element name="RecordTimestamp" 		type="DateTimeType" 	minOccurs="0"/>
-             <xsd:element name="InformationObjectType" 		type="IdentifierType" 	minOccurs="0"/>
+             <xsd:element name="InformationObjectType"    type="IdentifierType" minOccurs="0"/>
 	         <xsd:element name="OperationsRecordEntryTemplateChild"
-			  					type="OperationsRecordEntryTemplateType"    minOccurs="0" maxOccurs="unbounded"/>
-          <xsd:group ref="Extended:OperationsRecordEntryTemplate" minOccurs="0" maxOccurs="1"/>
+                                                          type="OperationsRecordEntryTemplateType"
+                                                          minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:group ref="Extended:OperationsRecordEntryTemplate" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
     <!--     -->
     <xsd:complexType name="OperationsRecordTemplateType">
         <xsd:sequence>
-             <xsd:element name="ID" 				type="IdentifierType"/>
-             <xsd:element name="Description" 			type="DescriptionType" 	minOccurs="0" maxOccurs="unbounded"/>
-             <xsd:element name="Action" 			type="ActionType" 	minOccurs="0"/>
-             <xsd:element name="EffectiveTimestamp" 		type="DateTimeType" 	minOccurs="0"/>
-             <xsd:element name="RecordTimestamp" 		type="DateTimeType" 	minOccurs="0"/>
-	     <xsd:element name="OperationsRecordEntryID"	type="IdentifierType" 	minOccurs="1" maxOccurs="unbounded"/>
-	     <xsd:element name="OperationsRecordSpecTemplateID"	type="IdentifierType"/>
-	     <xsd:element name="OperationsRecordTemplateChild"	type="OperationsRecordTemplateType"    minOccurs="0" maxOccurs="unbounded"/>
-           <xsd:group ref="Extended:OperationsRecordTemplate" minOccurs="0" maxOccurs="1"/>
+             <xsd:element name="ID"                       type="IdentifierType"/>
+             <xsd:element name="Description"              type="DescriptionType"  minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:element name="RecordTimestamp" 		  type="DateTimeType"     minOccurs="0"/>
+             <xsd:element name="EffectiveTimestamp"       type="DateTimeType"     minOccurs="0"/>
+             <xsd:element name="EffectiveEndDate"         type="DateTimeType"     minOccurs = "0"/>
+             <xsd:element name="Action" 			      type="ActionType"       minOccurs="0"/>
+             <xsd:element name="OperationsRecordEntryID"  type="IdentifierType"   minOccurs="1" maxOccurs="unbounded"/>
+	         <xsd:element name="OperationsRecordSpecTemplateID"	type="IdentifierType"/>
+             <xsd:element name="OperationsRecordTemplateChild"	type="OperationsRecordTemplateType"    minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:group ref="Extended:OperationsRecordTemplate" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
     <!--     -->
     <xsd:complexType name="OperationsRecordSpecTemplateType">
         <xsd:sequence>
-             <xsd:element name="ID" 				type="IdentifierType"/>
-             <xsd:element name="Description" 			type="DescriptionType" 	minOccurs="0" maxOccurs="unbounded"/>
-	     <xsd:element name = "OperationsRecordSpecTemplatePatternID"
-			  					type = "IdentifierType"	minOccurs = "0"/>
-	     <xsd:element name = "DefinitionType" 		type = "DefinitionTypeType"
-			  					minOccurs = "0"/>
-             <xsd:element name="InformationObjectType" 		type="IdentifierType" 	minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:element name="ID"                       type="IdentifierType"/>
+             <xsd:element name="Description"              type="DescriptionType"   minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:element name="PublishedDate"            type="DateTimeType"      minOccurs = "0"/>
+             <xsd:element name="EffectiveStartDate"       type="DateTimeType"      minOccurs = "0"/>
+             <xsd:element name="EffectiveEndDate"         type="DateTimeType"      minOccurs = "0"/>
+             <xsd:element name="OperationsRecordSpecTemplatePatternID"
+                                                          type="IdentifierType"    minOccurs = "0"/>
+	         <xsd:element name="DefinitionType"           type="DefinitionTypeType"    minOccurs="0"/>
+             <xsd:element name="InformationObjectType"    type="IdentifierType"    minOccurs="0" maxOccurs="unbounded"/>
              <xsd:element name="InformationObjectTypeMultiplicity"
-								type="TextType" 	minOccurs="0" maxOccurs="unbounded"/>
-             <xsd:element name="Action" 			type="ActionType" 	minOccurs="0"/>
-             <xsd:element name="ActionMultiplicity" 		type="TextType" 	minOccurs="0" maxOccurs="unbounded"/>
-	     <xsd:element name="OperationsRecordSpecTemplateChild"
-			  					type="OperationsRecordSpecTemplateType" minOccurs="0" maxOccurs="unbounded"/>
-           <xsd:group ref="Extended:OperationsRecordSpecTemplate" minOccurs="0" maxOccurs="1"/>
+                                                          type="TextType"          minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:element name="Action"                   type="ActionType"        minOccurs="0"/>
+             <xsd:element name="ActionMultiplicity"       type="TextType"          minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:element name="OperationsRecordSpecTemplateChild"
+                                                          type="OperationsRecordSpecTemplateType" minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:group ref="Extended:OperationsRecordSpecTemplate" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
     <!--     -->
