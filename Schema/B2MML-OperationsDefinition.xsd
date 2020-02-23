@@ -191,6 +191,12 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0"/>
+      <xsd:element name = "PublishedDate"               type = "DateTimeType"
+                                                        minOccurs = "0"/>                                                        
+      <xsd:element name = "EffectiveStartDate"          type = "DateTimeType"
+                                                        minOccurs = "0"/>
+      <xsd:element name = "EffectiveEndDate"            type = "DateTimeType"
+                                                        minOccurs = "0"/>           
       <xsd:element name = "UseType"                     type = "CodeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
