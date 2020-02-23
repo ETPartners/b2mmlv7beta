@@ -733,7 +733,7 @@ function or activity.
       </xsd:element>
     </xsd:sequence>
     <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
-    xsd:attribute name = "versionID"            type="xsd:normalizedString"     use="optional"/>
+    <xsd:attribute name = "versionID"            type="xsd:normalizedString"     use="optional"/>
   </xsd:complexType>
 
 
