@@ -180,7 +180,7 @@
   <xsd:complexType name = "MaterialClassType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
-      <xsd:element name = "Version"                     type = "VersionType"
+      <xsd:element name = "Version"                     type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -228,7 +228,7 @@
   <xsd:complexType name = "MaterialDefinitionType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
-      <xsd:element name = "Version"                     type = "VersionType"
+      <xsd:element name = "Version"                     type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -236,7 +236,7 @@
                                                         minOccurs = "0"  nillable="true"/>
       <xsd:element name = "EffectiveStartDate"          type = "DateTimeType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "EffectiveEndDate"          type = "DateTimeType"
+      <xsd:element name = "EffectiveEndDate"            type = "DateTimeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
                                                         minOccurs = "0"/>
@@ -283,7 +283,7 @@
   <xsd:complexType name = "MaterialLotType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
-      <xsd:element name = "Version"                     type = "VersionType"
+      <xsd:element name = "Version"                     type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -344,7 +344,7 @@
   <xsd:complexType name = "MaterialSubLotType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
-      <xsd:element name = "Version"                     type = "VersionType"
+      <xsd:element name = "Version"                     type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
