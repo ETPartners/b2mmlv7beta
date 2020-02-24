@@ -130,7 +130,7 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "Version"                     type = "VersionType"
+      <xsd:element name = "Version"                     type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:element name = "PublishedDate"               type = "DateTimeType"
                                                         minOccurs = "0"/>                                                        
@@ -168,6 +168,8 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0"/>
+      <xsd:element name = "Version"                     type = "IdentifierType"   
+                                                        minOccurs = "0"/>                                                        
       <xsd:element name = "PublishedDate"               type = "DateTimeType"
                                                         minOccurs = "0"/>                                                        
       <xsd:element name = "EffectiveStartDate"          type = "DateTimeType"
@@ -191,6 +193,8 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0"/>
+      <xsd:element name = "Version"                     type = "IdentifierType"   
+                                                        minOccurs = "0"/>                                                        
       <xsd:element name = "PublishedDate"               type = "DateTimeType"
                                                         minOccurs = "0"/>                                                        
       <xsd:element name = "EffectiveStartDate"          type = "DateTimeType"
@@ -220,6 +224,8 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0"/>
+      <xsd:element name = "Version"                     type = "IdentifierType"   
+                                                        minOccurs = "0"/>                                                        
       <xsd:element name = "PublishedDate"               type = "DateTimeType"
                                                         minOccurs = "0"/>                                                        
       <xsd:element name = "EffectiveStartDate"          type = "DateTimeType"
@@ -258,7 +264,8 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "SegmentDependency"           type = "SegmentDependencyType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "DependentOperationsSegmentID" type = "IdentifierType"
+      <xsd:element name = "DependentOperationsSegmentID" 
+                                                        type = "IdentifierType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "OperationsSegmentChild"      type = "OperationsSegmentType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
