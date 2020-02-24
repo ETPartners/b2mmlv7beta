@@ -148,6 +148,8 @@ may be made up of other operational locations.
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                     type = "IdentifierType"
+                                                        minOccurs = "0"/>
       <xsd:element name = "PublishedDate"         	    type = "DateTimeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "EffectiveStartDate"          type = "DateTimeType"
@@ -174,6 +176,8 @@ may be made up of other operational locations.
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                     type = "IdentifierType"
+                                                        minOccurs = "0"/>
       <xsd:element name = "PublishedDate"         	    type = "DateTimeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "EffectiveStartDate"          type = "DateTimeType"
