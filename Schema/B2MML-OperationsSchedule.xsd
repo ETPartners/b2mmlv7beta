@@ -91,17 +91,19 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
+      <xsd:element name = "Version"                     type = "IdentifierType"   
                                                         minOccurs = "0"/>
-      <xsd:element name = "OperationsType"              type = "OperationsTypeType"
+      <xsd:element name = "PublishedDate"               type = "DateTimeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "StartTime"                   type = "DateTimeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "EndTime"                     type = "DateTimeType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "ScheduleState"               type = "RequestStateType"
+      <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "PublishedDate"               type = "DateTimeType"
+      <xsd:element name = "OperationsType"              type = "OperationsTypeType"
+                                                        minOccurs = "0"/>
+      <xsd:element name = "ScheduleState"               type = "RequestStateType"
                                                         minOccurs = "0"/>
       <xsd:element name = "OperationsRequest"           type = "OperationsRequestType"
                                                         minOccurs = "1" maxOccurs = "unbounded"/>
@@ -114,17 +116,19 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                     type = "IdentifierType"   
+                                                        minOccurs = "0"/>   
+      <xsd:element name = "StartTime"                   type = "DateTimeType"
+                                                        minOccurs = "0"/>
+      <xsd:element name = "EndTime"                     type = "DateTimeType"
+                                                        minOccurs = "0"/>                                                                                                          
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "OperationsType"              type = "OperationsTypeType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "StartTime"                   type = "DateTimeType"
-                                                        minOccurs = "0"/>
-      <xsd:element name = "EndTime"                     type = "DateTimeType"
-                                                        minOccurs = "0"/>
       <xsd:element name = "Priority"                    type = "PriorityType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "RequestState"               type = "RequestStateType"
+      <xsd:element name = "RequestState"                type = "RequestStateType"
                                                         minOccurs = "0"/>
       <xsd:element name = "OperationsDefinitionID"      type = "IdentifierType"
                                                         minOccurs = "0"/>
@@ -146,15 +150,17 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                     type = "IdentifierType"   
+                                                        minOccurs = "0"/>                                                         
+      <xsd:element name = "EarliestStartTime"           type = "DateTimeType"
+                                                        minOccurs = "0"/>
+      <xsd:element name = "LatestEndTime"               type = "DateTimeType"
+                                                        minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "OperationsType"              type = "OperationsTypeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "ProcessSegmentID"            type = "IdentifierType"/>
-      <xsd:element name = "EarliestStartTime"           type = "DateTimeType"
-                                                        minOccurs = "0"/>
-      <xsd:element name = "LatestEndTime"               type = "DateTimeType"
-                                                        minOccurs = "0"/>
       <xsd:element name = "Duration"                    type = "DurationType"
                                                         minOccurs = "0"/>
       <xsd:element name = "OperationsDefinitionID"      type = "IdentifierType"/>
@@ -195,7 +201,7 @@
          <xsd:complexType>
             <xsd:sequence>
               <xsd:element name = "Get"         type = "TransGetType"/>
-              <xsd:element      name = "OperationsSchedule"
+              <xsd:element name = "OperationsSchedule"
                                                 type = "OperationsScheduleType"
                                                 minOccurs = "1"
                                                 maxOccurs = "unbounded"/>
