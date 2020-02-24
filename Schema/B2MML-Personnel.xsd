@@ -170,7 +170,7 @@ A person may be a member of zero or more personnel classes.
   <xsd:complexType name = "PersonType">
     <xsd:sequence>
       <xsd:element name = "ID"                    	    type = "IdentifierType"/>
-     	<xsd:element name = "Version"             	      type = "VersionType"
+     	<xsd:element name = "Version"             	      type = "IdentifierType"
                                                 	      minOccurs = "0" />
       <xsd:element name = "Description"         	      type = "DescriptionType"
                                                 	      minOccurs = "0" maxOccurs = "unbounded"/>
@@ -217,7 +217,7 @@ A person may be a member of zero or more personnel classes.
   <xsd:complexType name = "PersonnelClassType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
-     	<xsd:element name = "Version"             	      type = "VersionType"
+     	<xsd:element name = "Version"             	      type = "IdentifierType"
                                                 	      minOccurs = "0"/>
       <xsd:element name = "Description"         	      type = "DescriptionType"
                                                 	      minOccurs = "0" maxOccurs = "unbounded"/>
