@@ -175,6 +175,8 @@ function or activity.
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                     type = "IdentifierType"
+                                                        minOccurs = "0"/>                                                       
       <xsd:element name = "PublishedDate"         	    type = "DateTimeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "EffectiveStartDate"          type = "DateTimeType"
@@ -224,6 +226,8 @@ function or activity.
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"                
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                     type = "IdentifierType"
+                                                        minOccurs = "0"/>                                                        
       <xsd:element name = "PublishedDate"         	    type = "DateTimeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "EffectiveStartDate"          type = "DateTimeType"
@@ -289,6 +293,8 @@ function or activity.
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType" 
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                     type = "IdentifierType"
+                                                        minOccurs = "0"/>                                                        
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"   
                                                         minOccurs = "0"/>
       <xsd:element name = "EffectiveTimeStamp"   	      type = "DateTimeType"     
