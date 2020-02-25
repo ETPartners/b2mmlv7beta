@@ -111,6 +111,8 @@
       <xsd:element name = "ID"                      type = "IdentifierType"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                 type = "IdentifierType"
+                                                    minOccurs = "0"/>                                                     
       <xsd:element name = "PublishedDate"           type = "DateTimeType"
                                                     minOccurs = "0"/>                                                        
       <xsd:element name = "StartTime"               type = "DateTimeType"
@@ -151,6 +153,8 @@
       <xsd:element name = "ID"                      type = "IdentifierType"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                 type = "IdentifierType"
+                                                    minOccurs = "0"/>                                                      
       <xsd:element name = "PublishedDate"           type = "DateTimeType"
                                                     minOccurs = "0"/>                                                        
       <xsd:element name = "StartTime"               type = "DateTimeType"
@@ -187,6 +191,8 @@
       <xsd:element name = "ID"                      type = "IdentifierType"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                 type = "IdentifierType"
+                                                    minOccurs = "0"/>                                                  
       <xsd:element name = "PublishedDate"           type = "DateTimeType"
                                                     minOccurs = "0"/>                                                        
       <xsd:element name = "StartTime"               type = "DateTimeType"
