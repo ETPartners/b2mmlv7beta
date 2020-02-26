@@ -164,7 +164,7 @@
 
   <xsd:complexType name = "WorkAlertType">
     <xsd:sequence>
-      <xsd:element name = "ID"      "               type = "IdentifierType"/>
+      <xsd:element name = "ID"                      type = "IdentifierType"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>    
       <xsd:element name = "PublishedDate"           type = "DateTimeType"
