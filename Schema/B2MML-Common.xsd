@@ -925,6 +925,7 @@ This attribute must be defined in the corresponding operations event definition.
         <xsd:sequence>
              <xsd:element name="ID" 				      type="IdentifierType"/>
              <xsd:element name="Description" 			  type="DescriptionType"  minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:element name="Version"                  type="IdentifierType"   minOccurs = "0"/>
              <xsd:element name="RecordTimestamp" 		  type="DateTimeType"     minOccurs="0"/>
              <xsd:element name="EffectiveTimestamp"       type="DateTimeType"     minOccurs="0"/>
              <xsd:element name="EffectiveEndDate"         type="DateTimeType"     minOccurs = "0"/>
@@ -942,13 +943,14 @@ This attribute must be defined in the corresponding operations event definition.
     <!--     -->
     <xsd:complexType name="OperationsRecordTemplateType">
         <xsd:sequence>
-             <xsd:element name="ID"                       type="IdentifierType"/>
-             <xsd:element name="Description"              type="DescriptionType"  minOccurs="0" maxOccurs="unbounded"/>
-             <xsd:element name="RecordTimestamp" 		  type="DateTimeType"     minOccurs="0"/>
-             <xsd:element name="EffectiveTimestamp"       type="DateTimeType"     minOccurs="0"/>
-             <xsd:element name="EffectiveEndDate"         type="DateTimeType"     minOccurs = "0"/>
-             <xsd:element name="Action" 			      type="ActionType"       minOccurs="0"/>
-             <xsd:element name="OperationsRecordEntryID"  type="IdentifierType"   minOccurs="1" maxOccurs="unbounded"/>
+             <xsd:element name="ID"                             type="IdentifierType"/>
+             <xsd:element name="Description"                    type="DescriptionType"  minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:element name="Version"                        type="IdentifierType"   minOccurs = "0"/>
+             <xsd:element name="RecordTimestamp" 		        type="DateTimeType"     minOccurs="0"/>
+             <xsd:element name="EffectiveTimestamp"             type="DateTimeType"     minOccurs="0"/>
+             <xsd:element name="EffectiveEndDate"               type="DateTimeType"     minOccurs = "0"/>
+             <xsd:element name="Action" 			            type="ActionType"       minOccurs="0"/>
+             <xsd:element name="OperationsRecordEntryID"        type="IdentifierType"   minOccurs="1" maxOccurs="unbounded"/>
 	         <xsd:element name="OperationsRecordSpecTemplateID"	type="IdentifierType"/>
              <xsd:element name="OperationsRecordTemplateChild"	type="OperationsRecordTemplateType"    minOccurs="0" maxOccurs="unbounded"/>
              <xsd:group ref="Extended:OperationsRecordTemplate" minOccurs="0" maxOccurs="1"/>
@@ -959,6 +961,7 @@ This attribute must be defined in the corresponding operations event definition.
         <xsd:sequence>
              <xsd:element name="ID"                       type="IdentifierType"/>
              <xsd:element name="Description"              type="DescriptionType"   minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:element name="Version"                  type="IdentifierType"    minOccurs = "0"/>            
              <xsd:element name="PublishedDate"            type="DateTimeType"      minOccurs = "0"/>
              <xsd:element name="EffectiveStartDate"       type="DateTimeType"      minOccurs = "0"/>
              <xsd:element name="EffectiveEndDate"         type="DateTimeType"      minOccurs = "0"/>
@@ -1865,6 +1868,7 @@ Spatial definition identifies a value and the predefined coordinate reference sy
 		<xsd:sequence>
 			<xsd:element name="ID"                          type="IdentifierType"/>
 			<xsd:element name="Description"                 type="DescriptionType"  minOccurs="0" maxOccurs="unbounded"  nillable="true"/>
+            <xsd:element name="Version"                     type="IdentifierType" minOccurs="0"/>
             <xsd:element name="PublishedDate"               type="DateTimeType"   minOccurs="0"/>
 			<xsd:element name="EvaluationDate"              type="DateTimeType" minOccurs="0"  nillable="true"/>
 			<xsd:element name="Expiration"                  type="DateTimeType" minOccurs="0"  nillable="true"/>
