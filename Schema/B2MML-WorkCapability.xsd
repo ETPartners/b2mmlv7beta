@@ -123,6 +123,14 @@
       <xsd:element name = "ID"                      type = "IdentifierType"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                 type = "IdentifierType"
+                                                    minOccurs = "0"/>
+      <xsd:element name = "PublishedDate"           type = "DateTimeType"
+                                                    minOccurs = "0"/>
+      <xsd:element name = "StartTime"               type = "DateTimeType"
+                                                    minOccurs = "0"/>
+      <xsd:element name = "EndTime"                 type = "DateTimeType"
+                                                    minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
                                                     minOccurs = "0"/>
       <xsd:element name = "CapabilityType"          type = "CapabilityTypeType" 
@@ -130,10 +138,6 @@
       <xsd:element name = "Reason"                  type = "ReasonType"
                                                     minOccurs = "0"/>
       <xsd:element name = "ConfidenceFactor"        type = "ConfidenceFactorType"
-                                                    minOccurs = "0"/>
-      <xsd:element name = "StartTime"               type = "DateTimeType"
-                                                    minOccurs = "0"/>
-      <xsd:element name = "EndTime"                 type = "DateTimeType"
                                                     minOccurs = "0"/>
       <xsd:element name = "PublishedDate"           type = "DateTimeType"
                                                     minOccurs = "0"/>
@@ -157,18 +161,20 @@
       <xsd:element name = "ID"                      type = "IdentifierType"/>
       <xsd:element name = "Description"             type = "DescriptionType" 
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                 type = "IdentifierType"
+                                                    minOccurs = "0"/>
+      <xsd:element name = "PublishedDate"           type = "DateTimeType"
+                                                    minOccurs = "0"/>
+      <xsd:element name = "StartTime"               type = "DateTimeType"
+                                                    minOccurs = "0"/>
+      <xsd:element name = "EndTime"                 type = "DateTimeType"
+                                                    minOccurs = "0"/>
       <xsd:element name = "WorkMasterID"            type = "IdentifierType"/>
       <xsd:element name = "CapabilityType"          type = "CapabilityTypeType" />
       <xsd:element name = "Reason"                  type = "ReasonType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "StartTime"               type = "DateTimeType"
-                                                    minOccurs = "0"/>
-      <xsd:element name = "EndTime"                 type = "DateTimeType"
-                                                    minOccurs = "0"/>
-      <xsd:element name = "PublishedDate"           type = "DateTimeType"
-                                                    minOccurs = "0"/>
       <xsd:element name = "PersonnelCapability"     type = "OpPersonnelCapabilityType" 
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentCapability"     type = "OpEquipmentCapabilityType" 
