@@ -117,7 +117,7 @@
   <xsd:complexType name = "ResourceNetworkConnectionTypeType">
     <xsd:sequence>
       <xsd:element name = "ID"                                  type = "IdentifierType"/>
-      <xsd:element name = "Version"                             type = "VersionType"
+      <xsd:element name = "Version"                             type = "IdentifierType"
                                                                 minOccurs = "0"/>
       <xsd:element name = "Description"                         type = "DescriptionType"
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
@@ -141,7 +141,7 @@
   <xsd:complexType name = "ResourceRelationshipNetworkType">
     <xsd:sequence>
       <xsd:element name = "ID"                                  type = "IdentifierType"/>
-      <xsd:element name = "Version"                             type = "VersionType"
+      <xsd:element name = "Version"                             type = "IdentifierType"
                                                                 minOccurs = "0"/>
       <xsd:element name = "Description"                         type = "DescriptionType"
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
