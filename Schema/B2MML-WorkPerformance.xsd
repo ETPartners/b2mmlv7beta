@@ -106,6 +106,8 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                     type = "IdentifierType"
+                                                        minOccurs = "0"/>
       <xsd:element name = "PublishedDate"               type = "DateTimeType"
                                                         minOccurs = "0"/> 
       <xsd:element name = "StartTime"                   type = "DateTimeType"
@@ -132,6 +134,8 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                     type = "IdentifierType"
+                                                        minOccurs = "0"/>  
       <xsd:element name = "PublishedDate"               type = "DateTimeType"
                                                         minOccurs = "0"/> 
       <xsd:element name = "StartTime"                   type = "DateTimeType"
@@ -162,6 +166,8 @@
       <xsd:element name = "ID"                          type = "IdentifierType"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                     type = "IdentifierType"
+                                                        minOccurs = "0"/>  
       <xsd:element name = "PublishedDate"               type = "DateTimeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "StartTime"                   type = "DateTimeType"
@@ -209,7 +215,7 @@
   <xsd:complexType name = "JobResponseListType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType"/>
-      <xsd:element name = "Version"                     type = "VersionType"
+      <xsd:element name = "Version"                     type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:element name = "PublishedDate"               type = "DateTimeType"
                                                         minOccurs = "0"/>
@@ -230,7 +236,6 @@
       <xsd:group ref = "Extended:JobResponseList"       minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
-
 
 
 <!-- - - - - - - - - - - - - - - - - - - - - -->
