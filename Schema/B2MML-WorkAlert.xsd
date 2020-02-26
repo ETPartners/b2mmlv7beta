@@ -123,11 +123,13 @@
       <xsd:element name = "ID"                      type = "IdentifierType"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
+      <xsd:element name = "Version"                 type = "IdentifierType"
+                                                    minOccurs = "0"/>
       <xsd:element name = "PublishedDate"           type = "DateTimeType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "EffectiveStartDate       type = "DateTimeType"
+      <xsd:element name = "EffectiveStartDate"      type = "DateTimeType"
                                                     minOccurs = "0"/>      
-      <xsd:element name = "EffectiveEndDate         type = "DateTimeType"
+      <xsd:element name = "EffectiveEndDate"        type = "DateTimeType"
                                                     minOccurs = "0"/>                                                           
       <xsd:element name = "HierarchyScope"          type = "HierarchyScopeType"
                                                     minOccurs = "0"/>
@@ -162,14 +164,14 @@
 
   <xsd:complexType name = "WorkAlertType">
     <xsd:sequence>
-      <xsd:element name = "ID"                      type = "IdentifierType"/>
+      <xsd:element name = "ID"      "               type = "IdentifierType"/>
       <xsd:element name = "Description"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>    
       <xsd:element name = "PublishedDate"           type = "DateTimeType"
                                                     minOccurs = "0"/>
-      <xsd:element name = "EffectiveStartDate       type = "DateTimeType"
+      <xsd:element name = "EffectiveStartDate"      type = "DateTimeType"
                                                     minOccurs = "0"/>      
-      <xsd:element name = "EffectiveEndDate         type = "DateTimeType"
+      <xsd:element name = "EffectiveEndDate"        type = "DateTimeType"
                                                     minOccurs = "0"/>        
       <xsd:element name = "MessageText"             type = "DescriptionType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
@@ -183,8 +185,7 @@
                                                     minOccurs = "0"/>
       <xsd:element name = "WorkAlertProperty"       type = "WorkAlertPropertyType"
                                                     minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:group   ref  = "Extended:WorkAlert"
-                                                    minOccurs = "0" maxOccurs = "1"/>
+      <xsd:group   ref  = "Extended:WorkAlert"      minOccurs = "0" maxOccurs = "1"/>
     </xsd:sequence>
   </xsd:complexType>
 
