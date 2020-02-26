@@ -195,7 +195,7 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkMasterID"                type = "IdentifierType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "WorkMasterVersion"           type = "VersionType"
+      <xsd:element name = "WorkMasterVersion"           type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:element name = "Priority"                    type = "PriorityType"
                                                         minOccurs = "0"/>
