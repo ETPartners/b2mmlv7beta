@@ -81,10 +81,19 @@
   <xsd:element name = "CancelWorkPerformance"   type = "CancelWorkPerformanceType"/>
   <xsd:element name = "SyncWorkPerformance"     type = "SyncWorkPerformanceType"/>
 
+  <xsd:element name = "GetWorkResponse"          type = "GetWorkResponseType"/>
+  <xsd:element name = "ShowWorkResponse"         type = "ShowWorkResponseType"/>
+  <xsd:element name = "ProcessWorkResponse"      type = "ProcessWorkResponseType"/>
+  <xsd:element name = "AcknowledgeWorkResponse"  type = "AcknowledgeWorkResponseType"/>
+  <xsd:element name = "ChangeWorkResponse"       type = "ChangeWorkResponseType"/>
+  <xsd:element name = "RespondWorkResponse"      type = "RespondWorkResponseType"/>
+  <xsd:element name = "CancelWorkResponse"       type = "CancelWorkResponseType"/>
+  <xsd:element name = "SyncWorkResponse"         type = "SyncWorkResponseType"/>
+
   <xsd:element name = "GetJobResponse"          type = "GetJobResponseType"/>
   <xsd:element name = "ShowJobResponse"         type = "ShowJobResponseType"/>
   <xsd:element name = "ProcessJobResponse"      type = "ProcessJobResponseType"/>
-  <xsd:element name = "AcknowledgeJobResponse"   type = "AcknowledgeJobResponseType"/>
+  <xsd:element name = "AcknowledgeJobResponse"  type = "AcknowledgeJobResponseType"/>
   <xsd:element name = "ChangeJobResponse"       type = "ChangeJobResponseType"/>
   <xsd:element name = "RespondJobResponse"      type = "RespondJobResponseType"/>
   <xsd:element name = "CancelJobResponse"       type = "CancelJobResponseType"/>
@@ -407,6 +416,178 @@
     <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
     <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
   </xsd:complexType>
+
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - -->
+<!-- WorkResponse Transaction Types           -->
+<!-- - - - - - - - - - - - - - - - - - - - - -->
+
+<xsd:complexType name = "GetWorkResponseType">
+  <xsd:sequence>
+       <xsd:element name = "ApplicationArea"  type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Get"         type = "TransGetType"/>
+            <xsd:element name = "WorkResponse"
+                                              type = "WorkResponseType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "ShowWorkResponseType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Show"        type = "TransShowType"/>
+            <xsd:element name = "WorkResponse"
+                                              type = "WorkResponseType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "ProcessWorkResponseType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Process"     type = "TransProcessType"/>
+            <xsd:element name = "WorkResponse"
+                                              type = "WorkResponseType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "AcknowledgeWorkResponseType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Acknowledge" type = "TransAcknowledgeType"/>
+            <xsd:element name = "WorkResponse"
+                                              type = "WorkResponseType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "ChangeWorkResponseType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Change"      type = "TransChangeType"/>
+            <xsd:element name = "WorkResponse"
+                                              type = "WorkResponseType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "RespondWorkResponseType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Respond"     type = "TransRespondType"/>
+            <xsd:element name = "WorkResponse"
+                                              type = "WorkResponseType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "CancelWorkResponseType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Cancel"      type = "TransCancelType"/>
+            <xsd:element name = "WorkResponse"
+                                              type = "WorkResponseType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
+
+
+<xsd:complexType name = "SyncWorkResponseType">
+  <xsd:sequence>
+    <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+    <xsd:element name = "DataArea">
+       <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name = "Sync"        type = "TransSyncType"/>
+            <xsd:element name = "WorkResponse"
+                                              type = "WorkResponseType"
+                                              minOccurs = "1"
+                                              maxOccurs = "unbounded"/>
+          </xsd:sequence>
+       </xsd:complexType>
+    </xsd:element>
+
+  </xsd:sequence>
+  <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
+  <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
 
 
 <!-- - - - - - - - - - - - - - - - - - - - - -->
