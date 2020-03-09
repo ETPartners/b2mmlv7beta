@@ -72,7 +72,7 @@
  <xsd:include schemaLocation ="B2MML-PhysicalAsset.xsd"/>
  <xsd:include schemaLocation ="B2MML-ProcessSegment.xsd"/>
  <xsd:include schemaLocation ="B2MML-ResourceRelationshipNetwork.xsd"/>
- <xsd:include schemaLocation ="B2MML-TestSpecification.xsd"/>
+ <xsd:include schemaLocation ="B2MML-OperationsTest.xsd"/>
  <xsd:include schemaLocation ="B2MML-TransactionProfile.xsd"/>
  <xsd:include schemaLocation ="B2MML-WorkAlert.xsd"/>
  <xsd:include schemaLocation ="B2MML-WorkCalendar.xsd"/>
