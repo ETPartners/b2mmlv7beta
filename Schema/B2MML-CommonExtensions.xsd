@@ -87,12 +87,6 @@ of elements when used in an XML document.
                 </xsd:sequence>
         </xsd:group>
 
-        <xsd:group name = "EvaluatedProperty">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
         <xsd:group name = "HierarchyScope">
                 <xsd:sequence>
                         <!-- add extended elements here -->
@@ -222,48 +216,6 @@ of elements when used in an XML document.
         </xsd:group>
 
          <xsd:group name = "SpatialDefinition">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
-        <xsd:group name = "TestResult">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
-        <xsd:group name = "TestPropertyMeasurement">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
-         <xsd:group name = "TestSpecification">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
-        <xsd:group name = "TestSpecificationProperty">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
-         <xsd:group name = "TestSpecificationInformation">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
-         <xsd:group name = "TestSpecificationCriteria">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
-         <xsd:group name = "TestSpecificationEvaluatedProperty">
                 <xsd:sequence>
                         <!-- add extended elements here -->
                 </xsd:sequence>
