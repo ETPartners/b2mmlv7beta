@@ -14,14 +14,13 @@
 <xsd:import     namespace="http://www.mesa.org/xml/B2MML-AllExtensions"
                 schemaLocation="B2MML-AllExtensions.xsd"/>
 
-<!-- Include the Test Specification Schema         -->
+<!-- Include the OperationsTest Schema         -->
 
-<xsd:include     schemaLocation="B2MML-TestSpecification.xsd"/>
+<xsd:include schemaLocation="B2MML-OperationsTest.xsd"/>
 
 <!-- Include the Common schema   -->
 
 <xsd:include schemaLocation = "B2MML-Common.xsd"/>
-
 
 
 <xsd:annotation>
