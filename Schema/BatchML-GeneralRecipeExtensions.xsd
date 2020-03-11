@@ -16,6 +16,8 @@
             namespace              = "http://www.mesa.org/xml/B2MML"
             schemaLocation         = "B2MML-Common.xsd"/>
 
+<xsd:include schemaLocation="B2MML-CommonExtensions.xsd"/>
+
 <xsd:annotation>
    <xsd:documentation>
 
