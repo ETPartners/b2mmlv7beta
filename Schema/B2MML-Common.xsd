@@ -660,19 +660,6 @@ The hierarchy scope identifies the associated instance in the role-based equipme
         </xsd:sequence>
     </xsd:complexType>
 
-    <!--     -->   
-    <xsd:complexType name="InformationObjectType">
-      <xsd:annotation>
-        <xsd:documentation>CONTINUE with list of all ISA-95 first order types</xsd:documentation>
-      </xsd:annotation> 
-      <xsd:sequence>
-        <xsd:choice>
-          <xsd:element name = "Equipment"  type = "EquipmentType"/>
-          <xsd:element name = "EquipmentClass"  type = "EquipmentClassType"/>
-        </xsd:choice>
-      </xsd:sequence>
-    </xsd:complexType>
-
     <!--     -->
     <xsd:complexType name="JobOrderCommand1Type">
         <xsd:simpleContent>
