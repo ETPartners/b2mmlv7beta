@@ -2,6 +2,8 @@
 <xsd:schema xmlns="http://www.mesa.org/xml/B2MML" xmlns:Extended="http://www.mesa.org/xml/B2MML-AllExtensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.mesa.org/xml/B2MML" elementFormDefault="qualified" attributeFormDefault="unqualified">
     <!-- Include the Core Components schema in the default namespace  -->
     <xsd:include schemaLocation="B2MML-CoreComponents.xsd"/>
+    <!-- Include the InformationObject schema with InformationObjectType for OperationsRecordEntryTemplateType in the default namespace  -->
+    <xsd:include schemaLocation="B2MML-InformationObject.xsd"/>    
     <!-- Import the Common Extension Schema                 -->
     <xsd:import namespace="http://www.mesa.org/xml/B2MML-AllExtensions" 
                 schemaLocation="B2MML-CommonExtensions.xsd"/>
