@@ -6,7 +6,7 @@
     <xsd:include schemaLocation="B2MML-InformationObject.xsd"/>    
     <!-- Import the Common Extension Schema                 -->
     <xsd:import namespace="http://www.mesa.org/xml/B2MML-AllExtensions" 
-                schemaLocation="B2MML-CommonExtensions.xsd"/>
+                schemaLocation="B2MML-AllExtensions.xsd"/>
     <xsd:annotation>
         <xsd:documentation>
 
