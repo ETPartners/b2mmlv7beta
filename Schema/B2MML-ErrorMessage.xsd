@@ -3,16 +3,18 @@
 <xsd:schema     xmlns:xsd               = "http://www.w3.org/2001/XMLSchema"
                 targetNamespace         = "http://www.mesa.org/xml/B2MML"
                 xmlns                   = "http://www.mesa.org/xml/B2MML"
-                xmlns:Extended          = "http://www.mesa.org/xml/B2MML-AllExtensions" 
+                xmlns:Extended          = "http://www.mesa.org/xml/B2MML-AllExtensions"
+                elementFormDefault      = "qualified"
+                attributeFormDefault    = "unqualified"> 
   
 <!-- Import the Extension Schema         -->
 
-<xsd:import     namespace="http://www.mesa.org/xml/B2MML-AllExtensions" 
-                schemaLocation="B2MML-AllExtensions.xsd"/>
+<xsd:import     namespace = "http://www.mesa.org/xml/B2MML-AllExtensions" 
+                schemaLocation = "B2MML-AllExtensions.xsd"/>
 
 <!-- Include the Common schema   -->
 
-  <xsd:include schemaLocation = "B2MML-Common.xsd"/>
+<xsd:include schemaLocation = "B2MML-Common.xsd"/>
 
 <xsd:annotation> 
    <xsd:documentation>
@@ -59,12 +61,12 @@
 
 <!-- Global Elements -->
 
-  <xsd:element name = "ErrorMessage"                     type = "ErrorMessageType"/>  
+  <xsd:element name = "ErrorMessage"                    type = "ErrorMessageType"/>  
 
 <!-- Transaction Elements -->
   <xsd:element name = "GetErrorMessage"                 type = "GetErrorMessageType"/>
   <xsd:element name = "ShowErrorMessage"                type = "ShowErrorMessageType"/>
-  <xsd:element name = "ProcessErrorMessagen"            type = "ProcessErrorMessageType"/>
+  <xsd:element name = "ProcessErrorMessage"             type = "ProcessErrorMessageType"/>
   <xsd:element name = "AcknowledgeErrorMessage"         type = "AcknowledgeErrorMessageType"/>
   <xsd:element name = "ChangeErrorMessage"              type = "ChangeErrorMessageType"/>
   <xsd:element name = "RespondErrorMessage"             type = "RespondErrorMessageType"/>
@@ -75,209 +77,194 @@
 
 <xsd:complexType name = "ErrorMessageType">
   <xsd:sequence>
-    <xsd:element name = "ID"                          type = "IdentifierType"/>
-    <xsd:element name = "Description"                 type = "DescriptionType"
-                                                      minOccurs = "0" maxOccurs = "unbounded"/>
-    <xsd:element name = "ThrownFrom"                  type = "xsd:string"/>
-    <xsd:element name = "TimeStamp"                   type = "xsd:dateTime"/>
-    <xsd:element name = "ErrorType"                   type = "ErrorTypeType"/>
-    <xsd:element name = "ErrorCode"                   type = "xsd:string" 
-                                                      minOccurs = "0"/>
-    <xsd:element name = "ErrorDescription"            type = "xsd:string" 
-                                                      minOccurs = "0"/>
-    <xsd:element name = "CausedBy"                    type = "ext:ErrorMessageType" 
-                                                      minOccurs = "0"/>
-    <xsd:group   ref  = "Extended:ErrorMessage"       minOccurs = "0" maxOccurs = "1"/>
-  </xs:sequence>
-</xs:complexType>
+    <xsd:element name = "ID"                            type = "IdentifierType"/>
+    <xsd:element name = "Description"                   type = "DescriptionType"
+                                                        minOccurs = "0" maxOccurs = "unbounded"/>
+    <xsd:element name = "ThrownFrom"                    type = "xsd:string"/>
+    <xsd:element name = "TimeStamp"                     type = "DateTimeType"/>
+    <xsd:element name = "ErrorType"                     type = "ErrorTypeType"/>
+    <xsd:element name = "ErrorCode"                     type = "xsd:string" 
+                                                        minOccurs = "0"/>
+    <xsd:element name = "ErrorDescription"              type = "xsd:string" 
+                                                        minOccurs = "0"/>
+    <xsd:element name = "CausedBy"                      type = "ErrorMessageType" 
+                                                        minOccurs = "0"/>
+    <xsd:group ref = "Extended:ErrorMessage"            minOccurs = "0" maxOccurs = "1"/>
+  </xsd:sequence>
+</xsd:complexType>
 
 <xsd:complexType name = "ErrorTypeType">
     <xsd:simpleContent>
-      <xsd:extension base="ErrorType1Type">
-        <xsd:attribute name = "OtherValue" type="xsd:string"/>
+      <xsd:extension base = "ErrorType1Type">
+        <xsd:attribute name = "OtherValue"              type = "xsd:string"/>
       </xsd:extension>
     </xsd:simpleContent>
-  </xsd:complexType>
+</xsd:complexType>
       
 <xsd:complexType name = "ErrorType1Type">
     <xsd:simpleContent>
-          <xsd:restriction base="CodeType">
-                  <xsd:enumeration value="BusinessError"/>
-                  <xsd:enumeration value="SystemError"/>
-                  <xsd:enumeration value="Other"/>
+          <xsd:restriction base = "CodeType">
+                  <xsd:enumeration value = "BusinessError"/>
+                  <xsd:enumeration value = "SystemError"/>
+                  <xsd:enumeration value = "Other"/>
           </xsd:restriction>
     </xsd:simpleContent>
 </xsd:complexType>
 
-
-</xs:schema>
+</xsd:schema>
 
 <!-- - - - - - - - - - - - - - - - - - - - - -->
 <!-- ErrorMessage Transaction Types    -->
 <!-- - - - - - - - - - - - - - - - - - - - - -->
 
-  <xsd:complexType name = "GetErrorMessageType">
+<xsd:complexType name = "GetErrorMessageType">
     <xsd:sequence>      
-         <xsd:element name = "ApplicationArea"
-                                type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"             type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name = "Get"         type =  "TransGetType"/>
-              <xsd:element name =  "ErrorMessage"
-                                                type =  "ErrorMessageType"
-                                                minOccurs = "0" 
-                                                maxOccurs = "unbounded"/>
+              <xsd:element name = "Get"                 type = "TransGetType"/>
+              <xsd:element name = "ErrorMessage"        type = "ErrorMessageType"
+                                                        minOccurs = "0" 
+                                                        maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
       </xsd:element>
     </xsd:sequence>
-    <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
-    <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
-  </xsd:complexType>
+    <xsd:attribute name = "releaseID"                   type = "xsd:normalizedString"     use="required"/>
+    <xsd:attribute name = "versionID"                   type = "xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
 
-  <xsd:complexType name = "ShowErrorMessageType">
+<xsd:complexType name = "ShowErrorMessageType">
     <xsd:sequence>      
-         <xsd:element name = "ApplicationArea"
-                                type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"             type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name = "Show"        type =  "TransShowType"/>
-              <xsd:element name =  "ErrorMessage"
-                                                type =  "ErrorMessageType"
-                                                minOccurs = "0" 
-                                                maxOccurs = "unbounded"/>
+              <xsd:element name = "Show"                type = "TransShowType"/>
+              <xsd:element name = "ErrorMessage"        type = "ErrorMessageType"
+                                                        minOccurs = "0" 
+                                                        maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
       </xsd:element>
     </xsd:sequence>
-    <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
-    <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
-  </xsd:complexType>
+    <xsd:attribute name = "releaseID"                   type = "xsd:normalizedString"     use="required"/>
+    <xsd:attribute name = "versionID"                   type = "xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
 
 
-
-  <xsd:complexType name = "ProcessErrorMessageType">
+<xsd:complexType name = "ProcessErrorMessageType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"             type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name = "Process"     type = "TransProcessType"/>
-              <xsd:element name = "ErrorMessage"
-                                                type = "ErrorMessageType"
-                                                minOccurs = "1"
-                                                maxOccurs = "unbounded"/>
+              <xsd:element name = "Process"             type = "TransProcessType"/>
+              <xsd:element name = "ErrorMessage"        type = "ErrorMessageType"
+                                                        minOccurs = "1"
+                                                        maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
       </xsd:element>
     </xsd:sequence>
-    <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
-    <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
-  </xsd:complexType>
+    <xsd:attribute name = "releaseID"                   type = "xsd:normalizedString"     use="required"/>
+    <xsd:attribute name = "versionID"                   type = "xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
 
 
-  <xsd:complexType name = "AcknowledgeErrorMessageType">
+<xsd:complexType name = "AcknowledgeErrorMessageType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"             type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name = "Acknowledge" type = "TransAcknowledgeType"/>
-              <xsd:element name = "ErrorMessage"
-                                                type = "ErrorMessageType"
-                                                minOccurs = "1"
-                                                maxOccurs = "unbounded"/>
+              <xsd:element name = "Acknowledge"          type = "TransAcknowledgeType"/>
+              <xsd:element name = "ErrorMessage"         type = "ErrorMessageType"
+                                                         minOccurs = "1"
+                                                         maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
       </xsd:element>
     </xsd:sequence>
-    <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
-    <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
-  </xsd:complexType>
+    <xsd:attribute name = "releaseID"                    type = "xsd:normalizedString"     use="required"/>
+    <xsd:attribute name = "versionID"                    type = "xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
 
 
-  <xsd:complexType name = "ChangeErrorMessageType">
+<xsd:complexType name = "ChangeErrorMessageType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"              type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name = "Change"      type = "TransChangeType"/>
-              <xsd:element name = "ErrorMessage"
-                                                type = "ErrorMessageType"
-                                                minOccurs = "1"
-                                                maxOccurs = "unbounded"/>
+              <xsd:element name = "Change"               type = "TransChangeType"/>
+              <xsd:element name = "ErrorMessage"         type = "ErrorMessageType"
+                                                         minOccurs = "1"
+                                                         maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
       </xsd:element>
-
     </xsd:sequence>
-    <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
-    <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
-  </xsd:complexType>
+    <xsd:attribute name = "releaseID"                    type = "xsd:normalizedString"     use="required"/>
+    <xsd:attribute name = "versionID"                    type = "xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
 
 
-  <xsd:complexType name = "RespondErrorMessageType">
+<xsd:complexType name = "RespondErrorMessageType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"              type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name = "Respond"     type = "TransRespondType"/>
-              <xsd:element name = "ErrorMessage"
-                                                type = "ErrorMessageType"
-                                                minOccurs = "1"
-                                                maxOccurs = "unbounded"/>
+              <xsd:element name = "Respond"              type = "TransRespondType"/>
+              <xsd:element name = "ErrorMessage"         type = "ErrorMessageType"
+                                                         minOccurs = "1"
+                                                         maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
       </xsd:element>
-
     </xsd:sequence>
-    <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
-    <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
-  </xsd:complexType>
+    <xsd:attribute name = "releaseID"                    type = "xsd:normalizedString"     use="required"/>
+    <xsd:attribute name = "versionID"                    type = "xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
 
 
-  <xsd:complexType name = "CancelErrorMessageType">
+<xsd:complexType name = "CancelErrorMessageType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"              type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name = "Cancel"      type = "TransCancelType"/>
-              <xsd:element name = "ErrorMessage"
-                                                type = "ErrorMessageType"
-                                                minOccurs = "1"
-                                                maxOccurs = "unbounded"/>
+              <xsd:element name = "Cancel"               type = "TransCancelType"/>
+              <xsd:element name = "ErrorMessage"         type = "ErrorMessageType"
+                                                         minOccurs = "1"
+                                                         maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
       </xsd:element>
-
     </xsd:sequence>
-    <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
-    <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
-  </xsd:complexType>
+    <xsd:attribute name = "releaseID"                    type = "xsd:normalizedString"     use="required"/>
+    <xsd:attribute name = "versionID"                    type = "xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
 
 
-  <xsd:complexType name = "SyncErrorMessageType">
+<xsd:complexType name = "SyncErrorMessageType">
      <xsd:sequence>
-     <xsd:element name = "ApplicationArea"      type = "TransApplicationAreaType"/>
+     <xsd:element name = "ApplicationArea"               type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name = "Sync"        type = "TransSyncType"/>
-              <xsd:element name = "ErrorMessage"
-                                                type = "ErrorMessageType"
-                                                minOccurs = "1"
-                                                maxOccurs = "unbounded"/>
+              <xsd:element name = "Sync"                 type = "TransSyncType"/>
+              <xsd:element name = "ErrorMessage"         type = "ErrorMessageType"
+                                                         minOccurs = "1"
+                                                         maxOccurs = "unbounded"/>
             </xsd:sequence>
          </xsd:complexType>
       </xsd:element>
     </xsd:sequence>
-    <xsd:attribute name = "releaseID"           type="xsd:normalizedString"     use="required"/>
-    <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
-  </xsd:complexType>
+    <xsd:attribute name = "releaseID"                    type = "xsd:normalizedString"     use="required"/>
+    <xsd:attribute name = "versionID"                    type = "xsd:normalizedString"     use="optional"/>
+</xsd:complexType>
 
 </xsd:schema>
