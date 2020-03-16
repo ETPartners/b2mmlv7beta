@@ -73,7 +73,6 @@
 
 <xsd:complexType name = "ErrorMessageType">
   <xsd:sequence>
-<<<<<<< HEAD
     <xsd:element name = "ID"                            type = "IdentifierType"/>
     <xsd:element name = "Description"                   type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
@@ -87,7 +86,6 @@
     <xsd:element name = "CausedBy"                      type = "ErrorMessageType" 
                                                         minOccurs = "0"/>
     <xsd:group ref = "Extended:ErrorMessage"            minOccurs = "0" maxOccurs = "1"/>
-=======
     <xsd:element name = "ID"                          type = "IdentifierType"/>
     <xsd:element name = "Description"                 type = "DescriptionType"
                                                       minOccurs = "0" maxOccurs = "unbounded"/>
@@ -101,7 +99,6 @@
     <xsd:element name = "CausedBy"                    type = "ErrorMessageType" 
                                                       minOccurs = "0"/>
     <xsd:group   ref  = "Extended:ErrorMessage"       minOccurs = "0" maxOccurs = "1"/>
->>>>>>> b9bd974ae0046adf74c94aa19829cede8f9641ce
   </xsd:sequence>
 </xsd:complexType>
 
