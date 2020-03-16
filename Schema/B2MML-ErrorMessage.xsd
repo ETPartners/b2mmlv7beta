@@ -3,13 +3,9 @@
 <xsd:schema     xmlns:xsd               = "http://www.w3.org/2001/XMLSchema"
                 targetNamespace         = "http://www.mesa.org/xml/B2MML"
                 xmlns                   = "http://www.mesa.org/xml/B2MML"
-<<<<<<< HEAD
                 xmlns:Extended          = "http://www.mesa.org/xml/B2MML-AllExtensions"
                 elementFormDefault      = "qualified"
                 attributeFormDefault    = "unqualified"> 
-=======
-                xmlns:Extended          = "http://www.mesa.org/xml/B2MML-AllExtensions"> 
->>>>>>> b9bd974ae0046adf74c94aa19829cede8f9641ce
   
 <!-- Import the Extension Schema         -->
 
