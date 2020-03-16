@@ -3,7 +3,7 @@
 <xsd:schema     xmlns:xsd               = "http://www.w3.org/2001/XMLSchema"
                 targetNamespace         = "http://www.mesa.org/xml/B2MML"
                 xmlns                   = "http://www.mesa.org/xml/B2MML"
-                xmlns:Extended          = "http://www.mesa.org/xml/B2MML-AllExtensions" 
+                xmlns:Extended          = "http://www.mesa.org/xml/B2MML-AllExtensions"> 
   
 <!-- Import the Extension Schema         -->
 
@@ -16,9 +16,8 @@
 
 <xsd:annotation> 
    <xsd:documentation>
-
         Copyright 2019 MESA International, Version 0700
-    All Rights Reserved. http://www.mesa.org
+        All Rights Reserved. http://www.mesa.org
 
         This MESA International work (including specifications, documents, 
         software, and related items) referred to as the Business To 
@@ -46,13 +45,10 @@
    </xsd:documentation>
 
    <xsd:documentation> 
-
       Revision History
 
         Ver     Date            Person          Note
         ---     ----            ------          ----
-     
-    
 
    </xsd:documentation>
 </xsd:annotation>
@@ -85,11 +81,11 @@
                                                       minOccurs = "0"/>
     <xsd:element name = "ErrorDescription"            type = "xsd:string" 
                                                       minOccurs = "0"/>
-    <xsd:element name = "CausedBy"                    type = "ext:ErrorMessageType" 
+    <xsd:element name = "CausedBy"                    type = "ErrorMessageType" 
                                                       minOccurs = "0"/>
     <xsd:group   ref  = "Extended:ErrorMessage"       minOccurs = "0" maxOccurs = "1"/>
-  </xs:sequence>
-</xs:complexType>
+  </xsd:sequence>
+</xsd:complexType>
 
 <xsd:complexType name = "ErrorTypeType">
     <xsd:simpleContent>
@@ -108,9 +104,6 @@
           </xsd:restriction>
     </xsd:simpleContent>
 </xsd:complexType>
-
-
-</xs:schema>
 
 <!-- - - - - - - - - - - - - - - - - - - - - -->
 <!-- ErrorMessage Transaction Types    -->
