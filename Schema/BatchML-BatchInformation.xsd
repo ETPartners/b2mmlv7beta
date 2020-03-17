@@ -444,7 +444,7 @@
       <xsd:element name = "Description"                         type = "DescriptionType"
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "EquipmentElementType"                type = "EquipmentElementTypeType" />
-      <xsd:element name = "EquipmentElementLevel"               type = "EquipmentElementLevelType" />
+      <xsd:element name = "EquipmentElementLevel"               type = "EquipmentElementType" />
       <xsd:element name = "ClassInstanceAssociation"            type = "ClassInstanceAssociationType"
                                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Property"                            type = "EquipmentElementPropertyType"
@@ -1163,7 +1163,7 @@
         <xsd:element name = "EquipmentClassID"          type = "IdentifierType"/>
         <xsd:element name = "EquipmentConnection"       type = "EquipmentConnectionType" />
         <xsd:element name = "EquipmentElementID"        type = "IdentifierType"/>
-        <xsd:element name = "EquipmentElementLevel"     type = "EquipmentElementLevelType"/>
+        <xsd:element name = "EquipmentElementLevel"     type = "EquipmentLevelType"/>
         <xsd:element name = "EquipmentElementType"      type = "EquipmentElementTypeType"/>
         <xsd:element name = "EquipmentID"               type = "BatchEquipmentIDType"/>
         <xsd:element name = "EquipmentProceduralElement"        type ="EquipmentProceduralElementType" />
