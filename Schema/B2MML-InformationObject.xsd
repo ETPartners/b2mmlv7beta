@@ -55,9 +55,6 @@
    </xsd:documentation>
 </xsd:annotation>
 
-<xsd:include schemaLocation ="B2MML-CoreComponents.xsd"/>
-<xsd:include schemaLocation ="B2MML-Common.xsd"/>
-<xsd:include schemaLocation ="B2MML-ConfirmBOD.xsd"/>
 <xsd:include schemaLocation ="B2MML-Equipment.xsd"/>
 <xsd:include schemaLocation ="B2MML-Material.xsd"/>
 <xsd:include schemaLocation ="B2MML-Personnel.xsd"/>
@@ -65,25 +62,11 @@
 <xsd:include schemaLocation ="B2MML-ProcessSegment.xsd"/>
 <xsd:include schemaLocation ="B2MML-OperationalLocation.xsd"/>
 <xsd:include schemaLocation ="B2MML-OperationsCapability.xsd"/>
-<xsd:include schemaLocation ="B2MML-OperationsDefinition.xsd"/>
 <xsd:include schemaLocation ="B2MML-OperationsEvent.xsd"/>
-<xsd:include schemaLocation ="B2MML-OperationsPerformance.xsd"/>
-<xsd:include schemaLocation ="B2MML-OperationsPerformanceTypes.xsd"/>
-<xsd:include schemaLocation ="B2MML-OperationsSchedule.xsd"/>
-<xsd:include schemaLocation ="B2MML-OperationsTest.xsd"/>
 <xsd:include schemaLocation ="B2MML-ResourceRelationshipNetwork.xsd"/>
-<xsd:include schemaLocation ="B2MML-TransactionProfile.xsd"/>
-<xsd:include schemaLocation ="B2MML-WorkAlert.xsd"/>
-<xsd:include schemaLocation ="B2MML-WorkCalendar.xsd"/>
 <xsd:include schemaLocation ="B2MML-WorkCapability.xsd"/>
-<xsd:include schemaLocation ="B2MML-WorkDefinition.xsd"/>
-<xsd:include schemaLocation ="B2MML-WorkflowSpecification.xsd"/>
-<xsd:include schemaLocation ="B2MML-WorkPerformance.xsd"/>
 <xsd:include schemaLocation ="B2MML-WorkRecord.xsd"/>
-<xsd:include schemaLocation ="B2MML-WorkSchedule.xsd"/>
-<xsd:include schemaLocation ="BatchML-BatchInformation.xsd"/>
 <xsd:include schemaLocation ="BatchML-GeneralRecipe.xsd"/>
-<xsd:include schemaLocation ="BatchML-BatchProductionRecord.xsd"/>
 
  <xsd:import  namespace="http://www.mesa.org/xml/B2MML-AllExtensions"
               schemaLocation="B2MML-AllExtensions.xsd"/>
