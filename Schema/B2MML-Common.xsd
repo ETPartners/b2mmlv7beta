@@ -656,7 +656,10 @@ The hierarchy scope identifies the associated instance in the role-based equipme
 		</xsd:annotation>
         <xsd:sequence>
             <xsd:element name="EquipmentID" 		type="IdentifierType"/>
-            <xsd:element name="EquipmentLevel" 		type="EquipmentLevelType"/>
+            <xsd:choice>
+                <xsd:element name="EquipmentElementLevel" type="EquipmentLevelType"/>
+                <xsd:element name="EquipmentLevel" type="EquipmentLevelType"/>
+            </xsd:choice>
             <xsd:element name="HierarchyScopeChild" 	type="HierarchyScopeType" minOccurs="0"/>
             <xsd:group ref="Extended:HierarchyScope" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
@@ -762,7 +765,10 @@ Defined values are
     <xsd:complexType name="LocationType">
         <xsd:sequence>
             <xsd:element name="EquipmentID" type="IdentifierType"/>
-            <xsd:element name="EquipmentElementLevel" type="EquipmentLevelType"/>
+            <xsd:choice>
+                <xsd:element name="EquipmentElementLevel" type="EquipmentLevelType"/>
+                <xsd:element name="EquipmentLevel" type="EquipmentLevelType"/>
+            </xsd:choice>
             <xsd:element name="LocationChild" type="LocationType" minOccurs="0"/>
             <xsd:group ref="Extended:Location" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
