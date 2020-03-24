@@ -120,8 +120,6 @@
     </xsd:simpleContent>
 </xsd:complexType>
 
-</xsd:schema>
-
 <!-- - - - - - - - - - - - - - - - - - - - - -->
 <!-- ErrorMessage Transaction Types    -->
 <!-- - - - - - - - - - - - - - - - - - - - - -->
