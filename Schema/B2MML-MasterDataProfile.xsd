@@ -50,9 +50,7 @@
 
         Ver     Date            Person          Note
         ---     ----            ------          ----
-        7.0    12-Dec-2018    Dennis Brandl  Initial  version for a Base Data Exchange Profile
-                        Changed all intermediate date and time types to DatTimeType
-        29 Mar 2019    D. Brandl    All future comments and revisions to be recorded in GitHub
+
 
    </xsd:documentation>
 </xsd:annotation>
@@ -92,7 +90,7 @@
 <!-- Global Elements ========================= -->
 <!-- ========================================= -->
 
-  <xsd:element name = "MasterDataProfile"            type = "MasterDataProfileType"/>
+ <xsd:element name = "MasterDataProfile"          type = "MasterDataProfileType"/>
 
 <!-- ========================================= -->
 <!-- Type Definitions ======================== -->
@@ -113,15 +111,22 @@
                                                    minOccurs="0" maxOccurs = "unbounded"/>
          <xsd:element name = "OperationalLocation" type = "OperationalLocationType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "OperationalLocationClass" type = "OperationalLocationClassType"
+         <xsd:element name = "OperationalLocationClass" 
+                                                   type = "OperationalLocationClassType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "OperationsDefinition" type = "OperationsDefinitionType"
+         <xsd:element name = "OperationsCapability" 
+                                                   type = "OperationsCapabilityType"
+                                                   minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "OperationsDefinition" 
+                                                   type = "OperationsDefinitionType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
          <xsd:element name = "OperationsSegment"   type = "OperationsSegmentType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "OperationsEventClass" type = "OperationsEventClassType"
+         <xsd:element name = "OperationsEventClass" 
+                                                   type = "OperationsEventClassType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "OperationsEventDefinition" type = "OperationsEventDefinitionType"
+         <xsd:element name = "OperationsEventDefinition" 
+                                                   type = "OperationsEventDefinitionType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
          <xsd:element name = "ProcessSegment"      type = "ProcessSegmentType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
@@ -129,30 +134,59 @@
                                                    minOccurs="0" maxOccurs = "unbounded"/>
          <xsd:element name = "MaterialDefinition"  type = "MaterialDefinitionType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "EquipmentClass"       type = "EquipmentClassType"
+         <xsd:element name = "MaterialLot"         type = "MaterialLotType"
+                                                   minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "MaterialSublot"      type = "MaterialLotType"
+                                                   minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "EquipmentClass"      type = "EquipmentClassType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
          <xsd:element name = "Equipment"           type = "EquipmentType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
          <xsd:element name = "PersonnelClass"      type = "PersonnelClassType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "Person"              type = "PersonType"
+                                                   minOccurs="0" maxOccurs = "unbounded"/>                                                       
          <xsd:element name = "PhysicalAssetClass"  type = "PhysicalAssetClassType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "ResourceRelationshipNetwork"       type ="ResourceRelationshipNetworkType"
+         <xsd:element name = "PhysicalAsset"       type = "PhysicalAssetType"
+                                                   minOccurs="0" maxOccurs = "unbounded"/>                                                   
+         <xsd:element name = "ResourceRelationshipNetwork"       
+                                                   type ="ResourceRelationshipNetworkType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "ResourceNetworkConnectionType"  
+                                                   type = "ResourceNetworkConnectionTypeType"
+                                                   minOccurs="0" maxOccurs = "unbounded"/>                                                                                           
          <xsd:element name = "TestSpecification"   type = "TestSpecificationType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "WorkAlertDefinition"  type ="WorkAlertDefinitionType"
+         <xsd:element name = "TestResult"          type = "TestResultType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "WorkCalendar"       type ="WorkCalendarType"
+         <xsd:element name = "WorkAlertDefinition"  
+                                                   type ="WorkAlertDefinitionType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "WorkCalendarDefinition"  type ="WorkCalendarDefinitionType"
+         <xsd:element name = "WorkCalendar"        type ="WorkCalendarType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "WorkflowSpecification" type = "WorkflowSpecificationType"
+         <xsd:element name = "WorkCalendarDefinition"  
+                                                   type ="WorkCalendarDefinitionType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "WorkflowSpecificationType" type = "WorkflowSpecificationTypeType"
+         <xsd:element name = "WorkCapability"      type = "WorkCapabilityType"
+                                                   minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "WorkMasterCapability"
+                                                   type = "WorkMasterCapabilityType"
+                                                   minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "WorkflowSpecification" 
+                                                   type = "WorkflowSpecificationType"
+                                                   minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "WorkflowSpecificationNodeType" 
+                                                   type = "WorkflowSpecificationNodeTypeType"
+                                                   minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "WorkflowSpecificationConnectionType" 
+                                                   type = "WorkflowSpecificationConnectionTypeType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
          <xsd:element name = "WorkMaster"          type = "WorkMasterType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "WorkRecordSpecification"        
+                                                   type = "OperationsRecordSpecTemplateType"
+                                                   minOccurs="0" maxOccurs = "unbounded"/>                                        
          <xsd:element name = "TransactionProfile"  type = "MasterDataTransactionProfileType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
 
@@ -162,72 +196,68 @@
 
   <xsd:complexType name = "MasterDataProfileHeaderType">
       <xsd:sequence>
-         <xsd:element name = "ID"                 type = "IdentifierType"/>
-         <xsd:element name = "Version"            type = "VersionType"/>
-         <xsd:element name = "Name"               type = "TextType"/>
-         <xsd:element name = "Scope"              type = "TextType" minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "Abbreviation"       type = "TextType" minOccurs="0"/>
-         <xsd:element name = "ReleaseDate"        type = "DateTimeType" minOccurs="0"/>
-         <xsd:element name = "URILocation"        type = "TextType" minOccurs="0"/>
-         <xsd:element name = "OwningAuthority"    type = "TextType" minOccurs="0"/>
-         <xsd:element name = "ContactInformation" type="TextType" minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "Keyword"            type = "TextType" minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "NormativeReference" type="TextType" minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "Terms"              type = "TextType" minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "ID"                  type = "IdentifierType"/>
+         <xsd:element name = "Version"             type = "VersionType"/>
+         <xsd:element name = "Name"                type = "TextType"/>
+         <xsd:element name = "Scope"               type = "TextType"            minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "Abbreviation"        type = "TextType"            minOccurs="0"/>
+         <xsd:element name = "ReleaseDate"         type = "DateTimeType"        minOccurs="0"/>
+         <xsd:element name = "URILocation"         type = "TextType"            minOccurs="0"/>
+         <xsd:element name = "OwningAuthority"     type = "TextType"            minOccurs="0"/>
+         <xsd:element name = "ContactInformation"  type = "TextType"            minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "Keyword"             type = "TextType"            minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "NormativeReference"  type = "TextType"            minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "Terms"               type = "TextType"            minOccurs="0" maxOccurs = "unbounded"/>
       </xsd:sequence>
   </xsd:complexType>
 
     <xsd:complexType name = "MasterDataTransactionProfileType">
       <xsd:sequence>
-         <xsd:element name = "ApplicationID"      type = "IdentifierType"/>
-         <xsd:element name = "ApplicationRole"    type = "IdentifierType"/>
-         <xsd:element name = "TransactionProfile" type = "TransactionProfileType"/>
-         <xsd:element name = "ChannelTopic"       type = "ChannelTopicType"
-                                                  minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "ApplicationID"       type = "IdentifierType"/>
+         <xsd:element name = "ApplicationRole"     type = "IdentifierType"/>
+         <xsd:element name = "TransactionProfile"  type = "TransactionProfileType"/>
+         <xsd:element name = "ChannelTopic"        type = "ChannelTopicType"
+                                                   minOccurs="0" maxOccurs = "unbounded"/>
       </xsd:sequence>
   </xsd:complexType>
 
 
-
   <xsd:complexType name = "ChannelTopicType">
       <xsd:sequence>
-         <xsd:element name = "ChannelURI"         type = "xsd:normalizedString"/>
-         <xsd:element name = "ChannelDescription" type = "TextType" minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "Topic"              type = "xsd:normalizedString"/>
-         <xsd:element name = "TopicDescription"   type = "TextType" minOccurs="0" maxOccurs = "unbounded"/>
-         <xsd:element name = "MessageSpec"        type = "TextType" minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "ChannelURI"          type = "xsd:normalizedString"/>
+         <xsd:element name = "ChannelDescription"  type = "TextType"            minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "Topic"               type = "xsd:normalizedString"/>
+         <xsd:element name = "TopicDescription"    type = "TextType"            minOccurs="0" maxOccurs = "unbounded"/>
+         <xsd:element name = "MessageSpec"         type = "TextType"            minOccurs="0" maxOccurs = "unbounded"/>
       </xsd:sequence>
   </xsd:complexType>
 
 
   <xsd:complexType name = "OtherEnumerationType">
       <xsd:sequence>
-         <xsd:element name = "ObjectName"         type = "IdentifierType"/>
-         <xsd:element name = "EnumAttributeName"  type = "IdentifierType"/>
-         <xsd:element name = "OtherEnumValue"     type = "IdentifierType"/>
-         <xsd:element name = "Description"        type = "TextType"/>
+         <xsd:element name = "ObjectName"          type = "IdentifierType"/>
+         <xsd:element name = "EnumAttributeName"   type = "IdentifierType"/>
+         <xsd:element name = "OtherEnumValue"      type = "IdentifierType"/>
+         <xsd:element name = "Description"         type = "TextType"/>
       </xsd:sequence>
   </xsd:complexType>
 
 
   <xsd:complexType name = "ProfileEnumerationType">
       <xsd:sequence>
-         <xsd:element name = "ObjectName"    type = "IdentifierType"/>
-         <xsd:element name = "AttributeName"  type = "IdentifierType"/>
-         <xsd:element name = "DefinedValue"    type = "IdentifierType"/>
-         <xsd:element name = "Description"    type = "TextType"/>
+         <xsd:element name = "ObjectName"          type = "IdentifierType"/>
+         <xsd:element name = "AttributeName"       type = "IdentifierType"/>
+         <xsd:element name = "DefinedValue"        type = "IdentifierType"/>
+         <xsd:element name = "Description"         type = "TextType"/>
       </xsd:sequence>
   </xsd:complexType>
 
 
   <xsd:complexType name = "IDandDescriptionType">
       <xsd:sequence>
-         <xsd:element name = "ID"              type = "IdentifierType"/>
-         <xsd:element name = "Description"       type = "TextType"/>
+         <xsd:element name = "ID"                  type = "IdentifierType"/>
+         <xsd:element name = "Description"         type = "TextType"/>
       </xsd:sequence>
   </xsd:complexType>
-
-
-
 
 </xsd:schema>
