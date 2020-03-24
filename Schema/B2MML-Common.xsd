@@ -927,7 +927,7 @@ This attribute must be defined in the corresponding operations event definition.
                 <xsd:element name="ExternalReferenceID"   type="IdentifierType"/>
               </xsd:choice>
              <xsd:element name="InformationObjectType"    type="IdentifierType" minOccurs="0"/>
-	         <xsd:element name="OperationsRecordEntryTemplateChild"
+	         <xsd:element name="OperationsRecordEntryChild"
                                                           type="OperationsRecordEntryTemplateType"
                                                           minOccurs="0" maxOccurs="unbounded"/>
              <xsd:group ref="Extended:OperationsRecordEntryTemplate" minOccurs="0" maxOccurs="1"/>
@@ -943,9 +943,9 @@ This attribute must be defined in the corresponding operations event definition.
              <xsd:element name="EffectiveTimestamp"             type="DateTimeType"     minOccurs="0"/>
              <xsd:element name="EffectiveEndDate"               type="DateTimeType"     minOccurs = "0"/>
              <xsd:element name="Action" 			            type="ActionType"       minOccurs="0"/>
-             <xsd:element name="OperationsRecordEntryID"        type="IdentifierType"   minOccurs="1" maxOccurs="unbounded"/>
-	         <xsd:element name="OperationsRecordSpecTemplateID"	type="IdentifierType"/>
-             <xsd:element name="OperationsRecordTemplateChild"	type="OperationsRecordTemplateType"    minOccurs="0" maxOccurs="unbounded"/>
+             <xsd:element name="OperationsRecordEntry"          type="OperationsRecordEntryTemplateType"   minOccurs="1" maxOccurs="unbounded"/>
+	         <xsd:element name="OperationsRecordSpecificationID"	type="IdentifierType"/>
+             <xsd:element name="OperationsRecordChild"	        type="OperationsRecordTemplateType"    minOccurs="0" maxOccurs="unbounded"/>
              <xsd:group ref="Extended:OperationsRecordTemplate" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
@@ -958,7 +958,7 @@ This attribute must be defined in the corresponding operations event definition.
              <xsd:element name="PublishedDate"            type="DateTimeType"      minOccurs = "0"/>
              <xsd:element name="EffectiveStartDate"       type="DateTimeType"      minOccurs = "0"/>
              <xsd:element name="EffectiveEndDate"         type="DateTimeType"      minOccurs = "0"/>
-             <xsd:element name="OperationsRecordSpecTemplatePatternID"
+             <xsd:element name="OperationsRecordSpecificationPatternID"
                                                           type="IdentifierType"    minOccurs = "0"/>
 	         <xsd:element name="DefinitionType"           type="DefinitionTypeType"    minOccurs="0"/>
              <xsd:element name="InformationObjectType"    type="IdentifierType"    minOccurs="0" maxOccurs="unbounded"/>
@@ -966,7 +966,7 @@ This attribute must be defined in the corresponding operations event definition.
                                                           type="TextType"          minOccurs="0" maxOccurs="unbounded"/>
              <xsd:element name="Action"                   type="ActionType"        minOccurs="0"/>
              <xsd:element name="ActionMultiplicity"       type="TextType"          minOccurs="0" maxOccurs="unbounded"/>
-             <xsd:element name="OperationsRecordSpecTemplateChild"
+             <xsd:element name="OperationsRecordSpecificationChild"
                                                           type="OperationsRecordSpecTemplateType" minOccurs="0" maxOccurs="unbounded"/>
              <xsd:group ref="Extended:OperationsRecordSpecTemplate" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
