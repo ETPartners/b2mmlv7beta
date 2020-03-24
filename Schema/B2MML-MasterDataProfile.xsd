@@ -198,10 +198,12 @@
       <xsd:sequence>
          <xsd:element name = "ID"                  type = "IdentifierType"/>
          <xsd:element name = "Version"             type = "VersionType"/>
+         <xsd:element name = "PublishedDate"       type = "DateTimeType"        minOccurs=" 0"/>
+         <xsd:element name = "EffectiveStartDate"  type = "DateTimeType"        minOccurs= "0"/>      
+         <xsd:element name = "EffectiveEndDate"    type = "DateTimeType"        minOccurs= "0"/> 
          <xsd:element name = "Name"                type = "TextType"/>
          <xsd:element name = "Scope"               type = "TextType"            minOccurs="0" maxOccurs = "unbounded"/>
          <xsd:element name = "Abbreviation"        type = "TextType"            minOccurs="0"/>
-         <xsd:element name = "ReleaseDate"         type = "DateTimeType"        minOccurs="0"/>
          <xsd:element name = "URILocation"         type = "TextType"            minOccurs="0"/>
          <xsd:element name = "OwningAuthority"     type = "TextType"            minOccurs="0"/>
          <xsd:element name = "ContactInformation"  type = "TextType"            minOccurs="0" maxOccurs = "unbounded"/>
