@@ -237,8 +237,9 @@
 
   <xsd:complexType name = "OtherEnumerationType">
       <xsd:sequence>
-         <xsd:element name = "ObjectName"          type = "IdentifierType"/>
-         <xsd:element name = "EnumAttributeName"   type = "IdentifierType"/>
+         <xsd:element name = "InformationObjectName"
+                                                   type = "IdentifierType"/>
+         <xsd:element name = "EnumElementName"     type = "IdentifierType"/>
          <xsd:element name = "OtherEnumValue"      type = "IdentifierType"/>
          <xsd:element name = "Description"         type = "TextType"/>
       </xsd:sequence>
@@ -247,8 +248,9 @@
 
   <xsd:complexType name = "ProfileEnumerationType">
       <xsd:sequence>
-         <xsd:element name = "ObjectName"          type = "IdentifierType"/>
-         <xsd:element name = "AttributeName"       type = "IdentifierType"/>
+         <xsd:element name = "InformationObjectName"
+                                                   type = "IdentifierType"/>
+         <xsd:element name = "ElementName"         type = "IdentifierType"/>
          <xsd:element name = "DefinedValue"        type = "IdentifierType"/>
          <xsd:element name = "Description"         type = "TextType"/>
       </xsd:sequence>
