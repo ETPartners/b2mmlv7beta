@@ -76,7 +76,7 @@
 <!-- ========================================= -->
 
   <xsd:element name = "InformationObject"                        type = "InformationObjectType"/>
-
+  <xsd:element name = "InformationObjectType"                    type = "InformationObjectTypeType"/>
 <!-- ========================================= -->
 <!-- Type Definitions ======================== -->
 <!-- ========================================= -->
@@ -140,5 +140,86 @@
          </xsd:choice>   
      </xsd:sequence>
   </xsd:complexType>
+
+
+  <xsd:complexType name = "InformationObjectType1Type">
+     <xsd:simpleContent>
+        <xsd:restriction base = "CodeType">
+           <xsd:enumeration value = "Change"/>
+           <xsd:enumeration value = "Comment"/>
+           <xsd:enumeration value = "DataSet"/>
+           <xsd:enumeration value = "Event"/>
+           <xsd:enumeration value = "Operational Location"/> 
+           <xsd:enumeration value = "Operational LocationClass"/>
+           <xsd:enumeration value = "Personnel Class"/>
+           <xsd:enumeration value = "Person"/>
+           <xsd:enumeration value = "Equipment Class"/>
+           <xsd:enumeration value = "Equipment"/>          
+           <xsd:enumeration value = "Physical Asset Class"/>
+           <xsd:enumeration value = "Physical Asset"/>   
+           <xsd:enumeration value = "Material Class"/>
+           <xsd:enumeration value = "Material Definition"/>
+           <xsd:enumeration value = "Material Lot"/>
+           <xsd:enumeration value = "Material SubLot"/>           
+           <xsd:enumeration value = "Process Segment"/>
+           <xsd:enumeration value = "Test Specification"/>
+           <xsd:enumeration value = "Test Result"/>
+           <xsd:enumeration value = "Sample"/>
+           <xsd:enumeration value = "Property Measurement"/>  
+           <xsd:enumeration value = "Operations Event Class"/>
+           <xsd:enumeration value = "Operations Event Definition"/>
+           <xsd:enumeration value = "Operations Event"/>            
+           <xsd:enumeration value = "Operations Definition"/>
+           <xsd:enumeration value = "Operations Segment"/>
+           <xsd:enumeration value = "Operations Schedule"/>
+           <xsd:enumeration value = "Operations Request"/>
+           <xsd:enumeration value = "Operations Performance"/>
+           <xsd:enumeration value = "Operations Response"/>
+           <xsd:enumeration value = "Operations Capability"/>
+           <xsd:enumeration value = "Resource Relationship Network"/>
+           <xsd:enumeration value = "Resource Network Connection Type"/>           
+           <xsd:enumeration value = "Work Master"/>
+           <xsd:enumeration value = "Work Directive"/>       
+           <xsd:enumeration value = "Workflow Specification"/>
+           <xsd:enumeration value = "Workflow Specification Node Type"/>
+           <xsd:enumeration value = "Workflow Specification Connection Type"/>
+           <xsd:enumeration value = "Work Schedule"/>
+           <xsd:enumeration value = "Work Request"/>
+           <xsd:enumeration value = "Job List"/>
+           <xsd:enumeration value = "Job Order"/>
+           <xsd:enumeration value = "Work Performance"/>
+           <xsd:enumeration value = "Work Response"/>
+           <xsd:enumeration value = "Job Response"/>
+           <xsd:enumeration value = "Job Response List"/>           
+           <xsd:enumeration value = "Work Capability"/>
+           <xsd:enumeration value = "Work Master Capability"/>
+           <xsd:enumeration value = "Work Alert Definition"/>
+           <xsd:enumeration value = "Work Alert"/>  
+           <xsd:enumeration value = "Work Calendar"/>
+           <xsd:enumeration value = "Work Calendar Definition"/>
+           <xsd:enumeration value = "Work Record"/>
+           <xsd:enumeration value = "Work Record Specification"/> 
+           <xsd:enumeration value = "Batch Production Record"/>
+           <xsd:enumeration value = "Control Recipe"/>
+           <xsd:enumeration value = "Master Recipe"/>
+           <xsd:enumeration value = "GRecipe"/>
+           <xsd:enumeration value = "Recipe Element"/>
+           <xsd:enumeration value = "Resource Constraint"/>
+           <xsd:enumeration value = "Process Element"/> 
+           <xsd:enumeration value = "Personnel Identification Manifest"/>
+           <xsd:enumeration value = "Resource Definition Manifest"/>
+           <xsd:enumeration value="Other"/>
+        </xsd:restriction>
+     </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:complexType name = "InformationObjectTypeType">
+     <xsd:simpleContent>
+        <xsd:extension base = "InformationObjectType1Type">
+            <xsd:attribute name = "OtherValue"     type="xsd:string"/>
+        </xsd:extension>
+     </xsd:simpleContent>
+  </xsd:complexType>
+
 
 </xsd:schema>
