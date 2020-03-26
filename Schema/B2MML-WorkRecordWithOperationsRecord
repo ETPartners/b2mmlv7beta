@@ -76,16 +76,17 @@
 <!-- Global Elements ========================= -->
 <!-- ========================================= -->
 
-  <xsd:element name = "WorkRecord"            type = "WorkRecordType"/>
+  <xsd:element name = "WorkRecord"                 type = "WorkRecordType"/>
+  <xsd:element name = "WorkRecordSpec"             type = "WorkRecordSpecType"/>
 
-  <xsd:element name = "GetWorkRecord"         type = "GetWorkRecordType"/>
-  <xsd:element name = "ShowWorkRecord"        type = "ShowWorkRecordType"/>
-  <xsd:element name = "ProcessWorkRecord"     type = "ProcessWorkRecordType"/>
-  <xsd:element name = "AcknowledgeWorkRecord" type = "AcknowledgeWorkRecordType"/>
-  <xsd:element name = "ChangeWorkRecord"      type = "ChangeWorkRecordType"/>
-  <xsd:element name = "RespondWorkRecord"     type = "RespondWorkRecordType"/>
-  <xsd:element name = "CancelWorkRecord"      type = "CancelWorkRecordType"/>
-  <xsd:element name = "SyncWorkRecord"        type = "SyncWorkRecordType"/>
+  <xsd:element name = "GetWorkRecord"              type = "GetWorkRecordType"/>
+  <xsd:element name = "ShowWorkRecord"             type = "ShowWorkRecordType"/>
+  <xsd:element name = "ProcessWorkRecord"          type = "ProcessWorkRecordType"/>
+  <xsd:element name = "AcknowledgeWorkRecord"      type = "AcknowledgeWorkRecordType"/>
+  <xsd:element name = "ChangeWorkRecord"           type = "ChangeWorkRecordType"/>
+  <xsd:element name = "RespondWorkRecord"          type = "RespondWorkRecordType"/>
+  <xsd:element name = "CancelWorkRecord"           type = "CancelWorkRecordType"/>
+  <xsd:element name = "SyncWorkRecord"             type = "SyncWorkRecordType"/>
 
 
 <!-- ========================================= -->
@@ -94,11 +95,22 @@
 
   <xsd:group name = "WorkRecordEntryType">
     <xsd:sequence>
-      <xsd:element name = "EntryID"                type = "IdentifierType"/>
+      <xsd:element name = "ID"                     type = "IdentifierType"/>
+      <xsd:element name = "Description" 			   type = "DescriptionType"   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name = "Version"                type = "IdentifierType"    minOccurs = "0"/>
+      <xsd:element name = "RecordTimestamp" 		   type = "DateTimeType"      minOccurs="0"/>
+      <xsd:element name = "EffectiveTimestamp"     type = "DateTimeType"      minOccurs="0"/>
+      <xsd:element name = "EffectiveEndDate"       type = "DateTimeType"      minOccurs = "0"/>
+      <xsd:choice>
+         <xsd:element name = "InformationObject"   type = "InformationObjectType"/>
+         <xsd:element name = "ExternalReferenceID" type = "IdentifierType"/>
+      </xsd:choice>
+      <xsd:element name = "InformationObjectType"  type = "IdentifierType"    minOccurs="0"/>
+      <xsd:element name = "WorkRecordEntryChild"
+                                                   type = "OperationsRecordEntryTemplateType"
+                                                   minOccurs = "0" maxOccurs="unbounded"/>
       <xsd:element name = "ObjectType"             type = "WorkRecordObjectTypeType"/>
-      <xsd:element name = "TimeStamp"              type = "DateTimeType"     minOccurs="0"/>
       <xsd:element name = "ExternalReference"      type = "IdentifierType"   minOccurs="0"/>
-      <xsd:element name = "Description"            type = "DescriptionType"  minOccurs="0" maxOccurs="unbounded"/>
     </xsd:sequence>
   </xsd:group>
 
@@ -163,7 +175,7 @@
 
   <xsd:complexType name = "WorkRecordObjectTypeType">
      <xsd:simpleContent>
-         <xsd:extension base="WorkRecordObjectType1Type">
+         <xsd:extension base = "WorkRecordObjectType1Type">
             <xsd:attribute name = "OtherValue"     type="xsd:string"/>
         </xsd:extension>
      </xsd:simpleContent>
