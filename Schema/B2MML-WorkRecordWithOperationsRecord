@@ -89,97 +89,133 @@
   <xsd:element name = "SyncWorkRecord"             type = "SyncWorkRecordType"/>
 
 
-<!-- ========================================= -->
-<!-- Common group for all elements  ========== -->
-<!-- ========================================= -->
-
-  <xsd:group name = "WorkRecordEntryType">
-    <xsd:sequence>
-      <xsd:element name = "ID"                     type = "IdentifierType"/>
-      <xsd:element name = "Description" 			   type = "DescriptionType"   minOccurs="0" maxOccurs="unbounded"/>
-      <xsd:element name = "Version"                type = "IdentifierType"    minOccurs = "0"/>
-      <xsd:element name = "RecordTimestamp" 		   type = "DateTimeType"      minOccurs="0"/>
-      <xsd:element name = "EffectiveTimestamp"     type = "DateTimeType"      minOccurs="0"/>
-      <xsd:element name = "EffectiveEndDate"       type = "DateTimeType"      minOccurs = "0"/>
-      <xsd:choice>
-         <xsd:element name = "InformationObject"   type = "InformationObjectType"/>
-         <xsd:element name = "ExternalReferenceID" type = "IdentifierType"/>
-      </xsd:choice>
-      <xsd:element name = "InformationObjectType"  type = "IdentifierType"    minOccurs="0"/>
-      <xsd:element name = "WorkRecordEntryChild"
-                                                   type = "OperationsRecordEntryTemplateType"
-                                                   minOccurs = "0" maxOccurs="unbounded"/>
-      <xsd:element name = "ObjectType"             type = "WorkRecordObjectTypeType"/>
-      <xsd:element name = "ExternalReference"      type = "IdentifierType"   minOccurs="0"/>
-    </xsd:sequence>
-  </xsd:group>
-
 
 <!-- Simple & Complex Types  -->
 
-  <xsd:complexType name = "WorkRecordType">
+   <xsd:complexType  name = "WorkRecordEntryType">
+      <!-- Based OperationsRecordEntryTemplateType elements in Common.xsd and additional attributes from updated Work Record Model -->  
       <xsd:sequence>
-      <!-- OperationsRecordTemplate elements and additional attributes from updated Work Record Model -->     
-         <xsd:element name = "ID"                  type = "IdentifierType"/>
-         <xsd:element name = "Description"                    type="DescriptionType"  minOccurs="0" maxOccurs="unbounded"/>        
-         <xsd:element name = "Version"             type = "IdentifierType"    minOccurs="0"/>
-         <xsd:element name = "RecordTimestamp"        type = "DateTimeType"    minOccurs="0"/>
-         <xsd:element name = "EffectiveTimestamp"       type="DateTimeType"     minOccurs="0"/>
-         <xsd:element name = "EffectiveEndDate"         type="DateTimeType"     minOccurs = "0"/>
-         <xsd:element name = "HierarchyScope"      type = "HierarchyScopeType"  minOccurs="0"/>
-         <xsd:element name = "Action" 			            type="ActionType"       minOccurs="0"/>
-         <xsd:element name = "WorkRecordEntry"        type="OperationsRecordEntryTemplateType"   minOccurs="1" maxOccurs="unbounded"/>
-	      <xsd:element name = "WorkRecordSpecificationID"	type="IdentifierType"/>
-         <xsd:element name = "WorkRecordChild"	type="WorkRecordType"    minOccurs="0" maxOccurs="unbounded"/>
-     <!-- Simple types -->
-         <xsd:element name = "LastChangedDate"     type = "DateTimeType"    minOccurs="0"/>
-         <xsd:element name = "ChangeIndication"    type = "xsd:string"      minOccurs="0"/>
-         <xsd:element name = "Delimiter"           type = "TextType"      minOccurs="0"/>
-         <xsd:element name = "Language"            type = "CodeType"      minOccurs="0"/>
-         <xsd:element name = "RecordStatus"        type = "CodeType"      minOccurs="0"/>
-         <xsd:element name = "CampaignID"          type = "IdentifierType"    minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element name = "LotID"               type = "IdentifierType"    minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element name = "BatchID"             type = "IdentifierType"    minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element name = "MaterialDefinitionID" type = "IdentifierType"    minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element name = "EquipmentID"         type = "IdentifierType"    minOccurs="0" maxOccurs="unbounded"/>
-        <xsd:group   ref  = "Extended:WorkRecord" minOccurs="0" maxOccurs="1"/>
+         <xsd:element name = "ID"                     type = "IdentifierType"/>
+         <xsd:element name = "Description" 			   type = "DescriptionType"          minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element name = "Version"                type = "IdentifierType"           minOccurs = "0"/>
+         <xsd:element name = "RecordTimestamp" 		   type = "DateTimeType"             minOccurs="0"/>
+         <xsd:element name = "EffectiveTimestamp"     type = "DateTimeType"             minOccurs="0"/>
+         <xsd:element name = "EffectiveEndDate"       type = "DateTimeType"             minOccurs = "0"/>
+         <xsd:choice>
+            <xsd:element name = "InformationObject"   type = "InformationObjectType"/>
+            <xsd:element name = "ExternalReferenceID" type = "IdentifierType"/>
+         </xsd:choice>
+         <xsd:element name = "InformationObjectType"  type = "InformationObjectType"    minOccurs="0"/>
+         <xsd:element name = "WorkRecordEntryChild"   type = "WorkRecordEntryType"
+                                                      minOccurs = "0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+   </xsd:complexType>
+
+
+  <xsd:complexType name = "WorkRecordType">
+      <xsd:sequence> 
+      <!-- Based on OperationsRecordTemplate elements in Common.xsd and additional attributes from updated Work Record Model -->     
+         <xsd:element name = "ID"                     type = "IdentifierType"/>
+         <xsd:element name = "Description"            type = "DescriptionType"          minOccurs="0" maxOccurs="unbounded"/>        
+         <xsd:element name = "Version"                type = "IdentifierType"           minOccurs="0"/>
+         <xsd:element name = "RecordTimestamp"        type = "DateTimeType"             minOccurs="0"/>
+         <xsd:element name = "EffectiveTimestamp"     type = "DateTimeType"             minOccurs="0"/>
+         <xsd:element name = "EffectiveEndDate"       type = "DateTimeType"             minOccurs = "0"/>
+         <xsd:element name = "HierarchyScope"         type = "HierarchyScopeType"       minOccurs="0"/>
+         <xsd:element name = "Action" 			         type = "ActionType"               minOccurs="0"/>
+         <xsd:element name = "WorkRecordEntry"        type = "OperationsRecordEntryTemplateType"   
+                                                      minOccurs="1" maxOccurs="unbounded"/>
+         <xsd:element name = "WorkRecordSpecificationID"	
+                                                      type="IdentifierType"/>
+         <xsd:element name = "WorkRecordChild"	      type="WorkRecordType"    
+                                                      minOccurs="0" maxOccurs="unbounded"/>
+     <!-- Simple types from Work Record Model 950004-->
+         <xsd:element name = "LastChangedDate"        type = "DateTimeType"             minOccurs="0"/>
+         <xsd:element name = "ChangeIndication"       type = "xsd:string"               minOccurs="0"/>
+         <xsd:element name = "Delimiter"              type = "TextType"                 minOccurs="0"/>
+         <xsd:element name = "Language"               type = "CodeType"                 minOccurs="0"/>
+         <xsd:element name = "RecordStatus"           type = "CodeType"                 minOccurs="0"/>
+         <xsd:element name = "CampaignID"             type = "IdentifierType"           minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element name = "MaterialLotID"          type = "IdentifierType"           minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element name = "BatchID"                type = "IdentifierType"           minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element name = "MaterialDefinitionID"   type = "IdentifierType"           minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element name = "EquipmentID"            type = "IdentifierType"           minOccurs="0" maxOccurs="unbounded"/>
+    <!-- Complex types from Previous B2MML Version based on 880004 Batch Production Record 
+      but applied in terms of Level 3 but uses ISA-88 name space.  Where ISA-88 name space 
+      conflicts with ISA-95, ISA-95 is appied in this version.  There is redundant elements are:  -->
+         <xsd:element name = "ChangeHistory"          type = "WorkChangeHistoryType"    minOccurs="0"/>
+         <xsd:element name = "Comments"               type = "WorkCommentsType"         minOccurs="0"/>
+<xsd:element name = "DataSets"            type = "WorkDataSetsType"
+    minOccurs="0"/>
+<xsd:element name = "Events"              type = "WorkEventsType"
+    minOccurs="0"/>
+<xsd:element name = "PersonnelIdentification" type = "WorkPersonnelIdentificationType"
+    minOccurs="0"/>
+<xsd:element name = "OperationsDefinitions" type = "WWorkOperationsDefinitionsType"
+    minOccurs="0"/>
+<xsd:element name = "OperationsPerformances" type = "WWorkOperationsPerformancesType"
+    minOccurs="0"/>
+<xsd:element name = "OperationsSchedules" type = "WWorkOperationsSchedulesType"
+    minOccurs="0"/>
+<xsd:element name = "ResourceQualifications"  type = "WorkResourceQualificationsType"
+    minOccurs="0"/>
+<xsd:element name = "Samples"             type = "WorkSamplesType"
+    minOccurs="0"/>
+<xsd:element name = "WorkAlerts"          type = "WWorkAlertsType"
+    minOccurs="0"/>
+<xsd:element name = "WorkCalendars"       type = "WWorkCalendarsType"
+    minOccurs="0"/>
+<xsd:element name = "WorkDirectives"      type = "WWorkDirectivesType"
+    minOccurs="0"/>
+<xsd:element name = "WorkMasters"         type = "WWorkMastersType"
+    minOccurs="0"/>
+<xsd:element name = "WorkPerformances"    type = "WWorkPerformancesType"
+    minOccurs="0"/>
+<xsd:element name = "WorkSchedules"       type = "WWorkSchedulesType"
+    minOccurs="0"/>
+<xsd:element name = "BatchProductionRecord"  type = "BatchProductionRecordType"
+    minOccurs="0"/>
+
+
+
+         <xsd:group   ref  = "Extended:WorkRecord" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
   </xsd:complexType>
 
-  <xsd:complexType name = "WorkRecordObjectType1Type">
-     <xsd:simpleContent>
-        <xsd:restriction base="CodeType">
-           <xsd:enumeration value="Work Record"/>
-           <xsd:enumeration value="Change"/>
-           <xsd:enumeration value="Comment"/>
-           <xsd:enumeration value="Data Set"/>
-           <xsd:enumeration value="Event"/>
-           <xsd:enumeration value="Operations Definition"/>
-           <xsd:enumeration value="Operations Performance"/>
-           <xsd:enumeration value="Operations Schedule"/>
-           <xsd:enumeration value="Personnel Identification Manifest"/>
-           <xsd:enumeration value="Resource Qualifications"/>
-           <xsd:enumeration value="Sample"/>
-           <xsd:enumeration value="Sample Test"/>
-           <xsd:enumeration value="Sample Test Result"/>
-           <xsd:enumeration value="Work Alert"/>
-           <xsd:enumeration value="Work Calendar"/>
-           <xsd:enumeration value="Work Directive"/>
-           <xsd:enumeration value="Work Master"/>
-           <xsd:enumeration value="Work Performance"/>
-           <xsd:enumeration value="Work Schedule"/>
-           <xsd:enumeration value="Other"/>
-        </xsd:restriction>
-     </xsd:simpleContent>
-  </xsd:complexType>
-
-  <xsd:complexType name = "WorkRecordObjectTypeType">
-     <xsd:simpleContent>
-         <xsd:extension base = "WorkRecordObjectType1Type">
-            <xsd:attribute name = "OtherValue"     type="xsd:string"/>
-        </xsd:extension>
-     </xsd:simpleContent>
-  </xsd:complexType>
+  <xsd:complexType name = "WorkRecordSpecificationType">
+   <xsd:sequence> 
+   <!-- Based on OperationsRecordSpecTemplate elements in Common.xsd and additional attributes from updated Work Record Model -->     
+      <xsd:element name = "ID"                     type = "IdentifierType"/>
+      <xsd:element name = "Description"            type = "DescriptionType"             minOccurs="0" maxOccurs="unbounded"/>        
+      <xsd:element name = "Version"                type = "IdentifierType"              minOccurs="0"/>
+      <xsd:element name = "PublishedDate"          type = "DateTimeType"                minOccurs="0"/>
+      <xsd:element name = "EffectiveStartDate"     type = "DateTimeType"                minOccurs="0"/>
+      <xsd:element name = "EffectiveEndDate"       type = "DateTimeType"                minOccurs = "0"/>
+      <xsd:element name = "HierarchyScope"         type = "HierarchyScopeType"          minOccurs="0"/>
+      <xsd:element name = "Action" 			         type = "ActionType"                  minOccurs="0"/>
+      <xsd:element name = "WorkRecordSpecificationPatternID"
+                                                   type = "IdentifierType"              minOccurs = "0"/>
+      <xsd:element name = "DefinitionType"         type = "DefinitionTypeType"          minOccurs="0"/>
+      <xsd:element name = "InformationObjectType"  type = "InformationObjectTypeType"   minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name = "InformationObjectTypeMultiplicity"
+                                                   type = "TextType"                    minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name = "Action"                 type = "ActionType"                  minOccurs="0"/>
+      <xsd:element name = "ActionMultiplicity"     type = "TextType"                    minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name = "WorkRecordSpecificationChild"
+                                                   type = "WorkRecordSpecificationType" minOccurs="0" maxOccurs="unbounded"/>
+  <!-- Simple types from Work Record Model 950004-->
+      <xsd:element name = "ChangeIndication"       type = "xsd:string"                  minOccurs="0"/>
+      <xsd:element name = "Delimiter"              type = "TextType"                    minOccurs="0"/>
+      <xsd:element name = "Language"               type = "CodeType"                    minOccurs="0"/>
+      <xsd:element name = "RecordStatus"           type = "CodeType"                    minOccurs="0"/>
+      <xsd:element name = "CampaignID"             type = "IdentifierType"              minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name = "MaterialLotID"          type = "IdentifierType"              minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name = "BatchID"                type = "IdentifierType"              minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name = "MaterialDefinitionID"   type = "IdentifierType"              minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name = "EquipmentID"            type = "IdentifierType"              minOccurs="0" maxOccurs="unbounded"/>
+     <xsd:group   ref  = "Extended:WorkRecordSpecification" minOccurs="0" maxOccurs="1"/>
+   </xsd:sequence>
+</xsd:complexType>
 
 
 <!-- ========================================= -->
