@@ -43,78 +43,7 @@
 
     Ver     Date             Person          Note
     ---     ----             ------          ----
-    V01     7 Apr 2002       D. Emerson      - Initial release
-    V02     23 Sept 2003     D. Emerson      - Updated filename for V02
-                                             - Changed complexTypes that contained
-                                               simpleContent to be simpleTypes with
-                                               simpleContent by default (removed explicit)
-                                               simpleContent tags).  Types changed:
-                                                  CapabilityType1Type, DataType1Type,
-                                                  DependencyType
-                                             - Removed extra space in CapabilityType1Type
-                                             - Committed and Available enumerations
-                                             - Changed use of ##any to indirect reference
-                                               through AnyType, to allow parsing using Microsoft
-                                               XML toolset
-                                             - Added Common schema to B2MML namespace
-                                             - Add choice of ProductSegmentID or ProcessSegmentID
-                                               to SegmentDependencyType per comment BillS01.
-                                             - Change maxOccurs from "1" to "unbounded" for
-                                               Result in TestResultType.
-                                             - Remove UnitOfMeasure from TestResultType since it
-                                               is already in ResultType
-                                             - Added EnumerationID to DataTypeType to permit
-                                               identification an enumeration list when the datatype
-                                               is Enumeration.
-                                             - Added revision to namespace
-                                             - Added new element ValueString to ResultType to
-                                               contain the vaule of the result.
-    V0201   04 Nov 2003      D. Emerson      - Added minOccurs = "0" maxOccurs = "unbounded" to
-                                             - Any element in ValueType
-    v0300   26 Aug 2005      D. Emerson      - Added substitution groups.    One group added just
-                                               before each Any element.
-                                             - Add dateTime and SVG to datatype enumeration list.
-                                             - Add new, optional, element, "Key" based on IDType
-                                               to complexTypes QuantityType, ResultType, ValueType.
-                                             - Added UnitOfMeasure to ResultType as a mandatory element.
-                                             - Made mandatory to be consistent with its use in quantity
-                                               and value - this will impact upgrades from earlier versions.
-                                             - Add enumerations to EquipmentElementLevel1Type
-                                               StorageZone, StorageUnit, WorkCenter, WorkUnit
-    v0301   29 Dec 2005      D. Brandl       - Changed verison number to v0301
-    v04     04 Jun 2007      D. Brandl       - Added transaction elements for ISA 95 Part 5 support.
-                                             - Added "cc:" namespace for UN/CEFACT core types.
-                                             - Added the UN/CEFACT core components with optional attributes
-                                               and made them the base types for the B2MML types.
-                                             - Changed SegmentStateType to ResponseStateType for inclusion in all
-                                               levels of the ProductionPerformance element
-                                             - Enumerated types are now complexTypes declared as simpleContent
-                                             - Added warning before each use of the AnyType that the extension
-                                               schema should be used instead of the Any element and that in a
-                                               still to be determined future release of B2MML the AnyType and
-                                             - Notice that "Any" element will be removed.
-     V0500  26 Mar 2011     D. Brandl        Revised version
-                                             Added nillable=true to elements in QuantityValueType, ResultType
-                                               and ValueType
-                                             Removed "Any" element type, replaced with extended types for user extensions
-                                             Changed "Location" element name to "HierarchyScope"
-                                             Added EquipmentAssetMapping element
-                                             Removed AnyType
-                                             Made UOM and Datatype optional in QuantityType, ValueType, ResultType
-     V0600  17 Mar 2013     D. Brandl        Changed copyright to MESA International and support for ISA 95 Part 4
-                                             Corrected type group definition ProductProductionRuleIDGroup
-                                             Added a maxOccurs=unbounded to the TimingFactor element in a SegmentDerpendancy
-                                             Moved the OpXXXXXX elements into the common.xsd for support of Part 4 models
-                                             Updated the transaction schemas to match OAGiS 9.6, with addition of Receivers in header
      V0700  09 Nov 2018     D. Brandl        Updated Version for latest 2018 release of ISA 95
-                                             - Changed EquipmentAssetMappingType StartTime and EndTime types
-                                             - Added SegmentRequirementIDType
-                                             - Corrected MaterialUse1Type misspelling of Replaced Asset and Returned Sample
-                                             - Added a "Choice" option in HierarchyScopeType to allow either "EquipmentLevel" the updated
-                                               term in ISA 95, or "EquipmentElementLevel", the older term.
-                                             - Added HierarchyScope to TestResultType
-											 - Added documentation of selected elements
-											 - Removed intermediate types for Identifiers and DateTime
 			29 Mar 2019		D. Brandl		All future comments and revisions to be recorded in GitHub
 
 
@@ -159,36 +88,36 @@ If no action is specified, this is equivalent to all actions being allowed.
     <xsd:complexType name="AnyGenericValueType">
         <xsd:simpleContent>
             <xsd:extension base="xsd:string">
-                <xsd:attribute name="currencyID" type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="currencyID"                type="xsd:normalizedString" use="optional"/>
                 <xsd:attribute name="currencyCodeListVersionID" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="encodingCode" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="format" type="xsd:string" use="optional"/>
-                <xsd:attribute name="characterSetCode" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="listID" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="listAgencyID" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="listAgencyName" type="xsd:string" use="optional"/>
-                <xsd:attribute name="listName" type="xsd:string" use="optional"/>
-                <xsd:attribute name="listVersionID" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="languageID" type="xsd:language" use="optional"/>
-                <xsd:attribute name="languageLocaleID" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
-                <xsd:attribute name="listSchemaURI" type="xsd:anyURI" use="optional"/>
-                <xsd:attribute name="mimeCode" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="name" type="xsd:string" use="optional"/>
-                <xsd:attribute name="schemaID" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="schemaName" type="xsd:string" use="optional"/>
-                <xsd:attribute name="schemaAgencyID" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="schemaAgencyName" type="xsd:string" use="optional"/>
-                <xsd:attribute name="schemaVersionID" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="schemaDataURI" type="xsd:anyURI" use="optional"/>
-                <xsd:attribute name="schemaURI" type="xsd:anyURI" use="optional"/>
-                <xsd:attribute name="unitCode" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="unitCodeListID" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="unitCodeListAgencyID" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="unitCodeListAgencyName" type="xsd:string" use="optional"/>
-                <xsd:attribute name="unitCodeListVersionID" type="xsd:normalizedString" use="optional"/>
-                <xsd:attribute name="filename" type="xsd:string" use="optional"/>
-                <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+                <xsd:attribute name="encodingCode"              type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="format"                    type="xsd:string"           use="optional"/>
+                <xsd:attribute name="characterSetCode"          type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="listID"                    type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="listAgencyID"              type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="listAgencyName"            type="xsd:string"           use="optional"/>
+                <xsd:attribute name="listName"                  type="xsd:string"           use="optional"/>
+                <xsd:attribute name="listVersionID"             type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="languageID"                type="xsd:language"         use="optional"/>
+                <xsd:attribute name="languageLocaleID"          type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="listURI"                   type="xsd:anyURI"           use="optional"/>
+                <xsd:attribute name="listSchemaURI"             type="xsd:anyURI"           use="optional"/>
+                <xsd:attribute name="mimeCode"                  type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="name"                      type="xsd:string"           use="optional"/>
+                <xsd:attribute name="schemaID"                  type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="schemaName"                type="xsd:string"           use="optional"/>
+                <xsd:attribute name="schemaAgencyID"            type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="schemaAgencyName"          type="xsd:string"           use="optional"/>
+                <xsd:attribute name="schemaVersionID"           type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="schemaDataURI"             type="xsd:anyURI" use="optional"/>
+                <xsd:attribute name="schemaURI"                 type="xsd:anyURI" use="optional"/>
+                <xsd:attribute name="unitCode"                  type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="unitCodeListID"            type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="unitCodeListAgencyID"      type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="unitCodeListAgencyName"    type="xsd:string" use="optional"/>
+                <xsd:attribute name="unitCodeListVersionID"     type="xsd:normalizedString" use="optional"/>
+                <xsd:attribute name="filename"                  type="xsd:string" use="optional"/>
+                <xsd:attribute name="uri"                       type="xsd:anyURI" use="optional"/>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
@@ -214,7 +143,7 @@ Defined types are
 		</xsd:annotation>
          <xsd:simpleContent>
             <xsd:extension base="AssemblyRelationship1Type">
-                <xsd:attribute name="OtherValue" type="xsd:string"/>
+                <xsd:attribute name="OtherValue"               type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
@@ -240,7 +169,7 @@ Defined types are
 		</xsd:annotation>
          <xsd:simpleContent>
             <xsd:extension base="AssemblyType1Type">
-                <xsd:attribute name="OtherValue" type="xsd:string"/>
+                <xsd:attribute name="OtherValue"                type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
@@ -274,7 +203,7 @@ Defined values are
 		</xsd:annotation>
         <xsd:simpleContent>
             <xsd:extension base="CapabilityType1Type">
-                <xsd:attribute name="OtherValue" type="xsd:string"/>
+                <xsd:attribute name="OtherValue"               type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
@@ -309,18 +238,21 @@ Defines the type of the property. Defined types are
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="ConfidenceFactorType">
         <xsd:simpleContent>
             <xsd:restriction base="IdentifierType"/>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="CorrectionType">
         <xsd:simpleContent>
             <xsd:restriction base="CodeType"/>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="DataType1Type">
         <xsd:simpleContent>
@@ -395,6 +327,7 @@ Defines the type of the property. Defined types are
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="DataTypeType">
         <xsd:simpleContent>
@@ -403,6 +336,7 @@ Defines the type of the property. Defined types are
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="DefinitionTypeType">
 		<xsd:annotation>
@@ -420,6 +354,7 @@ Defined types are:
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
      <!--     -->
     <xsd:complexType name="Dependency1Type">
         <xsd:simpleContent>
@@ -438,6 +373,7 @@ Defined types are:
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="DependencyType">
 		<xsd:annotation>
@@ -458,10 +394,11 @@ Defined values are (explained using dependency type between element A and elemen
 		</xsd:annotation>
         <xsd:simpleContent>
             <xsd:extension base="Dependency1Type">
-                <xsd:attribute name="OtherValue" type="xsd:string"/>
+                <xsd:attribute name="OtherValue"             type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="Disposition1Type">
         <xsd:simpleContent>
@@ -475,6 +412,7 @@ Defined values are (explained using dependency type between element A and elemen
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="DispositionType">
 		<xsd:annotation>
@@ -495,12 +433,14 @@ Defined values for the disposition of a material lot are
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="DescriptionType">
         <xsd:simpleContent>
             <xsd:restriction base="TextType"/>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:simpleType name="DurationType">
         <xsd:restriction base="xsd:duration"/>
@@ -541,7 +481,7 @@ product shipping administration, maintenance management, marketing and sales, RD
 		</xsd:annotation>
          <xsd:simpleContent>
             <xsd:extension base="EnterpriseFunction1Type">
-                <xsd:attribute name="OtherValue" type="xsd:string"/>
+                <xsd:attribute name="OtherValue"                type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
@@ -549,12 +489,12 @@ product shipping administration, maintenance management, marketing and sales, RD
     <!--     -->
     <xsd:complexType name="EquipmentAssetMappingType">
         <xsd:sequence>
-            <xsd:element name="EquipmentID" type="IdentifierType"/>
-            <xsd:element name="PhysicalAssetID" type="IdentifierType"/>
-			<xsd:element name="HierarchyScope" type = "HierarchyScopeType" minOccurs = "0"/>
-            <xsd:element name="StartTime" type="DateTimeType" minOccurs="0"/>
-            <xsd:element name="EndTime" type="DateTimeType" minOccurs="0"/>
-            <xsd:group ref="Extended:EquipmentAssetMapping" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="EquipmentID"                    type="IdentifierType"/>
+            <xsd:element name="PhysicalAssetID"                type="IdentifierType"/>
+			<xsd:element name="HierarchyScope"                 type = "HierarchyScopeType"    minOccurs = "0"/>
+            <xsd:element name="StartTime"                      type="DateTimeType"            minOccurs="0"/>
+            <xsd:element name="EndTime"                        type="DateTimeType"            minOccurs="0"/>
+            <xsd:group ref="Extended:EquipmentAssetMapping"                                   minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
 
@@ -605,10 +545,11 @@ Defined values are:
 		</xsd:annotation>
         <xsd:simpleContent>
             <xsd:extension base="EquipmentLevel1Type">
-                <xsd:attribute name="OtherValue" type="xsd:string"/>
+                <xsd:attribute name="OtherValue"                   type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="EquipmentUseType">
         <xsd:simpleContent>
@@ -640,7 +581,7 @@ Extension can contain a set of entries of other operations event classes who rep
 		</xsd:annotation>
          <xsd:simpleContent>
             <xsd:extension base="Extension1Type">
-                <xsd:attribute name="OtherValue" type="xsd:string"/>
+                <xsd:attribute name="OtherValue"                type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
@@ -655,13 +596,13 @@ The hierarchy scope identifies the associated instance in the role-based equipme
 			</xsd:documentation>
 		</xsd:annotation>
         <xsd:sequence>
-            <xsd:element name="EquipmentID" 		type="IdentifierType"/>
-            <xsd:choice>
-                <xsd:element name="EquipmentElementLevel" type="EquipmentLevelType"/>
-                <xsd:element name="EquipmentLevel" type="EquipmentLevelType"/>
+            <xsd:element name="EquipmentID" 		            type="IdentifierType"/>
+            <xsd:choice>  
+                <xsd:element name="EquipmentElementLevel"       type="EquipmentLevelType"/>
+                <xsd:element name="EquipmentLevel"              type="EquipmentLevelType"/>
             </xsd:choice>
-            <xsd:element name="HierarchyScopeChild" 	type="HierarchyScopeType" minOccurs="0"/>
-            <xsd:group ref="Extended:HierarchyScope" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="HierarchyScopeChild" 	        type="HierarchyScopeType" minOccurs="0"/>
+            <xsd:group ref="Extended:HierarchyScope"            minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
 
@@ -754,28 +695,10 @@ Defined values are
 		</xsd:annotation>
          <xsd:simpleContent>
             <xsd:extension base="JobOrderDispatchStatus1Type">
-                <xsd:attribute name="OtherValue" type="xsd:string"/>
+                <xsd:attribute name="OtherValue"                type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
-
-
-    <!--     -->
-    <!--  LocationType kept in V05 for use with the Production element definitions. Not used in other elements.  -->
-    <xsd:complexType name="LocationType">
-        <xsd:sequence>
-            <xsd:element name="EquipmentID" type="IdentifierType"/>
-            <xsd:choice>
-                <xsd:element name="EquipmentElementLevel" type="EquipmentLevelType"/>
-                <xsd:element name="EquipmentLevel" type="EquipmentLevelType"/>
-            </xsd:choice>
-            <xsd:element name="LocationChild" type="LocationType" minOccurs="0"/>
-            <xsd:group ref="Extended:Location" minOccurs="0" maxOccurs="1"/>
-        </xsd:sequence>
-    </xsd:complexType>
-    <!--     -->
-    <!--  LocationType kept in V05 for use with the Production element definitions. Not used in other elements.  -->
-    <!--     -->
 
     <xsd:complexType name="MaterialUse1Type">
         <xsd:simpleContent>
@@ -1197,7 +1120,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:element name="Description" 			type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="PhysicalAssetUse" 		type="PhysicalAssetUseType" minOccurs="0"/>
             <xsd:element name="HierarchyScope" 			type="HierarchyScopeType" minOccurs="0"/>
-	    <xsd:element name="PhysicalLocation" 		type="ResourceLocationType" minOccurs = "0"/>
+	    <xsd:element name="PhysicalLocation" 		type="Resource" minOccurs = "0"/>
 	    <xsd:element name="SpatialDefinition" 		type="SpatialDefinitionType" minOccurs = "0"/>
             <xsd:element name="Quantity" 			type="QuantityValueType" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="PhysicalAssetSpecificationChild"	type="OpPhysicalAssetSpecificationType" minOccurs="0" maxOccurs="unbounded"/>
