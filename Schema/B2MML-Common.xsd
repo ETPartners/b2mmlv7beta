@@ -121,6 +121,7 @@ If no action is specified, this is equivalent to all actions being allowed.
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="AssemblyRelationship1Type">
         <xsd:simpleContent>
@@ -131,6 +132,7 @@ If no action is specified, this is equivalent to all actions being allowed.
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="AssemblyRelationshipType">
 		<xsd:annotation>
@@ -147,6 +149,7 @@ Defined types are
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
+    
     <!--     -->
     <xsd:complexType name="AssemblyType1Type">
         <xsd:simpleContent>
@@ -157,6 +160,7 @@ Defined types are
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+    
     <!--     -->
     <xsd:complexType name="AssemblyTypeType">
 		<xsd:annotation>
@@ -173,6 +177,7 @@ Defined types are
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="CapabilityType1Type">
         <xsd:simpleContent>
@@ -187,6 +192,7 @@ Defined types are
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="CapabilityTypeType">
 		<xsd:annotation>
@@ -199,7 +205,7 @@ Defined values are
 - Used: a historical value that defines the portion of the capacity with acceptable quality;
 - Unused: a historical value that defines the portion of the capacity that was not used or had unacceptable quality; and
 - Total: the sum of used and unused capability or the sum of available, unattainable and committed capability.
-			</xsd:documentation>
+            </xsd:documentation>
 		</xsd:annotation>
         <xsd:simpleContent>
             <xsd:extension base="CapabilityType1Type">
@@ -207,18 +213,21 @@ Defined values are
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="CauseType">
         <xsd:simpleContent>
             <xsd:restriction base="CodeType"/>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="CertificateOfAnalysisReferenceType">
         <xsd:simpleContent>
             <xsd:restriction base="IdentifierType"/>
         </xsd:simpleContent>
     </xsd:complexType>
+    
     <!--     -->
     <xsd:complexType name="ClassPropertyTypeType">
 		<xsd:annotation>
@@ -700,6 +709,7 @@ Defined values are
         </xsd:simpleContent>
     </xsd:complexType>
 
+   <!--     -->
     <xsd:complexType name="MaterialUse1Type">
         <xsd:simpleContent>
             <xsd:restriction base="CodeType">
@@ -719,6 +729,7 @@ Defined values are
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="MaterialUseType">
 		<xsd:annotation>
@@ -739,7 +750,7 @@ Defined values for inventory operations defined values are
 		</xsd:annotation>
          <xsd:simpleContent>
             <xsd:extension base="MaterialUse1Type">
-                <xsd:attribute name="OtherValue" type="xsd:string"/>
+                <xsd:attribute name="OtherValue"                type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
@@ -773,7 +784,7 @@ dispatching, execution management, data collection, performance analysis, and tr
 		</xsd:annotation>
          <xsd:simpleContent>
             <xsd:extension base="MOMFunction1Type">
-                <xsd:attribute name="OtherValue" type="xsd:string"/>
+                <xsd:attribute name="OtherValue"                type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
@@ -802,7 +813,7 @@ This attribute must be defined in the corresponding operations event definition.
 		</xsd:annotation>
          <xsd:simpleContent>
             <xsd:extension base="OperationsEventLevel1Type">
-                <xsd:attribute name="OtherValue" type="xsd:string"/>
+                <xsd:attribute name="OtherValue"                type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
@@ -824,14 +835,13 @@ This attribute must be defined in the corresponding operations event definition.
 		<xsd:annotation>
 			<xsd:documentation>
 The type of Level 3 operations event.
-Defined values are
-event, alert, and alarm.
+Defined values are event, alert, and alarm.
 This attribute must be defined in the corresponding operations event definition.
 			</xsd:documentation>
 		</xsd:annotation>
          <xsd:simpleContent>
             <xsd:extension base="OperationsEventType1Type">
-                <xsd:attribute name="OtherValue" type="xsd:string"/>
+                <xsd:attribute name="OtherValue"                type="xsd:string"/>
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
@@ -856,6 +866,7 @@ This attribute must be defined in the corresponding operations event definition.
              <xsd:group ref="Extended:OperationsRecordEntryTemplate" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OperationsRecordTemplateType">
         <xsd:sequence>
@@ -872,6 +883,7 @@ This attribute must be defined in the corresponding operations event definition.
              <xsd:group ref="Extended:OperationsRecordTemplate" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OperationsRecordSpecTemplateType">
         <xsd:sequence>
@@ -894,6 +906,7 @@ This attribute must be defined in the corresponding operations event definition.
              <xsd:group ref="Extended:OperationsRecordSpecTemplate" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpEquipmentRequirementType">
         <xsd:sequence>
@@ -915,6 +928,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpEquipmentRequirement" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpEquipmentRequirementPropertyType">
         <xsd:sequence>
@@ -932,6 +946,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpEquipmentRequirementProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpPersonnelRequirementType">
         <xsd:sequence>
@@ -952,6 +967,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpPersonnelRequirement" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpPersonnelRequirementPropertyType">
         <xsd:sequence>
@@ -968,6 +984,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpPersonnelRequirementProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpPhysicalAssetRequirementType">
         <xsd:sequence>
@@ -990,6 +1007,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpPhysicalAssetRequirement" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpPhysicalAssetRequirementPropertyType">
         <xsd:sequence>
@@ -1006,6 +1024,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpPhysicalAssetRequirementProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpMaterialRequirementType">
         <xsd:sequence>
@@ -1030,6 +1049,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpMaterialRequirement" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpMaterialRequirementPropertyType">
         <xsd:sequence>
@@ -1047,6 +1067,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpMaterialRequirementProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpPersonnelSpecificationType">
         <xsd:sequence>
@@ -1065,6 +1086,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpPersonnelSpecification" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpPersonnelSpecificationPropertyType">
         <xsd:sequence>
@@ -1079,6 +1101,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpPersonnelSpecificationProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpEquipmentSpecificationType">
         <xsd:sequence>
@@ -1097,6 +1120,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpEquipmentSpecification" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpEquipmentSpecificationPropertyType">
         <xsd:sequence>
@@ -1111,6 +1135,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpEquipmentSpecificationProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpPhysicalAssetSpecificationType">
         <xsd:sequence>
@@ -1120,7 +1145,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:element name="Description" 			type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="PhysicalAssetUse" 		type="PhysicalAssetUseType" minOccurs="0"/>
             <xsd:element name="HierarchyScope" 			type="HierarchyScopeType" minOccurs="0"/>
-	    <xsd:element name="PhysicalLocation" 		type="Resource" minOccurs = "0"/>
+	    <xsd:element name="PhysicalLocation" 		type="ResourceLocationType" minOccurs = "0"/>
 	    <xsd:element name="SpatialDefinition" 		type="SpatialDefinitionType" minOccurs = "0"/>
             <xsd:element name="Quantity" 			type="QuantityValueType" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="PhysicalAssetSpecificationChild"	type="OpPhysicalAssetSpecificationType" minOccurs="0" maxOccurs="unbounded"/>
@@ -1130,6 +1155,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpPhysicalAssetSpecification" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpPhysicalAssetSpecificationPropertyType">
         <xsd:sequence>
@@ -1144,6 +1170,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpPhysicalAssetSpecificationProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpMaterialSpecificationType">
         <xsd:sequence>
@@ -1166,6 +1193,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpMaterialSpecification" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpMaterialSpecificationPropertyType">
         <xsd:sequence>
@@ -1181,6 +1209,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpMaterialSpecificationProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpPersonnelCapabilityType">
         <xsd:sequence>
@@ -1203,6 +1232,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpPersonnelCapability" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpPersonnelCapabilityPropertyType">
         <xsd:sequence>
@@ -1217,6 +1247,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpPersonnelCapabilityProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpEquipmentCapabilityType">
         <xsd:sequence>
@@ -1239,6 +1270,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpEquipmentCapability" minOccurs="0"  maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpEquipmentCapabilityPropertyType">
         <xsd:sequence>
@@ -1253,6 +1285,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpEquipmentCapabilityProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpPhysicalAssetCapabilityType">
         <xsd:sequence>
@@ -1275,6 +1308,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpPhysicalAssetCapability" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpPhysicalAssetCapabilityPropertyType">
         <xsd:sequence>
@@ -1289,6 +1323,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpPhysicalAssetCapabilityProperty" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpMaterialCapabilityType">
         <xsd:sequence>
@@ -1315,6 +1350,7 @@ This attribute must be defined in the corresponding operations event definition.
             <xsd:group ref="Extended:OpMaterialCapability" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OpMaterialCapabilityPropertyType">
         <xsd:sequence>
@@ -1343,6 +1379,7 @@ This attribute must be defined in the corresponding operations event definition.
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="OperationsTypeType">
 		<xsd:annotation>
@@ -1359,12 +1396,7 @@ Defined values are
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
-    <!--     -->
-    <xsd:complexType name="OtherDependencyType">
-        <xsd:simpleContent>
-            <xsd:restriction base="CodeType"/>
-        </xsd:simpleContent>
-    </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="ParameterType">
         <xsd:sequence>
@@ -1384,55 +1416,42 @@ Defined values are
             <xsd:group ref="Extended:Parameter" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+    
     <!--     -->
     <xsd:complexType name="PersonNameType">
         <xsd:simpleContent>
             <xsd:restriction base="IdentifierType"/>
         </xsd:simpleContent>
     </xsd:complexType>
+    
     <!--     -->
     <xsd:complexType name="PersonnelUseType">
         <xsd:simpleContent>
             <xsd:restriction base="CodeType"/>
         </xsd:simpleContent>
     </xsd:complexType>
+    
     <!--     -->
     <xsd:complexType name="PhysicalAssetUseType">
         <xsd:simpleContent>
             <xsd:restriction base="CodeType"/>
         </xsd:simpleContent>
     </xsd:complexType>
+    
     <!--     -->
     <xsd:complexType name="PriorityType">
         <xsd:simpleContent>
             <xsd:restriction base="NumericType"/>
         </xsd:simpleContent>
     </xsd:complexType>
-    <!--     -->
-    <xsd:complexType name="ProblemType">
-        <xsd:simpleContent>
-            <xsd:restriction base="CodeType"/>
-        </xsd:simpleContent>
-    </xsd:complexType>
-    <!--     -->
-    <xsd:complexType name="ProductProductionRuleType">
-        <xsd:simpleContent>
-            <xsd:restriction base="IdentifierType"/>
-        </xsd:simpleContent>
-    </xsd:complexType>
-    <!--     -->
-    <xsd:group name="ProductProductionRuleIDGroup">
-        <xsd:sequence>
-            <xsd:element name="ProductProductionRuleID" type="IdentifierType"/>
-            <xsd:element name="Version" type="VersionType" minOccurs="0"/>
-        </xsd:sequence>
-    </xsd:group>
+
     <!--     -->
     <xsd:complexType name="QuantityStringType">
         <xsd:simpleContent>
             <xsd:restriction base="AnyGenericValueType"/>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="QuantityValueType">
         <xsd:sequence>
@@ -1443,12 +1462,14 @@ Defined values are
             <xsd:group ref="Extended:Quantity" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="ReasonType">
         <xsd:simpleContent>
             <xsd:restriction base="CodeType"/>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="RelationshipForm1Type">
         <xsd:simpleContent>
@@ -1459,6 +1480,7 @@ Defined values are
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="RelationshipFormType">
         <xsd:simpleContent>
@@ -1467,6 +1489,7 @@ Defined values are
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="RelationshipType1Type">
         <xsd:simpleContent>
@@ -1477,6 +1500,7 @@ Defined values are
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="RelationshipTypeType">
         <xsd:simpleContent>
@@ -1485,12 +1509,7 @@ Defined values are
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
-    <!--     -->
-    <xsd:complexType name="RequestedPriorityType">
-        <xsd:simpleContent>
-            <xsd:restriction base="NumericType"/>
-        </xsd:simpleContent>
-    </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="RequestState1Type">
         <xsd:simpleContent>
@@ -1509,6 +1528,7 @@ Defined values are
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="RequestStateType">
 		<xsd:annotation>
@@ -1544,6 +1564,7 @@ Defined values are
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="RequiredByRequestedSegmentResponseType">
 		<xsd:annotation>
@@ -1572,6 +1593,7 @@ Defined values are
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="ResourceLocationTypeType">
 		<xsd:annotation>
@@ -1592,6 +1614,7 @@ Defined values are
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="ResourceLocationType">
         <xsd:sequence>
@@ -1599,6 +1622,7 @@ Defined values are
 		<xsd:element name = "LocationType" type = "ResourceLocationTypeType"/>
         </xsd:sequence>
     </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="ResourceReferenceType1Type">
         <xsd:simpleContent>
@@ -1624,6 +1648,8 @@ Defined values are
             </xsd:restriction>
         </xsd:simpleContent>
     </xsd:complexType>
+
+     <!--     -->   
     <xsd:complexType name="ResourceReferenceTypeType">
         <xsd:simpleContent>
             <xsd:extension base="ResourceReferenceType1Type">
@@ -1631,30 +1657,7 @@ Defined values are
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
-    <!--     -->
-    <xsd:complexType name="ResourcesType">
-		<xsd:annotation>
-			<xsd:documentation>
-Indicates the type of the resource referenced.
-Defined values are
-- Personnel
-- Personnel Class
-- Equipment
-- Equipment Class
-- Material Class
-- Material Definition
-- Material Lot
-- Material Sublot
-- Physical Asset
-- Physical Ssset Class
-- Work Master
-- Process Segment
-			</xsd:documentation>
-		</xsd:annotation>
-        <xsd:simpleContent>
-            <xsd:restriction base="CodeType"/>
-        </xsd:simpleContent>
-    </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="ResponseState1Type">
         <xsd:simpleContent>
