@@ -1648,12 +1648,14 @@ Defined values are
     <xsd:complexType name="ResponseState1Type">
         <xsd:simpleContent>
             <xsd:restriction base="CodeType">
+                <xsd:enumeration value="Waiting"/>
                 <xsd:enumeration value="Ready"/>
                 <xsd:enumeration value="Running"/>
                 <xsd:enumeration value="Completed"/>
                 <xsd:enumeration value="Aborted"/>
-                <xsd:enumeration value="Holding"/>
-                <xsd:enumeration value="Paused"/>
+                <xsd:enumeration value="Held"/>
+                <xsd:enumeration value="Suspended"/>               
+                <xsd:enumeration value="Closed"/>
                 <xsd:enumeration value="Other"/>
             </xsd:restriction>
         </xsd:simpleContent>
