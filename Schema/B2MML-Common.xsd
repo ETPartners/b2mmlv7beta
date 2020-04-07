@@ -220,13 +220,6 @@ Defined values are
             <xsd:restriction base="CodeType"/>
         </xsd:simpleContent>
     </xsd:complexType>
-
-    <!--     -->
-    <xsd:complexType name="CertificateOfAnalysisReferenceType">
-        <xsd:simpleContent>
-            <xsd:restriction base="IdentifierType"/>
-        </xsd:simpleContent>
-    </xsd:complexType>
     
     <!--     -->
     <xsd:complexType name="ClassPropertyTypeType">
@@ -252,13 +245,6 @@ Defines the type of the property. Defined types are
     <xsd:complexType name="ConfidenceFactorType">
         <xsd:simpleContent>
             <xsd:restriction base="IdentifierType"/>
-        </xsd:simpleContent>
-    </xsd:complexType>
-
-    <!--     -->
-    <xsd:complexType name="CorrectionType">
-        <xsd:simpleContent>
-            <xsd:restriction base="CodeType"/>
         </xsd:simpleContent>
     </xsd:complexType>
 
