@@ -1681,23 +1681,14 @@ Defined values are
             </xsd:extension>
         </xsd:simpleContent>
     </xsd:complexType>
-    <!--     -->
-    <xsd:complexType name="ResultType">
-        <xsd:sequence>
-            <xsd:element name="ValueString" type="ValueStringType" nillable="true"/>
-            <xsd:element name="DataType" type="DataTypeType" nillable="true" minOccurs="0"/>
-            <xsd:element name="UnitOfMeasure" type="UnitOfMeasureType" nillable="true" minOccurs="0"/>
-            <xsd:element name="Key" type="IdentifierType" minOccurs="0" maxOccurs="1"/>
-            <xsd:group ref="Extended:Result" minOccurs="0" maxOccurs="1"/>
-        </xsd:sequence>
-    </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="SegmentDependencyType">
         <xsd:sequence>
             <xsd:element name="ID" type="IdentifierType"/>
             <xsd:element name="Description" type="DescriptionType" minOccurs="0" maxOccurs="unbounded"/>
             <xsd:element name="Dependency" type="DependencyType"/>
-	    <xsd:element name="DependencyFactor" type="ValueType" minOccurs="0"/>
+	        <xsd:element name="DependencyFactor" type="ValueType" minOccurs="0"/>
             <xsd:choice minOccurs="0" maxOccurs="unbounded">
                 <xsd:element name="ProductSegmentID" type="IdentifierType"/>
                 <xsd:element name="ProcessSegmentID" type="IdentifierType"/>
@@ -1764,14 +1755,6 @@ Spatial definition identifies a value and the predefined coordinate reference sy
     </xsd:complexType>
 
     <!--     -->
-    <xsd:complexType name="StorageHierarchyScopeType">
-        <xsd:simpleContent>
-            <xsd:restriction base="IdentifierType"/>
-        </xsd:simpleContent>
-    </xsd:complexType>
-    <!--     -->
-
-    <!--     -->
     <xsd:complexType name="UnitOfMeasureType">
         <xsd:simpleContent>
             <xsd:restriction base="CodeType"/>
@@ -1793,12 +1776,7 @@ Spatial definition identifies a value and the predefined coordinate reference sy
             <xsd:group ref="Extended:Value" minOccurs="0" maxOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
-    <!--     -->
-    <xsd:complexType name="VersionType">
-        <xsd:simpleContent>
-            <xsd:restriction base="IdentifierType"/>
-        </xsd:simpleContent>
-    </xsd:complexType>
+
     <!--     -->
     <xsd:complexType name="WorkType1Type">
         <xsd:simpleContent>
