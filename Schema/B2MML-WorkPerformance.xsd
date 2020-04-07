@@ -191,11 +191,11 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkDirective"               type = "WorkDirectiveType" 
                                                         minOccurs = "0"/>
-      <xsd:element name = "WorkDirectiveVersion"        type = "VersionType"
+      <xsd:element name = "WorkDirectiveVersion"        type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkMasterID"                type = "IdentifierType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "WorkMasterVersion"           type = "VersionType"
+      <xsd:element name = "WorkMasterVersion"           type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:element name = "WorkflowSpecificationID"     type = "IdentifierType"
                                                         minOccurs = "0"/>
