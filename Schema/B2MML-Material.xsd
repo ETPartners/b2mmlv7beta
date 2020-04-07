@@ -204,7 +204,7 @@
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "AssemblyType"                type = "AssemblyTypeType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "AssemblyRelationship"        type = "Assembly"
+      <xsd:element name = "AssemblyRelationship"        type = "AssemblyRelationshipType"
                                                         minOccurs = "0"/>
       <xsd:group   ref  = "Extended:MaterialClass"      minOccurs="0"/>
     </xsd:sequence>
