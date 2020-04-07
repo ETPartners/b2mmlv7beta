@@ -126,7 +126,7 @@ form a hierarchy of test specifications.
                                                         minOccurs = "0"/>
       <xsd:element name = "Description"                 type = "DescriptionType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
-      <xsd:element name = "Version"           		      type = "VersionType"
+      <xsd:element name = "Version"           		      type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:element name = "PublishedEndDate"		        type = "DateTimeType"
                                                         minOccurs = "0"/>                                                  
