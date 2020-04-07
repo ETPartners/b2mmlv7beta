@@ -116,7 +116,7 @@
       <xsd:sequence>
         <xsd:element name = "FinalApprovalDate"  type = "DateTimeType"
                                                  minOccurs = "0"/>
-        <xsd:element name = "Version"            type = "VersionType"
+        <xsd:element name = "Version"            type = "IdentifierType"
                                                  minOccurs = "0"/>
         <xsd:element name = "Description"        type = "DescriptionType"
                                                  minOccurs = "0" maxOccurs = "unbounded"/>
@@ -312,7 +312,7 @@
   <xsd:complexType name = "ControlRecipeType">
     <xsd:sequence>
       <xsd:element name = "ID"                    type = "IdentifierType" />
-      <xsd:element name = "Version"               type = "VersionType"
+      <xsd:element name = "Version"               type = "IdentifierType"
                                                   minOccurs = "0"/>
       <xsd:element name = "VersionDate"           type = "DateTimeType"
                                                   minOccurs = "0"/>
@@ -709,7 +709,7 @@
   <xsd:complexType name = "ListHeaderType">
     <xsd:sequence>
       <xsd:element name = "ID"                  type = "IdentifierType"              minOccurs = "0"/>
-      <xsd:element name = "Version"             type = "VersionType"         minOccurs = "0"/>
+      <xsd:element name = "Version"             type = "IdentifierType"         minOccurs = "0"/>
       <xsd:element name = "Description"         type = "DescriptionType"
                                                 minOccurs = "0" maxOccurs = "unbounded"/>
       <xsd:element name = "Origin"              type = "OriginType"          minOccurs = "0"/>
@@ -725,7 +725,7 @@
   <xsd:complexType name = "MasterRecipeType">
     <xsd:sequence>
       <xsd:element name = "ID"                   type = "IdentifierType" />
-      <xsd:element name = "Version"              type = "VersionType"
+      <xsd:element name = "Version"              type = "IdentifierType"
                                                  minOccurs = "0"/>
       <xsd:element name = "VersionDate"          type = "DateTimeType"
                                                  minOccurs = "0"/>
@@ -916,7 +916,7 @@
   <xsd:complexType name = "RecipeElementType">
     <xsd:sequence>
       <xsd:element name = "ID"                          type = "IdentifierType" />
-      <xsd:element name = "Version"                     type = "VersionType"
+      <xsd:element name = "Version"                     type = "IdentifierType"
                                                         minOccurs = "0"/>
       <xsd:element name = "VersionDate"                 type = "DateTimeType"
                                                         minOccurs = "0"/>
@@ -1240,7 +1240,7 @@
 
         <xsd:element name = "Value"                     type = "BatchValueType"/>
         <xsd:element name = "ValueString"               type = "ValueStringType"/>
-        <xsd:element name = "Version"                   type = "VersionType"/>
+        <xsd:element name = "Version"                   type = "IdentifierType"/>
         <xsd:element name = "VersionDate"               type = "DateTimeType"/>
 
 </xsd:schema>
