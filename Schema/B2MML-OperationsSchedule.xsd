@@ -55,13 +55,6 @@
 
         Ver     Date            Person          Note
         ---     ----            ------          ----
-        V0500   26 Mar 2011     D. Brandl       Initial version
-        V0600   17 Mar 2013     D. Brandl       Changed copyright to MESA International and support for ISA 95 Part 4
-                                                Modified OpMaterialRequirementPropertyType to make it recursive like MaterialDefinitionProperty
-        V0700   21 Dec 2018     D. Brandl       Updated Version for 2018 update of ISA 95 Part 2
-                                                Added OperationsSegmentID to OperationsRequestType
-                                                Added OperationsSegmentID to OpSegmentRequirementType
-												Added Spatial Definition and locations
 				29 Mar 2019		D. Brandl		All future comments and revisions to be recorded in GitHub
 
    </xsd:documentation>
@@ -195,8 +188,7 @@
 
   <xsd:complexType name = "GetOperationsScheduleType">
     <xsd:sequence>
-         <xsd:element name = "ApplicationArea"
-                                type = "TransApplicationAreaType"/>
+         <xsd:element name = "ApplicationArea"  type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -213,10 +205,9 @@
     <xsd:attribute name = "versionID"           type="xsd:normalizedString"     use="optional"/>
   </xsd:complexType>
 
-
   <xsd:complexType name = "ShowOperationsScheduleType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -237,7 +228,7 @@
 
   <xsd:complexType name = "ProcessOperationsScheduleType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -258,7 +249,7 @@
 
   <xsd:complexType name = "AcknowledgeOperationsScheduleType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -279,11 +270,11 @@
 
   <xsd:complexType name = "ChangeOperationsScheduleType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
-              <xsd:element name = "Change"     type = "TransChangeType"/>
+              <xsd:element name = "Change"      type = "TransChangeType"/>
               <xsd:element name = "OperationsSchedule"
                                                 type = "OperationsScheduleType"
                                                 minOccurs = "1"
@@ -300,7 +291,7 @@
 
   <xsd:complexType name = "RespondOperationsScheduleType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -321,7 +312,7 @@
 
   <xsd:complexType name = "CancelOperationsScheduleType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
@@ -342,7 +333,7 @@
 
   <xsd:complexType name = "SyncOperationsScheduleType">
     <xsd:sequence>
-      <xsd:element name = "ApplicationArea"       type = "TransApplicationAreaType"/>
+      <xsd:element name = "ApplicationArea"     type = "TransApplicationAreaType"/>
       <xsd:element name = "DataArea">
          <xsd:complexType>
             <xsd:sequence>
