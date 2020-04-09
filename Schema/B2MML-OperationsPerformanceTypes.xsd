@@ -55,13 +55,7 @@
 
         Ver     Date            Person          Note
         ---     ----            ------          ----
-        V0500   26 Mar 2011     D. Brandl       Initial version with OpSegmentResponseType and sub element definitions
-        V0600   17 Mar 2013     D. Brandl       Changed copyright to MESA International and support for ISA 95 Part 4
-                                                Moved the Description Element in opSegmentDataType to match the order of other elements
-                                                Modified OpMaterialActualPropertyType to make it recursive like MaterialDefinitionProperty
-        V0700   21 Dec 2018     D. Brandl       Updated Version for 2018 update of ISA 95 Part 2
-                                                Added OperationsSegmentID to OpSegmentResponseType
-				29 Mar 2019		D. Brandl		All future comments and revisions to be recorded in GitHub
+ 			29 Mar 2019		D. Brandl		All future comments and revisions to be recorded in GitHub
 
    </xsd:documentation>
 </xsd:annotation>
