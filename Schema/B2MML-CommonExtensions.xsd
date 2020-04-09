@@ -49,10 +49,6 @@
 
         Ver     Date            Person          Note
         ---     ----            ------          ----
-        v04     04 Jun 2007     D. Brandl       Added transaction elements for ISA 95 Part 5 support.
-        V0500   26 Mar 2011     D. Brandl       Revised version
-        V0600   17 Mar 2013     D. Brandl       Changed copyright to MESA International and support for ISA 95 Part 4
-                                                Moved OpXXXXX elements from Extensions to Common Extensions
         V0700   09 Nov 2018     D. Brandl       Updated Version for latest 2018 release of ISA 95
 				29 Mar 2019		D. Brandl		All future comments and revisions to be recorded in GitHub
 
@@ -198,12 +194,6 @@ of elements when used in an XML document.
         </xsd:group>
 
         <xsd:group name = "OperationsRecordSpecTemplate">
-                <xsd:sequence>
-                        <!-- add extended elements here -->
-                </xsd:sequence>
-        </xsd:group>
-
-        <xsd:group name = "Result">
                 <xsd:sequence>
                         <!-- add extended elements here -->
                 </xsd:sequence>
