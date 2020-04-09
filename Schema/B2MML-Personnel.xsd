@@ -18,8 +18,7 @@
 
 <!-- Include the Common schema   -->
 
-  <xsd:include schemaLocation = "B2MML-Common.xsd"/>
-
+<xsd:include schemaLocation = "B2MML-Common.xsd"/>
 
 <xsd:annotation>
    <xsd:documentation>
@@ -58,36 +57,12 @@
 
         Ver     Date            Person          Note
         ---     ----            ------          ----
-        V01     7 Apr 2002      D. Emerson      Initial release
-        V02     23 Sept 2003    D. Emerson      Updated filename for V02
-                                                Added Location to person
-                                                Changed ##any to "Any" element of type "AnyType"
-                                                Added revision to namespace
-        V0201   17 Nov 2003     D. Emerson      Updated namespace after change to common schema
-        v03     26 Aug 2005     D. Emerson      Added substitution groups.  One group added just
-                                                before each Any element.
-        v0301   29 Dec 2005     D. Brandl       Only changed version to v0301
-        v04     04 Jun 2007     D. Brandl       Added transaction elements for ISA 95 Part 5 support.
-                                                Added "cc:" namespace for UN/CEFACT core types.
-                                                Added the UN/CEFACT core components with optional attributes
-                                                and made them the base types for the B2MML types.
-                                                Added warning before each use of the AnyType that the extension
-                                                schema should be used instead of the Any element and that in a
-                                                still to be determined future release of B2MML the AnyType and
-                                                Any element will be removed.
-        V0500   26 Mar 2011     D. Brandl       Revised version
-	   					Removed "Any" element type, replaced with extended types for user extensions
-						Changed "Location" element name to "HierarchyScope"
-						Added QualificationTestSpecificationID to Person and PersonnelClass
-        V0600   17 Mar 2013     D. Brandl       Changed copyright to MESA International and support for ISA 95 Part 4
-        V0700   21 Dec 2018     D. Brandl       Updated Version for 2018 update of ISA 95 Part 2
-						Removed QuaificationTestSpecification definitions, replaced by TestSpecification model
 	29 Mar 2019		D. Brandl	All future comments and revisions to be recorded in GitHub
 
    </xsd:documentation>
 </xsd:annotation>
 
-<!-- Elements -->
+<!-- Global Elements -->
 
   <xsd:element name = "PersonnelInformation"                    type ="PersonnelInformationType" />
   <xsd:element name = "PersonnelClass"                          type ="PersonnelClassType" >
@@ -141,9 +116,7 @@ A person may be a member of zero or more personnel classes.
   <xsd:element name = "CancelPerson"                            type = "CancelPersonType"/>
   <xsd:element name = "SyncPerson"                              type = "SyncPersonType"/>
 
-
-
-
+  
 <!-- Simple & Complex Types  -->
 
   <xsd:complexType name = "PersonnelInformationType">
