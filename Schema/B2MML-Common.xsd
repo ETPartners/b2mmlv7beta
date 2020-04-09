@@ -1502,13 +1502,14 @@ Defined values are
             <xsd:restriction base="CodeType">
                 <xsd:enumeration value="Forecast"/>
                 <xsd:enumeration value="Released"/>
+                <xsd:enumeration value="Waiting"/>               
                 <xsd:enumeration value="Cancelled"/>
                 <xsd:enumeration value="Ready"/>
                 <xsd:enumeration value="Running"/>
                 <xsd:enumeration value="Completed"/>
                 <xsd:enumeration value="Aborted"/>
                 <xsd:enumeration value="Held"/>
-                <xsd:enumeration value="Paused"/>
+                <xsd:enumeration value="Suspended"/>
                 <xsd:enumeration value="Closed"/>
                 <xsd:enumeration value="Other"/>
             </xsd:restriction>
