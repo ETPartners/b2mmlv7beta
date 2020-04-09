@@ -54,17 +54,6 @@
 
         Ver     Date            Person          Note
         ---     ----            ------          ----
-
-        V0500   26 Mar 2011     D. Brandl       New Version
-                          Removed "Any" element type, replaced with extended types for user extensions
-                          Changed "Location" element name to "HierarchyScope"
-        V0600   17 Mar 2013     D. Brandl       Changed copyright to MESA International and support for ISA 95 Part 4
-                                                Corrected the  OperationsMaterialBillType wrong definition for the OperationsMaterialBillItem
-        V0700   21 Dec 2018     D. Brandl       Updated Version for 2018 update of ISA 95 Part 2
-                        Added Test Specification ID to resource specifications
-                        Added Work Master links
-                        Added transactions for Operations Segment, not in Part 5, but discussed in ISA 95 meetings
-                        Changed all intermediate date and time types to DatTimeType
         29 Mar 2019    D. Brandl    All future comments and revisions to be recorded in GitHub
 
    </xsd:documentation>
