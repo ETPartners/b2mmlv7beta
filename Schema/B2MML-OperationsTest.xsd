@@ -9,7 +9,7 @@
 <xsd:import     namespace="http://www.mesa.org/xml/B2MML-AllExtensions" 
                 schemaLocation="B2MML-AllExtensions.xsd"/>
 <!-- Include the Common schema   -->
-  <xsd:include schemaLocation = "B2MML-Common.xsd"/>
+<xsd:include schemaLocation = "B2MML-Common.xsd"/>
 <xsd:annotation> 
    <xsd:documentation>
     Copyright 2019 MESA International, Version 0700
@@ -38,7 +38,7 @@
    </xsd:documentation>
 </xsd:annotation>
 
-<!-- Elements -->
+<!-- Global Elements -->
   <xsd:element name = "OperationsTestInformation" type ="OperationsTestInformationType" >
 		<xsd:annotation> 
 			<xsd:documentation>
