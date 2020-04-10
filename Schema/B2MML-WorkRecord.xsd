@@ -9,7 +9,7 @@
 
 <!-- Import the B2MML Extension Schema and pickup the BatchML Information Extensions -->
 
-  <xsd:import   namespace="http://www.mesa.org/xml/B2MML-AllExtensions"
+<xsd:import   namespace="http://www.mesa.org/xml/B2MML-AllExtensions"
                 schemaLocation="B2MML-AllExtensions.xsd"/>
 
 <!-- Include the BatchML and B2MML schemas   -->
@@ -27,8 +27,6 @@
 <!-- Include the Common schema   -->
 
   <xsd:include  schemaLocation = "B2MML-Common.xsd"/>
-
-
 
 <xsd:annotation>
    <xsd:documentation>
