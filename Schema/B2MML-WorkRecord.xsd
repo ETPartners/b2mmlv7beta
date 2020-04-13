@@ -4,6 +4,7 @@
                 targetNamespace         = "http://www.mesa.org/xml/B2MML"
                 xmlns                   = "http://www.mesa.org/xml/B2MML"
                 xmlns:Extended          = "http://www.mesa.org/xml/B2MML-AllExtensions"
+
                 elementFormDefault      = "qualified"
                 attributeFormDefault    = "unqualified">
 
@@ -14,15 +15,15 @@
 
 <!-- Include the BatchML and B2MML schemas   -->
 
-  <xsd:include schemaLocation = "BatchML-BatchProductionRecord.xsd"/>
-  <xsd:include schemaLocation = "B2MML-OperationsDefinition.xsd"/>
-  <xsd:include schemaLocation = "B2MML-OperationsPerformance.xsd"/>
-  <xsd:include schemaLocation = "B2MML-OperationsSchedule.xsd"/>
-  <xsd:include schemaLocation = "B2MML-WorkAlert.xsd"/>
-  <xsd:include schemaLocation = "B2MML-WorkCalendar.xsd"/>
-  <xsd:include schemaLocation = "B2MML-WorkDefinition.xsd"/>
-  <xsd:include schemaLocation = "B2MML-WorkPerformance.xsd"/>
-  <xsd:include schemaLocation = "B2MML-WorkSchedule.xsd"/>
+<xsd:include schemaLocation = "BatchML-BatchProductionRecord.xsd"/>
+<xsd:include schemaLocation = "B2MML-OperationsDefinition.xsd"/>
+<xsd:include schemaLocation = "B2MML-OperationsPerformance.xsd"/>
+<xsd:include schemaLocation = "B2MML-OperationsSchedule.xsd"/>
+<xsd:include schemaLocation = "B2MML-WorkAlert.xsd"/>
+<xsd:include schemaLocation = "B2MML-WorkCalendar.xsd"/>
+<xsd:include schemaLocation = "B2MML-WorkDefinition.xsd"/>
+<xsd:include schemaLocation = "B2MML-WorkPerformance.xsd"/>
+<xsd:include schemaLocation = "B2MML-WorkSchedule.xsd"/>
 
 <!-- Include the Common schema   -->
 

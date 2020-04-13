@@ -79,6 +79,7 @@
  <xsd:include schemaLocation ="B2MML-WorkflowSpecification.xsd"/>
  <xsd:include schemaLocation ="B2MML-WorkPerformance.xsd"/>
  <xsd:include schemaLocation ="B2MML-WorkSchedule.xsd"/>
+ <xsd:include schemaLocation ="B2MML-WorkRecord.xsd"/>
  <xsd:include schemaLocation ="BatchML-BatchInformation.xsd"/>
  <xsd:include schemaLocation ="BatchML-GeneralRecipe.xsd"/>
  <xsd:include schemaLocation ="BatchML-BatchProductionRecord.xsd"/>
