@@ -185,7 +185,7 @@
          <xsd:element name = "WorkMaster"          type = "WorkMasterType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
          <xsd:element name = "WorkRecordSpecification"        
-                                                   type = "OperationsRecordSpecTemplateType"
+                                                   type = "WorkRecordSpecificationType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>                                        
          <xsd:element name = "TransactionProfile"  type = "MasterDataTransactionProfileType"
                                                    minOccurs="0" maxOccurs = "unbounded"/>
