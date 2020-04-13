@@ -150,10 +150,6 @@
          <xsd:element name = "BatchID"                type = "IdentifierType"           minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element name = "MaterialDefinitionID"   type = "IdentifierType"           minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element name = "EquipmentID"            type = "IdentifierType"           minOccurs="0" maxOccurs="unbounded"/>
-    <!-- Elements with Complex types from Previous B2MML Version NOT in 940004 Work Record Model but incorporated
-      from 880004 Batch Production Record. -->
-         <xsd:element name = "ChangeHistory"          type = "ChangeHistoryType"        minOccurs="0"/>
-         <xsd:element name = "Comments"               type = "CommentsType"             minOccurs="0"/>
          <xsd:group   ref  = "Extended:WorkRecord"    minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
   </xsd:complexType>
