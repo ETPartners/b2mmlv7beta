@@ -114,10 +114,6 @@
          </xsd:choice>
 
          <xsd:element name = "InformationObjectType"  type = "InformationObjectTypeType"    minOccurs="0"/>
-<!-- Elements and types from Previous B2MML version which were incorporated from 880004 Batch Production Record 
-but applied in terms of Work for Level 3 but still uses ISA-88 name space.  -->
-         <xsd:element name = "WorkChangeHistory"      type = "WorkChangeHistoryType"    minOccurs="0"/>
-         <xsd:element name = "WorkComments"           type = "WorkCommentsType"         minOccurs="0"/>
          <xsd:element name = "WorkRecordEntryChild"   type = "WorkRecordEntryType"
                                                       minOccurs = "0" maxOccurs="unbounded"/>
          <xsd:group   ref  = "Extended:WorkRecordEntry" minOccurs="0" maxOccurs="1"/>                                                
@@ -198,52 +194,9 @@ but applied in terms of Work for Level 3 but still uses ISA-88 name space.  -->
          <xsd:element name = "BatchID"                type = "IdentifierType"              minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element name = "MaterialDefinitionID"   type = "IdentifierType"              minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element name = "EquipmentID"            type = "IdentifierType"              minOccurs="0" maxOccurs="unbounded"/>
-    <!-- Elements with Complex types from Previous B2MML Version NOT in 940004 Work Record Model but incorporated
-      from 880004 Batch Production Record. -->
-         <xsd:element name = "ChangeHistory"          type = "ChangeHistoryType"        minOccurs="0"/>
-         <xsd:element name = "Comments"               type = "CommentsType"             minOccurs="0"/>
          <xsd:group   ref  = "Extended:WorkRecordSpecification" minOccurs="0" maxOccurs="1"/>
    </xsd:sequence>
 </xsd:complexType>
-
-
-<!-- ========================================= -->
-<!-- Change History ========================== -->
-<!-- ========================================= -->
-  <xsd:complexType name = "WorkChangeHistoryType">
-      <xsd:sequence>
-         <xsd:element name = "Change"              type = "WorkChangeType"
-                                                   minOccurs="0" maxOccurs="unbounded"/>
-      </xsd:sequence>
-  </xsd:complexType>
-
-  <xsd:complexType name = "WorkChangeType">
-      <xsd:sequence>
-         <xsd:group   ref  = "WorkRecordEntryType"/>
-         <xsd:element name = "RecordReference"     type = "IdentifierType"/>
-         <xsd:element name = "PrechangeData"       type = "ValueType"      nillable="true" maxOccurs="unbounded"/>
-         <xsd:element name = "Reason"              type = "TextType"       minOccurs="0" maxOccurs="unbounded"/>
-      </xsd:sequence>
-  </xsd:complexType>
-
-<!-- ========================================= -->
-<!-- Comments ================================ -->
-<!-- ========================================= -->
-  <xsd:complexType name = "WorkCommentsType">
-      <xsd:sequence>
-         <xsd:element name = "Comment"             type = "WorkCommentType"
-                                                   minOccurs="0" maxOccurs="unbounded"/>
-      </xsd:sequence>
-  </xsd:complexType>
-
-  <xsd:complexType name = "WorkCommentType">
-      <xsd:sequence>
-         <xsd:group   ref  = "WorkRecordEntryType"/>
-         <xsd:element name = "RecordReference"     type = "IdentifierType"/>
-         <xsd:element name = "CommentText"         type = "TextType"     maxOccurs="unbounded"/>
-         <xsd:element name = "PersonID"            type = "NameType"    minOccurs="0"/>
-      </xsd:sequence>
-  </xsd:complexType>
 
 
 <!-- - - - - - - - - - - - - - - - - - - - - -->
