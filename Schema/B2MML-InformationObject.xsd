@@ -65,7 +65,7 @@
 <xsd:include schemaLocation ="B2MML-OperationsEvent.xsd"/>
 <xsd:include schemaLocation ="B2MML-ResourceRelationshipNetwork.xsd"/>
 <xsd:include schemaLocation ="B2MML-WorkCapability.xsd"/>
-<xsd:include schemaLocation ="B2MML-WorkRecord.xsd"/>
+<xsd:include schemaLocation ="B2MML-.xsd"/>
 <xsd:include schemaLocation ="BatchML-GeneralRecipe.xsd"/>
 
  <xsd:import  namespace="http://www.mesa.org/xml/B2MML-AllExtensions"
@@ -130,8 +130,8 @@
             <xsd:element name = "WorkAlert"                      type = "WorkAlertType"/>  
             <xsd:element name = "WorkCalendar"                   type = "WorkCalendarType"/>
             <xsd:element name = "WorkCalendarDefinition"         type = "WorkCalendarDefinitionType"/>
-            <xsd:element name = "WorkRecord"                     type = "OperationsRecordTemplateType"/>
-            <xsd:element name = "WorkRecordSpecification"        type = "OperationsRecordSpecTemplateType"/> 
+            <xsd:element name = "WorkRecord"                     type = "WorkRecordType"/>
+            <xsd:element name = "WorkRecordSpecification"        type = "WorkRecordSpecificationType"/> 
             <xsd:element name = "BatchProductionRecord"          type = "BatchProductionRecordType"/>
             <xsd:element name = "GRecipe"                        type = "GRecipeType"/>
             <xsd:element name = "ResourceConstraint"             type = "ResourceConstraintType"/>
