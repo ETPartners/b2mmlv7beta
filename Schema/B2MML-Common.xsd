@@ -841,6 +841,7 @@ This attribute must be defined in the corresponding operations event definition.
              <xsd:element name="RecordTimestamp" 		  type="DateTimeType"     minOccurs="0"/>
              <xsd:element name="EffectiveTimestamp"       type="DateTimeType"     minOccurs="0"/>
              <xsd:element name="EffectiveEndDate"         type="DateTimeType"     minOccurs = "0"/>
+             <xsd:element name="HierarchyScope"           type="HierarchyScopeType"       minOccurs="0"/>            
              <xsd:choice>
                 <xsd:element name="InformationObject"     type="InformationObjectType"/>
                 <xsd:element name="ExternalReferenceID"   type="IdentifierType"/>
@@ -862,6 +863,7 @@ This attribute must be defined in the corresponding operations event definition.
              <xsd:element name="RecordTimestamp" 		        type="DateTimeType"     minOccurs="0"/>
              <xsd:element name="EffectiveTimestamp"             type="DateTimeType"     minOccurs="0"/>
              <xsd:element name="EffectiveEndDate"               type="DateTimeType"     minOccurs = "0"/>
+             <xsd:element name="HierarchyScope"                 type="HierarchyScopeType"       minOccurs="0"/>
              <xsd:element name="Action" 			            type="ActionType"       minOccurs="0"/>
              <xsd:element name="OperationsRecordEntry"          type="OperationsRecordEntryTemplateType"   minOccurs="1" maxOccurs="unbounded"/>
 	         <xsd:element name="OperationsRecordSpecificationID"	type="IdentifierType"/>
@@ -879,6 +881,7 @@ This attribute must be defined in the corresponding operations event definition.
              <xsd:element name="PublishedDate"            type="DateTimeType"      minOccurs = "0"/>
              <xsd:element name="EffectiveStartDate"       type="DateTimeType"      minOccurs = "0"/>
              <xsd:element name="EffectiveEndDate"         type="DateTimeType"      minOccurs = "0"/>
+             <xsd:element name="HierarchyScope"           type = "HierarchyScopeType"       minOccurs="0"/>
              <xsd:element name="OperationsRecordSpecificationPatternID"
                                                           type="IdentifierType"    minOccurs = "0"/>
 	         <xsd:element name="DefinitionType"           type="DefinitionTypeType"    minOccurs="0"/>
