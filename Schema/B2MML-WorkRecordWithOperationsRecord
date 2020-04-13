@@ -102,11 +102,12 @@
       <!-- Based OperationsRecordEntryTemplateType elements in Common.xsd and additional attributes from updated Work Record Model -->  
       <xsd:sequence>
          <xsd:element name = "ID"                     type = "IdentifierType"/>
-         <xsd:element name = "Description" 			   type = "DescriptionType"          minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element name = "Description" 			      type = "DescriptionType"          minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element name = "Version"                type = "IdentifierType"           minOccurs="0"/>
-         <xsd:element name = "RecordTimestamp" 		   type = "DateTimeType"             minOccurs="0"/>
+         <xsd:element name = "RecordTimestamp" 		    type = "DateTimeType"             minOccurs="0"/>
          <xsd:element name = "EffectiveTimestamp"     type = "DateTimeType"             minOccurs="0"/>
          <xsd:element name = "EffectiveEndDate"       type = "DateTimeType"             minOccurs="0"/>
+         <xsd:element name = "HierarchyScope"         type = "HierarchyScopeType"       minOccurs="0"/>
          <xsd:choice>
             <xsd:element name = "InformationObject"   type = "InformationObjectType"/>
             <xsd:element name = "ExternalReferenceID" type = "IdentifierType"/>
