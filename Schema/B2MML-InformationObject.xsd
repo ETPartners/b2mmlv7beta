@@ -65,7 +65,7 @@
 <xsd:include schemaLocation ="B2MML-OperationsEvent.xsd"/>
 <xsd:include schemaLocation ="B2MML-ResourceRelationshipNetwork.xsd"/>
 <xsd:include schemaLocation ="B2MML-WorkCapability.xsd"/>
-<xsd:include schemaLocation ="B2MML-.xsd"/>
+<xsd:include schemaLocation ="B2MML-WorkRecord.xsd"/>
 <xsd:include schemaLocation ="BatchML-GeneralRecipe.xsd"/>
 
  <xsd:import  namespace="http://www.mesa.org/xml/B2MML-AllExtensions"
