@@ -125,7 +125,7 @@
                                                         minOccurs = "0"/>
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "Workype"                     type = "OperationsTypeType"
+      <xsd:element name = "WorkType"                    type = "OperationsTypeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "StartTime"                   type = "DateTimeType"
                                                         minOccurs = "0"/>
@@ -162,7 +162,7 @@
                                                         minOccurs = "0"/>                                                       
       <xsd:element name = "HierarchyScope"              type = "HierarchyScopeType"
                                                         minOccurs = "0"/>
-      <xsd:element name = "Workype"                     type = "OperationsTypeType"
+      <xsd:element name = "WorkType"                    type = "OperationsTypeType"
                                                         minOccurs = "0"/>
       <xsd:element name = "JobOrder"                    type = "JobOrderType"
                                                         minOccurs = "0" maxOccurs = "unbounded"/>
